@@ -1,0 +1,7 @@
+Version string '1.6a' does not match SemVer specification 
+You should try SemVer : http://semver.org/
+:genIntellijRuns
+
+BUILD SUCCESSFUL
+
+Total time: 0.314 secs

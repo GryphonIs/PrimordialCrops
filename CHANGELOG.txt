@@ -1,0 +1,57 @@
+/* v1.0 - v1.6 by abused_master (see Curse Page)
+ *
+ * v1.6a and beyond now maintained by KillBait
+ *
+ *
+ * v1.6a changelog
+ *
+ * - Reduced size of mod by 50% compared to v1.6
+ *
+ * - Fixed recipe typo making diamond seeds uncraftable.
+ *
+ * - Major rework of recipe registration, seed recipes now use ore dictionary
+ *   (eliminated duplicate recipes for each tier of infusion stones)
+ *   (please report any recipe errors, i may have derped something in the process)
+ *
+ * - Crop blocks are no longer registered as ItemBlocks, removes them from JEI view.
+ *   **NOTE: You will get "missing item CropXXXX" on world load, safe to ignore them**
+ *
+ * - Essence dropped on harvest are no longer plantable as seeds, changed code to register
+ *   essence as items, not seeds.
+ *
+ * - Fixed bug causing EnderIO farming station to not give/collect essence on harvest
+ *   (related to essence being registered as seeds)
+ *
+ * - A Broken crop will now give back it's seed 100% of the time, with additional 20% chance
+ *   of second seed if fully grown. (extra seed % will be changable through config file later on)
+ *
+ * - MinicioOre now registered with ore dictionary name "oreMinicio", primary for ease of use with
+ *   mekanism digital miner searching.
+ *
+ * - Added 11 new mob based crops
+ *    Blaze, Chicken, Cow, Ghast, Pig, Sheep, Skeleton, Slime, Spider, Wither, Zombie
+ *    Craft seeds using standard mob drops and the following infusion stone/essence tier
+ *     - Tier 2/Accio Eseence   - Chicken ,Cow ,Pig ,Sheep
+ *     - Tier 3/Crucio Essence  - Skeleton ,Slime ,Spider ,Zombie ,Creeper
+ *     - Tier 4/Imperio Essence - Wither ,Ghast ,Blaze
+ *
+ * - Added Water essence/Crop
+ *
+ * - Recipe Changes
+ *    Any recipe results for mob drop items now use there associated mob essence to create them
+ *    dye seed recipes now uses ore dictionary, use any 4 dye to craft. (24 recipes condensed to 3)
+ *    changed recipe for mycelium to use small red/brown mushrooms instead of mushroom block
+ *    changed gunpowder recipe, now gives 8 gunpowder
+ *    changed ender pearl recipe, now gives 4 pearls
+ *    changed wither skull recipe to use wither essence instead of diamond essence
+ *    changed feather recipe to use chicken essence instead of air essence
+ *
+ * - Added recipes for the following items/quantities.
+ *    SnowBalls(32), PodZol(16), Sand(32), RedSand (32), Cobblestone(32), Gravel(32), Water Bucket
+ *    Oak/Spruce/Birch/Jungle/Acacia/DarkOak wood (16), Eye Of Ender(4), Chorus Flower(2), Ghast Tear(8),
+ *    Porkchops/Cooked Porkchops (16), all Vanilla Music Discs, Rotten Flesh (16), Slimeball (8)
+ *    Magma Cream (8), Creeper/Zombie/Skeleton Heads, Blaze Rods (6), Blaze Powder (16)
+ *    String (8), Spider Eye (8), Fermented Spider Eye (8), Beef/Steak (16),  Mutton/Cooked Mutton (16)
+ *    Raw Chicken/Cooked Chicken (16), All Vanilla Wool Colours
+ *
+ */
