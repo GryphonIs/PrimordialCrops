@@ -3,7 +3,39 @@
  * v1.6a and beyond now maintained by KillBait
  *
  *
- * v1.6a changelog
+ * V1.6b Changelog
+ * ---------------
+ *
+ * Added 20 Mod based crops
+ * Added 2 Special Crops (Nether Star, Dragon Egg)
+ * Added 1 Food Crop
+ *
+ * Primordial Crops now has crops for the following mod resources.
+ *
+ * - Tinkers Construct : (Cobalt, Ardite, Manyullyn, KnighSlime, PigIron)
+ * - Immersive Engineering:
+ *   (Bauxite/Aluminum, Nickel, Uranium, Electrum, Steel, Constantan, Copper
+ *    Lead, Silver)
+ * - Botania : (Manasteel, Terrasteel, Elementium)
+ * - IC2 Experimental : (Rubber, Copper, Lead, Silver, Tin, Uranium, Bronze, Steel)
+ * - Forestry: (Bronze, Tin, Copper, Apatite)
+ * - Extreme Reactors : (Yellorite, Ludicrite, Cyanite, Blutonium)
+ *
+ *
+ * New Special Crops added for NetherStars and DragonEgg.
+ *
+ * -- Special Crops have a VERY low chance of dropping extra seeds (2%)
+ *    and need high tier items for crafting the seeds.
+
+ *    please leave feedback if you think these 2 crops have balance/recipe issues, please note
+ *    the recipe's and extra seed % are "Work In Progress".
+ *
+ *
+ * Cake Crop added - *cough* Mana Production *cough* :-P
+ *
+ *
+ * v1.6a Changelog - First update by me (KillBait!)
+ * ---------------
  *
  * - Reduced size of mod by 50% compared to v1.6
  *

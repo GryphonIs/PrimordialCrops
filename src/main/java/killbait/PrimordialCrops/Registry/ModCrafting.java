@@ -4,22 +4,14 @@ package killbait.PrimordialCrops.Registry;
 import killbait.PrimordialCrops.Utils.LogHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import java.util.List;
-
-import static net.minecraft.init.Blocks.SKULL;
-
-// TODO: add support for Tinkers (cobalt, ardite, manyullyn)
-// TODO: Add support for Immersive Engineering (Bauxite/Aluminum, Nickel, electrum, Uranium, steel (ore dict with ic2?) )
-// TODO: Add support for Botania (manasteel, terrasteel)
 
 // TODO: add IC2 Bronze, Rubber, Steel
 
@@ -38,141 +30,42 @@ public class ModCrafting {
 		GameRegistry.addSmelting(ModBlocks.MinicioOre, new ItemStack(ModItems.MinicioEssence, 4), 3.5F);
 
         // Coal Seeds
+		GameRegistry.addRecipe(new ItemStack(ModSeeds.MinicioSeeds), new Object[]{" m ","msm"," m ", 'm', ModItems.MinicioEssence, 's', Items.WHEAT_SEEDS});
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.CoalSeeds), new Object[]{"scs","c1c","scs", 's', ModItems.MinicioEssence, 'c', Items.COAL, '1', "InfusionStoneT1Plus"}));
-
-        // Diamond Seeds
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DiamondSeeds), new Object[]{"idi","d5d","idi", 'i', ModItems.ZivicioEssence,'d', Items.DIAMOND, '5', "InfusionStoneT4Plus"}));
-		//GameRegistry.addRecipe(new ItemStack(ModSeeds.DiamondSeeds), new Object[]{"idi","d5d","idi", 'i', ModItems.ZivicioEssence,'d', Items.DIAMOND, '5', ModItems.InfusionStoneT5});
-
-        // Iron Seeds
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.IronSeeds), new Object[]{"cic","i2i","cic", 'c', ModItems.CrucioEssence, 'i', Items.IRON_INGOT, '2', "InfusionStoneT2Plus"}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.IronSeeds), new Object[]{"cic","i2i","cic", 'c', ModItems.CrucioEssence, 'i', Items.IRON_INGOT, '2', ModItems.InfusionStoneT3});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.IronSeeds), new Object[]{"cic","i2i","cic", 'c', ModItems.CrucioEssence, 'i', Items.IRON_INGOT, '2', ModItems.InfusionStoneT4});
-		GameRegistry.addRecipe(new ItemStack(ModSeeds.IronSeeds), new Object[]{"cic","i2i","cic", 'c', ModItems.CrucioEssence, 'i', Items.IRON_INGOT, '2', ModItems.InfusionStoneT5});*/
-
-		// Gold Seeds
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.GoldSeeds), new Object[]{"igi","g3g","igi", 'i', ModItems.ImperioEssence, 'g', Items.GOLD_INGOT, '3', "InfusionStoneT3Plus"}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.GoldSeeds), new Object[]{"igi","g3g","igi", 'i', ModItems.ImperioEssence, 'g', Items.GOLD_INGOT, '3', ModItems.InfusionStoneT4});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.GoldSeeds), new Object[]{"igi","g3g","igi", 'i', ModItems.ImperioEssence, 'g', Items.GOLD_INGOT, '3', ModItems.InfusionStoneT5});*/
-
-        // Redstone Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.RedstoneSeeds), new Object[]{"ara","r3r","ara", 'a', ModItems.ImperioEssence, 'r', Items.REDSTONE, '3', "InfusionStoneT3Plus"}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.RedstoneSeeds), new Object[]{"ara","r3r","ara", 'a', ModItems.ImperioEssence, 'r', Items.REDSTONE, '3', ModItems.InfusionStoneT4});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.RedstoneSeeds), new Object[]{"ara","r3r","ara", 'a', ModItems.ImperioEssence, 'r', Items.REDSTONE, '3', ModItems.InfusionStoneT5});*/
-
-        // (Vanilla) Quartz Seed
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.QuartzSeeds), new Object[]{"aqa","q3q","aqa", 'a', ModItems.ImperioEssence, 'q', Items.QUARTZ, '3', "InfusionStoneT3Plus"}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.QuartzSeeds), new Object[]{"aqa","q3q","aqa", 'a', ModItems.ImperioEssence, 'q', Items.QUARTZ, '3', ModItems.InfusionStoneT4});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.QuartzSeeds), new Object[]{"aqa","q3q","aqa", 'a', ModItems.ImperioEssence, 'q', Items.QUARTZ, '3', ModItems.InfusionStoneT5});*/
-
-        // Obsidian Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ObsidianSeeds), new Object[]{"ara","r4r","ara", 'a', ModItems.ZivicioEssence, 'r', Blocks.OBSIDIAN, '4', "InfusionStoneT4Plus"}));
-        //GameRegistry.addRecipe(new ItemStack(ModSeeds.ObsidianSeeds), new Object[]{"ara","r4r","ara", 'a', ModItems.ZivicioEssence, 'r', Blocks.OBSIDIAN, '4', ModItems.InfusionStoneT4});
-        //GameRegistry.addRecipe(new ItemStack(ModSeeds.ObsidianSeeds), new Object[]{"ara","r4r","ara", 'a', ModItems.ZivicioEssence, 'r', Blocks.OBSIDIAN, '4', ModItems.InfusionStoneT5});
-
-        // Nether seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.NetherSeeds), new Object[]{"ara","r3r","ara", 'a', ModItems.ImperioEssence, 'r', Blocks.NETHERRACK, '3', "InfusionStoneT3Plus"}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.NetherSeeds), new Object[]{"ara","r3r","ara", 'a', ModItems.ImperioEssence, 'r', Blocks.NETHERRACK, '3', ModItems.InfusionStoneT4});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.NetherSeeds), new Object[]{"ara","r3r","ara", 'a', ModItems.ImperioEssence, 'r', Blocks.NETHERRACK, '3', ModItems.InfusionStoneT5});*/
-
-        // Nature Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.NatureSeeds), new Object[]{" s ","sms"," s ", 's', Items.WHEAT_SEEDS, 'm', "InfusionStoneT2Plus"}));
-
-        // Lapis Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.LapisSeeds), new Object[]{"ala","l2l","ala", 'a', ModItems.CrucioEssence, '2', "InfusionStoneT2Plus", 'l', new ItemStack(Items.DYE, 1, 4)}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.LapisSeeds), new Object[]{"ala","l2l","ala", 'a', ModItems.CrucioEssence, '2', ModItems.InfusionStoneT3, 'l', new ItemStack(Items.DYE, 1, 4)});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.LapisSeeds), new Object[]{"ala","l2l","ala", 'a', ModItems.CrucioEssence, '2', ModItems.InfusionStoneT4, 'l', new ItemStack(Items.DYE, 1, 4)});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.LapisSeeds), new Object[]{"ala","l2l","ala", 'a', ModItems.CrucioEssence, '2', ModItems.InfusionStoneT5, 'l', new ItemStack(Items.DYE, 1, 4)});*/
-
-        // GlowStone Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.GlowstoneSeeds), new Object[]{"cgc","g3g","cgc", 'c', ModItems.ImperioEssence, 'g', Items.GLOWSTONE_DUST, '3', "InfusionStoneT3Plus"}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.GlowstoneSeeds), new Object[]{"cgc","g3g","cgc", 'c', ModItems.ImperioEssence, 'g', Items.GLOWSTONE_DUST, '3', ModItems.InfusionStoneT4});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.GlowstoneSeeds), new Object[]{"cgc","g3g","cgc", 'c', ModItems.ImperioEssence, 'g', Items.GLOWSTONE_DUST, '3', ModItems.InfusionStoneT5});*/
-
-        // Fire Seeds
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.FireSeeds), new Object[]{"XYX","Y3Y","XYX", '3', "InfusionStoneT3Plus", 'Y', Items.LAVA_BUCKET, 'X', ModItems.ImperioEssence}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.FireSeeds), new Object[]{"XYX","Y3Y","XYX", '3', ModItems.InfusionStoneT4, 'Y', Items.LAVA_BUCKET, 'X', ModItems.ImperioEssence});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.FireSeeds), new Object[]{"XYX","Y3Y","XYX", '3', ModItems.InfusionStoneT5, 'Y', Items.LAVA_BUCKET, 'X', ModItems.ImperioEssence});*/
-
-        // Experience Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ExperienceSeeds), new Object[]{"ibi","g4a","ifi", 'b', Items.BONE, 'i', ModItems.ImperioEssence, 'g', Items.GUNPOWDER, 'a', Items.ARROW, 'f', Items.ROTTEN_FLESH, '4', "InfusionStoneT4Plus"}));
-        //GameRegistry.addRecipe(new ItemStack(ModSeeds.ExperienceSeeds), new Object[]{"ibi","g4a","ifi", 'b', Items.BONE, 'i', ModItems.ImperioEssence, 'g', Items.GUNPOWDER, 'a', Items.ARROW, 'f', Items.ROTTEN_FLESH, '4', ModItems.InfusionStoneT4});
-        //GameRegistry.addRecipe(new ItemStack(ModSeeds.ExperienceSeeds), new Object[]{"ibi","g4a","ifi", 'b', Items.BONE, 'i', ModItems.ImperioEssence, 'g', Items.GUNPOWDER, 'a', Items.ARROW, 'f', Items.ROTTEN_FLESH, '4', ModItems.InfusionStoneT5});
-
-        // Emerald Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.EmeraldSeeds), new Object[]{"iei","e4e","iei", 'i', ModItems.ZivicioEssence, 'e', Items.EMERALD, '4', "InfusionStoneT4Plus"}));
-        //GameRegistry.addRecipe(new ItemStack(ModSeeds.EmeraldSeeds), new Object[]{"iei","e4e","iei", 'i', ModItems.ImperioEssence, 'e', ModItems.ImperioEssence, '4', ModItems.InfusionStoneT4});
-        //GameRegistry.addRecipe(new ItemStack(ModSeeds.EmeraldSeeds), new Object[]{"iei","e4e","iei", 'i', ModItems.ZivicioEssence, 'e', Items.EMERALD, '4', ModItems.InfusionStoneT5});
-
-        // Earth Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.EarthSeeds), new Object[]{"asa","d2d","asa", 's', ModSeeds.MinicioSeeds, 'd', Blocks.DIRT, '2', "InfusionStoneT2Plus", 'a', ModItems.AccioEssence}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.EarthSeeds), new Object[]{"asa","d2d","asa", 's', ModSeeds.MinicioSeeds, 'd', Blocks.DIRT, '2', ModItems.InfusionStoneT3, 'a', ModItems.AccioEssence});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.EarthSeeds), new Object[]{"asa","d2d","asa", 's', ModSeeds.MinicioSeeds, 'd', Blocks.DIRT, '2', ModItems.InfusionStoneT4, 'a', ModItems.AccioEssence});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.EarthSeeds), new Object[]{"asa","d2d","asa", 's', ModSeeds.MinicioSeeds, 'd', Blocks.DIRT, '2', ModItems.InfusionStoneT5, 'a', ModItems.AccioEssence});*/
-
-        // Minicio Seeds
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.MinicioSeeds), new Object[]{" m ","msm"," m ", 'm', ModItems.MinicioEssence, 's', Items.WHEAT_SEEDS});
-
-        // Air Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.AirSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.CrucioEssence, 'g', Items.GLASS_BOTTLE, '1', "InfusionStoneT2Plus"}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.AirSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.CrucioEssence, 'g', Items.GLASS_BOTTLE, '1', ModItems.InfusionStoneT3});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.AirSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.CrucioEssence, 'g', Items.GLASS_BOTTLE, '1', ModItems.InfusionStoneT4});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.AirSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.CrucioEssence, 'g', Items.GLASS_BOTTLE, '1', ModItems.InfusionStoneT5});*/
-
-        // dye Seeds - Changed to Ore Dictionary, uses any dye
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DyeSeeds), new Object[]{"ada","d2d","ada", 'a', ModItems.CrucioEssence, '2', "InfusionStoneT2Plus", 'd', "dye"}));
-        /*GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DyeSeeds), new Object[]{"ada","d2d","ada", 'a', ModItems.CrucioEssence, '2', ModItems.InfusionStoneT3, 'd', "dye"}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DyeSeeds), new Object[]{"ada","d2d","ada", 'a', ModItems.CrucioEssence, '2', ModItems.InfusionStoneT4, 'd', "dye"}));
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DyeSeeds), new Object[]{"ada","d2d","ada", 'a', ModItems.CrucioEssence, '2', ModItems.InfusionStoneT5, 'd', "dye"}));*/
-
-        //Ender Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.EnderSeeds), new Object[]{"iei","e4e","iei", 'e', Items.ENDER_PEARL, 'i', ModItems.ImperioEssence, '4', "InfusionStoneT4Plus"}));
-        //GameRegistry.addRecipe(new ItemStack(ModSeeds.EnderSeeds), new Object[]{"iei","e4e","iei", 'e', Items.ENDER_PEARL, 'i', ModItems.ImperioEssence, '4', ModItems.InfusionStoneT5});
-
-        //Water Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.WaterSeeds), new Object[]{"XYX","Y3Y","XYX", '3', "InfusionStoneT2Plus", 'Y', Items.WATER_BUCKET, 'X', ModItems.CrucioEssence}));
-        /*GameRegistry.addRecipe(new ItemStack(ModSeeds.WaterSeeds), new Object[]{"XYX","Y3Y","XYX", '3', ModItems.InfusionStoneT3, 'Y', Items.WATER_BUCKET, 'X', ModItems.CrucioEssence});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.WaterSeeds), new Object[]{"XYX","Y3Y","XYX", '3', ModItems.InfusionStoneT4, 'Y', Items.WATER_BUCKET, 'X', ModItems.CrucioEssence});
-        GameRegistry.addRecipe(new ItemStack(ModSeeds.WaterSeeds), new Object[]{"XYX","Y3Y","XYX", '3', ModItems.InfusionStoneT5, 'Y', Items.WATER_BUCKET, 'X', ModItems.CrucioEssence});*/
-
 
         // Grass Drop
         MinecraftForge.addGrassSeed(new ItemStack(ModSeeds.MinicioSeeds), 15);
 
-        // Chicken Seeds
+        // Mob Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ChickenSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.AccioEssence, 'g', Items.CHICKEN, '1', "InfusionStoneT2Plus"}));
-
-        // Cow seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.CowSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.AccioEssence, 'g', Items.BEEF, '1', "InfusionStoneT2Plus"}));
-
-        // Pig Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.PigSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.AccioEssence, 'g', Items.PORKCHOP, '1', "InfusionStoneT2Plus"}));
-
-        // Sheep Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.SheepSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.AccioEssence, 'g', Items.MUTTON, '1', "InfusionStoneT2Plus"}));
-
-        // Creeper Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.CreeperSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.CrucioEssence, 'g', Items.GUNPOWDER, '1', "InfusionStoneT3Plus"}));
-
-        // Zombie Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ZombieSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.CrucioEssence, 'g', Items.ROTTEN_FLESH, '1', "InfusionStoneT3Plus"}));
-
-        // Skeleton Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.SkeletonSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.CrucioEssence, 'g', Items.BONE, '1', "InfusionStoneT3Plus"}));
-
-        // Slime Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.SlimeSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.CrucioEssence, 'g', Items.SLIME_BALL, '1', "InfusionStoneT3Plus"}));
-
-        // Spider Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.SpiderSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.CrucioEssence, 'g', Items.SPIDER_EYE, '1', "InfusionStoneT3Plus"}));
-
-        // Wither Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.WitherSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.ImperioEssence, 'g', new ItemStack(Items.SKULL, 1, 1), '1', "InfusionStoneT4Plus"}));
-
-        // Ghast seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.GhastSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.ImperioEssence, 'g', Items.GHAST_TEAR, '1', "InfusionStoneT4Plus"}));
-
-        // Blaze Seeds
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.BlazeSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.ImperioEssence, 'g', Items.BLAZE_ROD, '1', "InfusionStoneT4Plus"}));
 
         // -------------
@@ -227,6 +120,11 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ItemStack(Items.DYE, 2, 7), new Object[]{"  d"," d ","d  ", 'd', ModItems.DyeEssence});
         GameRegistry.addRecipe(new ItemStack(Items.DYE, 2, 8), new Object[]{"  d","  d","  d", 'd', ModItems.DyeEssence});
 
+		// Cake Essence
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.CakeSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.AccioEssence, 'g', Items.CAKE, '1', "InfusionStoneT2Plus"}));
+		GameRegistry.addRecipe(new ItemStack(Items.CAKE, 1), new Object[]{"cc ","cc ","   ", 'c', ModItems.CakeEssence});
+
+
         // Ore Essence
 		GameRegistry.addRecipe(new ItemStack(Items.DIAMOND, 1), new Object[]{"ddd","d d","ddd", 'd', ModItems.DiamondEssence});
 		GameRegistry.addRecipe(new ItemStack(Blocks.IRON_ORE, 6), new Object[]{"iii","i i","iii", 'i', ModItems.IronEssence});
@@ -244,13 +142,11 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ItemStack(Items.COOKED_PORKCHOP, 16), new Object[]{"ddd","dfd","ddd", 'd', ModItems.PigEssence, 'f', ModItems.FireEssence});
 
         // Chicken Essence
-
         GameRegistry.addRecipe(new ItemStack(Items.CHICKEN, 16), new Object[]{"ddd","d d","ddd", 'd', ModItems.ChickenEssence});
         GameRegistry.addRecipe(new ItemStack(Items.COOKED_CHICKEN, 16), new Object[]{"ddd","dfd","ddd", 'd', ModItems.ChickenEssence, 'f', ModItems.FireEssence});
         GameRegistry.addRecipe(new ItemStack(Items.FEATHER, 4), new Object[]{"X X","X X","X X", 'X', ModItems.ChickenEssence});
 
         // Sheep Essence
-
         GameRegistry.addRecipe(new ItemStack(Items.MUTTON, 16), new Object[]{"ddd","d d","ddd", 'd', ModItems.SheepEssence});
         GameRegistry.addRecipe(new ItemStack(Items.COOKED_MUTTON, 16), new Object[]{"ddd","dfd","ddd", 'd', ModItems.SheepEssence, 'f', ModItems.FireEssence});
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.WOOL, 8, 0), new Object[]{" w ","w w"," w ", 'w', ModItems.SheepEssence}));
@@ -269,16 +165,12 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.WOOL, 8, 13), new Object[]{" w ","wdw"," w ", 'w', ModItems.SheepEssence, 'd', new ItemStack (Items.DYE, 1, 2)}));
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.WOOL, 8, 14), new Object[]{" w ","wdw"," w ", 'w', ModItems.SheepEssence, 'd', new ItemStack (Items.DYE, 1, 1)}));
 
-
-
         // Cow Essence
-
-        GameRegistry.addRecipe(new ItemStack(Items.BEEF, 16), new Object[]{"ddd","d d","ddd", 'd', ModItems.CowEssence});
+		GameRegistry.addRecipe(new ItemStack(Items.BEEF, 16), new Object[]{"ddd","d d","ddd", 'd', ModItems.CowEssence});
         GameRegistry.addRecipe(new ItemStack(Items.COOKED_BEEF, 16), new Object[]{"ddd","dfd","ddd", 'd', ModItems.CowEssence, 'f', ModItems.FireEssence});
         GameRegistry.addRecipe(new ItemStack(Items.LEATHER, 8), new Object[]{"ll ","ll ","   ", 'l', ModItems.CowEssence});
 
-
-        // Ender Essence
+		// Ender Essence
         GameRegistry.addRecipe(new ItemStack(Items.ENDER_PEARL, 4), new Object[]{"e e","   ","e e", 'e', ModItems.EnderEssence});
         GameRegistry.addRecipe(new ItemStack(Blocks.END_STONE, 8), new Object[]{"ee ","ee ","   ", 'e', ModItems.EnderEssence});
         GameRegistry.addRecipe(new ItemStack(Items.CHORUS_FRUIT, 16), new Object[]{"XYX","Y Y","XYX", 'X', ModItems.EmeraldEssence, 'Y', ModItems.EnderEssence});
@@ -286,7 +178,7 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.ENDER_EYE, 4), new Object[]{"ebe","b b","ebe", 'e', ModItems.EnderEssence, 'b', ModItems.FireEssence}));
 
         // Ghast Essence
-        GameRegistry.addRecipe(new ItemStack(Items.GHAST_TEAR, 8), new Object[]{"ddd","d d","ddd", 'd', ModItems.GhastEssence});
+		GameRegistry.addRecipe(new ItemStack(Items.GHAST_TEAR, 8), new Object[]{"ddd","d d","ddd", 'd', ModItems.GhastEssence});
 
         // Creeper Essence
         GameRegistry.addRecipe(new ShapedOreRecipe( new ItemStack(Items.SKULL, 1, 4), new Object[]{"ebe","beb","ebe", 'e', ModItems.CreeperEssence, 'b', Items.BONE}));
@@ -328,9 +220,17 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ItemStack(Items.STRING, 8), new Object[]{" e ","e e"," e ", 'e', ModItems.SpiderEssence});
         GameRegistry.addRecipe(new ItemStack(Items.SPIDER_EYE, 8), new Object[]{"s s"," s ","s s", 's', ModItems.SpiderEssence});
 
-        // Random Stuff
+		// Special Stuff
 
-        GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG), new Object[]{"XXX","XYX","XXX", 'X', ModItems.ZivicioEssence, 'Y', Items.NETHER_STAR});
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.NetherStarSeeds), new Object[]{"aga","g1g","aga", 'a', ModItems.ZivicioEssence, 'g', Items.NETHER_STAR, '1', "InfusionStoneT5Plus"}));
+		GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), new Object[]{"sss","szs","sss", 's', ModItems.NetherStarEssence, 'z', ModItems.ZivicioEssence});
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DragonEggSeeds), new Object[]{"zdz","e5e","zez", 'z', ModItems.ZivicioEssence, 'd', Blocks.DRAGON_EGG, '5', "InfusionStoneT5Plus", 'e' , ModItems.EnderEssence}));
+		GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG, 1), new Object[]{"ddd","dzd","ddd", 'd', ModItems.DragonEggEssence, 'z', ModItems.ZivicioEssence});
+
+
+
+        // Random Stuff
+        //GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG), new Object[]{"XXX","XYX","XXX", 'X', ModItems.ZivicioEssence, 'Y', Items.NETHER_STAR});
 		GameRegistry.addRecipe(new ItemStack(Items.GOLDEN_APPLE), new Object[]{"XXX","XYX","XXX", 'X', ModItems.GoldEssence, 'Y', Items.APPLE});
 		GameRegistry.addRecipe(new ItemStack(Items.BUCKET), new Object[]{"   ","X X"," X ", 'X', ModItems.IronEssence});
 		GameRegistry.addRecipe(new ItemStack(Items.SADDLE), new Object[]{"XYX","YDY","   ", 'X', ModItems.FireEssence, 'Y', ModItems.EarthEssence, 'D', ModItems.DiamondEssence});
@@ -357,53 +257,130 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ItemStack(ModItems.Donut), new Object[]{"XX ","XX ","   ", 'X', ModItems.DonutEssence});
         GameRegistry.addRecipe(new ItemStack(ModSeeds.DonutSeeds), new Object[]{"XXX","ZYZ","   ", 'X', Items.WHEAT, 'Y', Items.MILK_BUCKET, 'Z', Items.SUGAR});
 
-        //getEquivelent("ingotCopper");
-        //getEquivelent("plankWood");
+		//
+		// Mod Compatability
+		//
+		// Detect each mod and add seeds/recipes ONLY for the item specific to there mod.
+		//
+		// Common items that appear in multiple mods (e.x. multiple Copper ores) are detected
+		// by OreDictionary name later on so we only register 1 seed instead of 10 copper seeds (for example)
 
-        if(Loader.isModLoaded("FunOres") || Loader.isModLoaded("forestry") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("tconstruct")){
+		if(Loader.isModLoaded("tconstruct")) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ArditeSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotArdite", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotArdite",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.ArditeEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.CobaltSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotCobalt", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotCobalt",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.CobaltEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ManyullynSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotManyullyn", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT4Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotManyullyn",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.ManyullynEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.KnightSlimeSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotKnightslime", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotKnightslime",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.KnightSlimeEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.PigIronSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotPigiron", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotPigiron",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.PigIronEssence}));
+		}
 
-        	//Experimental
-        	//GameRegistry.addRecipe(new ItemStack(getEquivelant("ingotCopper"), 4), new Object[]{"XXX","X X","XXX", 'X', ModItems.CopperEssence});
+		if(Loader.isModLoaded("immersiveengineering")) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.AluminumSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotAluminum", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotAluminum",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.AluminumEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.NickelSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotNickel", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotNickel",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.NickelEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ElectrumSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotElectrum", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotElectrum",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.ElectrumEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ConstantanSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotConstantan", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotConstantan",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.ConstantanEssence}));
+		}
 
-			GameRegistry.addRecipe(new ItemStack(ModItems.CopperIngot, 4), new Object[]{"XXX","X X","XXX", 'X', ModItems.CopperEssence});
-        	GameRegistry.addRecipe(new ItemStack(ModItems.TinIngot, 6), new Object[]{"XXX","X X","XXX", 'X', ModItems.TinEssence});
-        	GameRegistry.addRecipe(new ItemStack(ModItems.LeadIngot, 4), new Object[]{"XXX","X X","XXX", 'X', ModItems.LeadEssence});
-        	GameRegistry.addRecipe(new ItemStack(ModItems.SilverIngot, 4), new Object[]{"XXX","X X","XXX", 'X', ModItems.SilverEssence});
+		if (Loader.isModLoaded("botania") || Loader.isModLoaded("Botania")) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ManaSteelSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotManasteel", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotManasteel",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.ManaSteelEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.TerraSteelSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotTerrasteel", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotTerrasteel",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.TerraSteelEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ElementiumSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotElvenElementium", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotElvenElementium",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.ElementiumEssence}));
+		}
 
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.CopperSeeds), new Object[]{"XYX","YZY","XYX", 'Y', ModItems.CopperIngot, 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
-        	GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.TinSeeds), new Object[]{"XYX","YZY","XYX", 'Y', ModItems.TinIngot, 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
-        	GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.LeadSeeds), new Object[]{"XYX","YZY","XYX", 'Y', ModItems.LeadIngot, 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
-        	GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.SilverSeeds), new Object[]{"XYX","YZY","XYX", 'Y', ModItems.SilverIngot, 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
-        }
+		if (Loader.isModLoaded("IC2")) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.RubberSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "itemRubber", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("itemRubber", 8), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.RubberEssence}));
+		}
 
-        if(Loader.isModLoaded("Mekanism")) {
-            GameRegistry.addRecipe(new ItemStack(ModItems.OsmiumIngot, 4), new Object[]{"XXX","X X","XXX", 'X', ModItems.OsmiumEssence});
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.OsmiumSeeds), new Object[]{"XYX","YZY","XYX", 'Y', ModItems.OsmiumIngot, 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
-        }
+		if (Loader.isModLoaded("forestry")) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.ApatiteSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "gemApatite", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("gemApatite", 8), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.ApatiteEssence}));
+		}
 
-        	
-    }
-
-	public static Item getEquivelent(String oreId) {
-	    LogHelper.info("**** checking OreDictionary for " + oreId + " ****");
-		List<ItemStack> res = OreDictionary.getOres(oreId);
-		/*if(res == null || res.isEmpty()) {
-			return null;
-		}*/
-		ItemStack[] res2 = res.toArray(new ItemStack[res.size()]);
-		for(int i = 0; i < res.size(); ++i) {
-			//res2[i] = res2[i].copy();
-			//res2[i].stackSize = getInput().stackSize;
-            //System.out.println(res2[i].getUnlocalizedName());
-            //System.out.println(res2[i].getItem());
-            return res2[i].getItem();
-            //ItemStack res3=res2[i].copy();
-            //break;
+		if (Loader.isModLoaded("bigreactors")) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.YelloriteSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotYellorium", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotYellorium", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.YelloriteEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.LudicriteSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotLudicrite", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotLudicrite", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.LudicriteEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.CyaniteSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotCyanite", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotCyanite", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.CyaniteEssence}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.BlutoniumSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotBlutonium", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotBlutonium", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.BlutoniumEssence}));
 
 		}
 
-        //return res3;
+		if (Loader.isModLoaded("Mekanism")) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.OsmiumSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotOsmium", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(getOreDictItemWithMeta("ingotOsmium",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.OsmiumEssence});
+		}
+
+		//
+		// Hacky way to detect common mod items, so we don't register the same thing multiple times
+		//
+		// check oreDictionary for a certain name
+		//
+
+		if (OreDictionary.doesOreNameExist("ingotBronze")) {
+			LogHelper.info("Detected oreDictionary name 'ingotBronze', adding support for Bronze seeds/crafting recipes");
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.BronzeSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotBronze", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotBronze",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.BronzeEssence}));
+		}
+
+		if (OreDictionary.doesOreNameExist("oreUranium")) {
+			LogHelper.info("Detected oreDictionary name 'oreUranium', adding support for Uranium seeds/crafting recipes");
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.UraniumSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "oreUranium", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("oreUranium",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.UraniumEssence}));
+		}
+
+		if (OreDictionary.doesOreNameExist("ingotSteel")) {
+			LogHelper.info("Detected oreDictionary name 'ingotSteel', adding support for Steel seeds/crafting recipes");
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.SteelSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotSteel", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotSteel",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.SteelEssence}));
+		}
+
+		if (OreDictionary.doesOreNameExist("ingotCopper")) {
+			LogHelper.info("Detected oreDictionary name 'ingotCopper', adding support for Copper seeds/crafting recipes");
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.CopperSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotCopper", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotCopper",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.CopperEssence}));
+		}
+
+		if (OreDictionary.doesOreNameExist("ingotTin")) {
+			LogHelper.info("Detected oreDictionary name 'ingotTin', adding support for Tin seeds/crafting recipes");
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.TinSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotTin", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotTin",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.TinEssence}));
+		}
+
+		if (OreDictionary.doesOreNameExist("ingotLead")) {
+			LogHelper.info("Detected oreDictionary name 'ingotLead', adding support for Lead seeds/crafting recipes");
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.LeadSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotLead", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotLead",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.LeadEssence}));
+		}
+
+		if (OreDictionary.doesOreNameExist("ingotSilver")) {
+			LogHelper.info("Detected oreDictionary name 'ingotSilver', adding support for Silver seeds/crafting recipes");
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.SilverSeeds), new Object[]{"XYX","YZY","XYX", 'Y', "ingotSilver", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotSilver",4), new Object[]{"XXX","X X","XXX", 'X', ModItems.SilverEssence}));
+		}
+    }
+
+    // returns an itemstack of the first block/Item id that matches the OreDict name
+	public static ItemStack getOreDictItemWithMeta(String oreIdName, int num) {
+		List<ItemStack> res = OreDictionary.getOres(oreIdName);
+		ItemStack[] res2 = res.toArray(new ItemStack[res.size()]);
+		for(int i = 0; i < res.size(); ++i) {
+            return new ItemStack(res2[i].getItem(), num, res2[i].getItemDamage());
+		}
         return null;
     }
-	
 }

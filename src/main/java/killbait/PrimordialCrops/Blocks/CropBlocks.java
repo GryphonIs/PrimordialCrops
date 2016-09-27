@@ -1,5 +1,7 @@
-package killbait.PrimordialCrops.Registry;
+package killbait.PrimordialCrops.Blocks;
 
+import killbait.PrimordialCrops.Registry.ModItems;
+import killbait.PrimordialCrops.Registry.ModSeeds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.IGrowable;

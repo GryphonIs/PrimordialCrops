@@ -1,5 +1,7 @@
 package killbait.PrimordialCrops.Registry;
 
+import killbait.PrimordialCrops.Blocks.CropBlocks;
+import killbait.PrimordialCrops.Blocks.CropBlocksSpecial;
 import killbait.PrimordialCrops.Items.Donut;
 import killbait.PrimordialCrops.Items.PrimordialCropsItem;
 import killbait.PrimordialCrops.PrimordialCrops;
@@ -17,6 +19,7 @@ import static net.minecraftforge.fml.common.registry.GameRegistry.register;
 public class ModItems {
 
     public static HashMap<CropBlocks, Item> harvestedItemMap = new HashMap<CropBlocks, Item>();
+    public static HashMap<CropBlocksSpecial, Item> harvestedItemMapSpecial = new HashMap<CropBlocksSpecial, Item>();
     
     //public static Item[] MCDrops;
     //public static Item[] MCMisc;
@@ -96,7 +99,33 @@ public class ModItems {
     public static Item SilverEssence;
     public static Item LeadEssence;
     public static Item OsmiumEssence;
-    
+
+    public static Item ArditeEssence;
+    public static Item CobaltEssence;
+    public static Item ManyullynEssence;
+    public static Item KnightSlimeEssence;
+    public static Item PigIronEssence;
+    public static Item AluminumEssence;
+    public static Item NickelEssence;
+    public static Item UraniumEssence;
+    public static Item ElectrumEssence;
+    public static Item SteelEssence;
+    public static Item ConstantanEssence;
+    public static Item RubberEssence;
+    public static Item BronzeEssence;
+    public static Item ManaSteelEssence;
+    public static Item TerraSteelEssence;
+    public static Item ElementiumEssence;
+    public static Item ApatiteEssence;
+    public static Item YelloriteEssence;
+    public static Item LudicriteEssence;
+    public static Item CyaniteEssence;
+    public static Item BlutoniumEssence;
+    public static Item CakeEssence;
+    public static Item NetherStarEssence;
+    public static Item DragonEggEssence;
+
+
     public static Item CopperIngot;
     public static Item TinIngot;
     public static Item SilverIngot;
@@ -128,9 +157,9 @@ public class ModItems {
         GoldEssence = regHarvestItem("GoldEssence", ModBlocks.GoldCrop);
         RedstoneEssence = regHarvestItem("RedstoneEssence", ModBlocks.RedstoneCrop);
         WaterEssence = regHarvestItem("WaterEssence", ModBlocks.WaterCrop);
+
         DonutEssence = regHarvestItem("DonutEssence", ModBlocks.DonutCrop);
-
-
+        CakeEssence = regHarvestItem("CakeEssence", ModBlocks.CakeCrop);
 
         BlazeEssence = regHarvestItem("BlazeEssence", ModBlocks.BlazeCrop);
         ChickenEssence = regHarvestItem("ChickenEssence", ModBlocks.ChickenCrop);
@@ -145,6 +174,11 @@ public class ModItems {
         SpiderEssence = regHarvestItem("SpiderEssence", ModBlocks.SpiderCrop);
         WitherEssence = regHarvestItem("WitherEssence", ModBlocks.WitherCrop);
         ZombieEssence = regHarvestItem("ZombieEssence", ModBlocks.ZombieCrop);
+
+        // Special Crops
+
+        NetherStarEssence = regSpecialHarvestItem("NetherStarEssence",ModBlocks.NetherStarCrop);
+        DragonEggEssence = regSpecialHarvestItem("DragonEggEssence", ModBlocks.DragonEggCrop);
 
 
 
@@ -165,18 +199,66 @@ public class ModItems {
         GameRegistry.register(AccioSword.setRegistryName("AccioSword"));
         GameRegistry.register(CrucioSword.setRegistryName("CrucioSword"));
         GameRegistry.register(ImperioSword.setRegistryName("ImperioSword"));
-         
-        if(Loader.isModLoaded("FunOres") || Loader.isModLoaded("forestry") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("tconstruct")){
 
-        	 CopperEssence = regHarvestItem("CopperEssence", ModBlocks.CopperCrop);
-        	 TinEssence = regHarvestItem("TinEssence", ModBlocks.TinCrop);
-        	 SilverEssence = regHarvestItem("SilverEssence", ModBlocks.SilverCrop);
-        	 LeadEssence = regHarvestItem("LeadEssence", ModBlocks.LeadCrop);
-        	 
-        	 CopperIngot = regCraftItem("CopperIngot");
-        	 TinIngot = regCraftItem("TinIngot");
-        	 SilverIngot = regCraftItem("SilverIngot");
-        	 LeadIngot = regCraftItem("LeadIngot");
+        if (Loader.isModLoaded("tconstruct")) {
+            ArditeEssence = regHarvestItem("ArditeEssence", ModBlocks.ArditeCrop);
+            CobaltEssence = regHarvestItem("CobaltEssence", ModBlocks.CobaltCrop);
+            ManyullynEssence = regHarvestItem("ManyullynEssence", ModBlocks.ManyullynCrop);
+            KnightSlimeEssence = regHarvestItem("KnightSlimeEssence", ModBlocks.KnightSlimeCrop);
+            PigIronEssence = regHarvestItem("PigIronEssence", ModBlocks.PigIronCrop);
+        }
+
+        if (Loader.isModLoaded("immersiveengineering")) {
+            AluminumEssence = regHarvestItem("AluminumEssence", ModBlocks.AluminumCrop);
+            NickelEssence = regHarvestItem("NickelEssence", ModBlocks.NickelCrop);
+            ElectrumEssence = regHarvestItem("ElectrumEssence", ModBlocks.ElectrumCrop);
+            ConstantanEssence = regHarvestItem("ConstantanEssence", ModBlocks.ConstantanCrop);
+        }
+
+        if (Loader.isModLoaded("botania") || Loader.isModLoaded("Botania")) {
+            ManaSteelEssence = regHarvestItem("ManaSteelEssence", ModBlocks.ManaSteelCrop);
+            TerraSteelEssence = regHarvestItem("TerraSteelEssence", ModBlocks.TerraSteelCrop);
+            ElementiumEssence = regHarvestItem("ElementiumEssence", ModBlocks.ElementiumCrop);
+        }
+
+        if (Loader.isModLoaded("IC2")) {
+            RubberEssence = regHarvestItem("RubberEssence", ModBlocks.RubberCrop);
+        }
+
+        if (Loader.isModLoaded("IC2") || Loader.isModLoaded("immersiveengineering")) {
+            UraniumEssence = regHarvestItem("UraniumEssence", ModBlocks.UraniumCrop);
+            SteelEssence = regHarvestItem("SteelEssence", ModBlocks.SteelCrop);
+        }
+
+        if (Loader.isModLoaded("IC2") || Loader.isModLoaded("forestry")) {
+            BronzeEssence = regHarvestItem("BronzeEssence", ModBlocks.BronzeCrop);
+        }
+
+        if (Loader.isModLoaded("forestry")) {
+            ApatiteEssence = regHarvestItem("ApatiteEssence", ModBlocks.ApatiteCrop);
+        }
+
+        if (Loader.isModLoaded("bigreactors")) {
+            YelloriteEssence = regHarvestItem("YelloriteEssence", ModBlocks.YelloriteCrop);
+            LudicriteEssence = regHarvestItem("LudicriteEssence", ModBlocks.LudicriteCrop);
+            CyaniteEssence = regHarvestItem("CyaniteEssence", ModBlocks.CyaniteCrop);
+            BlutoniumEssence = regHarvestItem("BlutoniumEssence", ModBlocks.BlutoniumCrop);
+
+        }
+
+
+            if(Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("forestry") || Loader.isModLoaded("immersiveengineering")) {
+            CopperEssence = regHarvestItem("CopperEssence", ModBlocks.CopperCrop);
+            CopperIngot = regCraftItem("CopperIngot");
+            TinEssence = regHarvestItem("TinEssence", ModBlocks.TinCrop);
+            TinIngot = regCraftItem("TinIngot");
+        }
+
+        if(Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep")|| Loader.isModLoaded("immersiveengineering")) {
+            SilverEssence = regHarvestItem("SilverEssence", ModBlocks.SilverCrop);
+            SilverIngot = regCraftItem("SilverIngot");
+            LeadEssence = regHarvestItem("LeadEssence", ModBlocks.LeadCrop);
+            LeadIngot = regCraftItem("LeadIngot");
         }
 
         if(Loader.isModLoaded("Mekanism")) {
@@ -190,6 +272,12 @@ public class ModItems {
        //MCMisc = new Item[] {InfusionStoneT1, InfusionStoneT2, InfusionStoneT3, InfusionStoneT4, InfusionStoneT5};
        
 	}
+
+    public static Item regSpecialHarvestItem(String regName, Block crop) {
+        Item item = register(new PrimordialCropsItem(regName).setCreativeTab(PrimordialCrops.PrimordialCrops));
+        harvestedItemMapSpecial.put((CropBlocksSpecial) crop, item);
+        return item;
+    }
 
     public static Item regHarvestItem(String regName, Block crop) {
         Item item = register(new PrimordialCropsItem(regName).setCreativeTab(PrimordialCrops.PrimordialCrops));
