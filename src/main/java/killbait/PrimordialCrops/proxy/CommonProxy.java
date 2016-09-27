@@ -2,7 +2,6 @@ package killbait.PrimordialCrops.proxy;
 
 import killbait.PrimordialCrops.Registry.*;
 import killbait.PrimordialCrops.WorldGen.MagicalWorldGen;
-import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -22,5 +21,6 @@ public class CommonProxy {
 		ModCrafting.initCrafting();
 	}
 
-	public void postInit(FMLPostInitializationEvent e) {}
+	public void postInit(FMLPostInitializationEvent e) {
+	}
 }

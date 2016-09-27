@@ -13,32 +13,29 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModBlocks {
 
 	// Item Crops
-	
+
 	public static Block MinicioCrop;
-    public static Block AirCrop;
-    public static Block CoalCrop;
-    public static Block DyeCrop;
-    public static Block EarthCrop;
-    public static Block EmeraldCrop;
-    public static Block EnderCrop;
-    public static Block ExperienceCrop;
-    public static Block FireCrop;
-    public static Block GlowstoneCrop;
-    public static Block LapisCrop;
-    public static Block NatureCrop;
-    public static Block NetherCrop;
-    public static Block ObsidianCrop;
-    public static Block QuartzCrop;
-    public static Block IronCrop;
-    public static Block GoldCrop;
-    public static Block DiamondCrop;
-    public static Block RedstoneCrop;
+	public static Block AirCrop;
+	public static Block CoalCrop;
+	public static Block DyeCrop;
+	public static Block EarthCrop;
+	public static Block EmeraldCrop;
+	public static Block EnderCrop;
+	public static Block ExperienceCrop;
+	public static Block FireCrop;
+	public static Block GlowstoneCrop;
+	public static Block LapisCrop;
+	public static Block NatureCrop;
+	public static Block NetherCrop;
+	public static Block ObsidianCrop;
+	public static Block QuartzCrop;
+	public static Block IronCrop;
+	public static Block GoldCrop;
+	public static Block DiamondCrop;
+	public static Block RedstoneCrop;
 	public static Block WaterCrop;
 
 	// Mod Crops
-
-
-
 
 
 	// Food Crops
@@ -62,12 +59,12 @@ public class ModBlocks {
 	public static Block WitherCrop;
 	public static Block ZombieCrop;
 
-    //Mod Intergration Crops
-    
-    public static Block CopperCrop;
-    public static Block TinCrop;
-    public static Block LeadCrop;
-    public static Block SilverCrop;
+	//Mod Intergration Crops
+
+	public static Block CopperCrop;
+	public static Block TinCrop;
+	public static Block LeadCrop;
+	public static Block SilverCrop;
 	public static Block OsmiumCrop;
 	public static Block ArditeCrop;
 	public static Block CobaltCrop;
@@ -93,31 +90,31 @@ public class ModBlocks {
 
 	public static Block NetherStarCrop;
 	public static Block DragonEggCrop;
-    
-    public static Block MinicioOre;
-	
+
+	public static Block MinicioOre;
+
 	public static void init() {
 
 		// Resource Crops
 
 		MinicioCrop = registerBlockCrop("MinicioCrop");
-	    AirCrop = registerBlockCrop("AirCrop");
-	    CoalCrop = registerBlockCrop("CoalCrop");
-	    DyeCrop = registerBlockCrop("DyeCrop");
-	    EarthCrop = registerBlockCrop("EarthCrop");
-	    EmeraldCrop = registerBlockCrop("EmeraldCrop");
-	    ExperienceCrop = registerBlockCrop("ExperienceCrop");
-	    FireCrop = registerBlockCrop("FireCrop");
-	    GlowstoneCrop = registerBlockCrop("GlowstoneCrop");
-	    LapisCrop = registerBlockCrop("LapisCrop");
-	    NatureCrop = registerBlockCrop("NatureCrop");
-	    NetherCrop = registerBlockCrop("NetherCrop");
-	    ObsidianCrop = registerBlockCrop("ObsidianCrop");
-	    QuartzCrop = registerBlockCrop("QuartzCrop");
-	    IronCrop = registerBlockCrop("IronCrop");
-	    GoldCrop = registerBlockCrop("GoldCrop");
-	    DiamondCrop = registerBlockCrop("DiamondCrop");
-	    RedstoneCrop = registerBlockCrop("RedstoneCrop");
+		AirCrop = registerBlockCrop("AirCrop");
+		CoalCrop = registerBlockCrop("CoalCrop");
+		DyeCrop = registerBlockCrop("DyeCrop");
+		EarthCrop = registerBlockCrop("EarthCrop");
+		EmeraldCrop = registerBlockCrop("EmeraldCrop");
+		ExperienceCrop = registerBlockCrop("ExperienceCrop");
+		FireCrop = registerBlockCrop("FireCrop");
+		GlowstoneCrop = registerBlockCrop("GlowstoneCrop");
+		LapisCrop = registerBlockCrop("LapisCrop");
+		NatureCrop = registerBlockCrop("NatureCrop");
+		NetherCrop = registerBlockCrop("NetherCrop");
+		ObsidianCrop = registerBlockCrop("ObsidianCrop");
+		QuartzCrop = registerBlockCrop("QuartzCrop");
+		IronCrop = registerBlockCrop("IronCrop");
+		GoldCrop = registerBlockCrop("GoldCrop");
+		DiamondCrop = registerBlockCrop("DiamondCrop");
+		RedstoneCrop = registerBlockCrop("RedstoneCrop");
 		WaterCrop = registerBlockCrop("WaterCrop");
 
 		// Food
@@ -125,9 +122,9 @@ public class ModBlocks {
 		DonutCrop = registerBlockCrop("DonutCrop");
 		CakeCrop = registerBlockCrop("CakeCrop");
 
-        // Mob crops
+		// Mob crops
 
-        BlazeCrop = registerBlockCrop("BlazeCrop");
+		BlazeCrop = registerBlockCrop("BlazeCrop");
 		ChickenCrop = registerBlockCrop("ChickenCrop");
 		CowCrop = registerBlockCrop("CowCrop");
 		CreeperCrop = registerBlockCrop("CreeperCrop");
@@ -201,17 +198,17 @@ public class ModBlocks {
 			TinCrop = registerBlockCrop("TinCrop");
 		}
 
-		if(Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep")|| Loader.isModLoaded("immersiveengineering")) {
+		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("immersiveengineering")) {
 			SilverCrop = registerBlockCrop("SilverCrop");
 			LeadCrop = registerBlockCrop("LeadCrop");
 		}
 
-		if(Loader.isModLoaded("Mekanism")) {
+		if (Loader.isModLoaded("Mekanism")) {
 			OsmiumCrop = registerBlockCrop("OsmiumCrop");
 		}
-	     
-	     MinicioOre = registerMiscBlock("MinicioOre").setHardness(2);
-	     
+
+		MinicioOre = registerMiscBlock("MinicioOre").setHardness(2);
+
 	}
 
 	private static Block registerSpecialBlockCrop(String regName) {
@@ -220,34 +217,34 @@ public class ModBlocks {
 
 		return registerBlock(regName, null, MagicalCrop);
 	}
-	
-	 private static Block registerBlockCrop(String regName) {
-	        final Block MagicalCrop = new CropBlocks(regName);
-	        //final ItemBlock itemBlock = new ItemBlock(MagicalCrop);
 
-	        return registerBlock(regName, null, MagicalCrop);
-	 }
+	private static Block registerBlockCrop(String regName) {
+		final Block MagicalCrop = new CropBlocks(regName);
+		//final ItemBlock itemBlock = new ItemBlock(MagicalCrop);
 
-	    private static Block registerBlock(String regName, ItemBlock itemBlock, Block block) {
-	        block.setRegistryName(regName);
-	        block.setUnlocalizedName(regName);
+		return registerBlock(regName, null, MagicalCrop);
+	}
 
-	        GameRegistry.register(block);
+	private static Block registerBlock(String regName, ItemBlock itemBlock, Block block) {
+		block.setRegistryName(regName);
+		block.setUnlocalizedName(regName);
 
-			if (block instanceof PrimordialBlock) {
-				itemBlock.setRegistryName(regName);
-				itemBlock.setUnlocalizedName(regName);
-				GameRegistry.register(itemBlock);
-			}
-	        return block;
-	    }
-	    
-	    
-		 private static Block registerMiscBlock(String regName) {
-		        final Block MagicalBlock = new PrimordialBlock(regName);
-		        final ItemBlock itemBlock = new ItemBlock(MagicalBlock);
+		GameRegistry.register(block);
 
-		        return registerBlock(regName, itemBlock, MagicalBlock);
-		 }
-		 
+		if (block instanceof PrimordialBlock) {
+			itemBlock.setRegistryName(regName);
+			itemBlock.setUnlocalizedName(regName);
+			GameRegistry.register(itemBlock);
+		}
+		return block;
+	}
+
+
+	private static Block registerMiscBlock(String regName) {
+		final Block MagicalBlock = new PrimordialBlock(regName);
+		final ItemBlock itemBlock = new ItemBlock(MagicalBlock);
+
+		return registerBlock(regName, itemBlock, MagicalBlock);
+	}
+
 }

@@ -1,6 +1,5 @@
 package killbait.PrimordialCrops.Registry;
 
-import killbait.PrimordialCrops.Utils.LogHelper;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
@@ -8,8 +7,8 @@ import net.minecraftforge.fml.common.Loader;
 
 public class ItemRenderRegistry {
 
-	
-    public static void registerItemRenderer() {
+
+	public static void registerItemRenderer() {
 
 		// Vanilla/Elemental Seeds
 		reg(ModSeeds.DiamondSeeds);
@@ -39,18 +38,18 @@ public class ItemRenderRegistry {
 
 		// Mob Seeds
 
-        reg(ModSeeds.BlazeSeeds);
-        reg(ModSeeds.ChickenSeeds);
-        reg(ModSeeds.CowSeeds);
-        reg(ModSeeds.CreeperSeeds);
-        reg(ModSeeds.EnderSeeds);
-        reg(ModSeeds.GhastSeeds);
-        reg(ModSeeds.PigSeeds);
-        reg(ModSeeds.SheepSeeds);
-        reg(ModSeeds.SkeletonSeeds);
-        reg(ModSeeds.SlimeSeeds);
-        reg(ModSeeds.SpiderSeeds);
-        reg(ModSeeds.WitherSeeds);
+		reg(ModSeeds.BlazeSeeds);
+		reg(ModSeeds.ChickenSeeds);
+		reg(ModSeeds.CowSeeds);
+		reg(ModSeeds.CreeperSeeds);
+		reg(ModSeeds.EnderSeeds);
+		reg(ModSeeds.GhastSeeds);
+		reg(ModSeeds.PigSeeds);
+		reg(ModSeeds.SheepSeeds);
+		reg(ModSeeds.SkeletonSeeds);
+		reg(ModSeeds.SlimeSeeds);
+		reg(ModSeeds.SpiderSeeds);
+		reg(ModSeeds.WitherSeeds);
 		reg(ModSeeds.ZombieSeeds);
 
 
@@ -84,17 +83,17 @@ public class ItemRenderRegistry {
 		// Mob Essence
 
 		reg(ModItems.BlazeEssence);
-        reg(ModItems.ChickenEssence);
-        reg(ModItems.CowEssence);
+		reg(ModItems.ChickenEssence);
+		reg(ModItems.CowEssence);
 		reg(ModItems.CreeperEssence);
-        reg(ModItems.EnderEssence);
-        reg(ModItems.GhastEssence);
-        reg(ModItems.PigEssence);
-        reg(ModItems.SheepEssence);
-        reg(ModItems.SkeletonEssence);
-        reg(ModItems.SlimeEssence);
-        reg(ModItems.SpiderEssence);
-        reg(ModItems.WitherEssence);
+		reg(ModItems.EnderEssence);
+		reg(ModItems.GhastEssence);
+		reg(ModItems.PigEssence);
+		reg(ModItems.SheepEssence);
+		reg(ModItems.SkeletonEssence);
+		reg(ModItems.SlimeEssence);
+		reg(ModItems.SpiderEssence);
+		reg(ModItems.WitherEssence);
 		reg(ModItems.ZombieEssence);
 
 		// Crafting Essence
@@ -151,7 +150,6 @@ public class ItemRenderRegistry {
 			reg(ModItems.ElectrumEssence);
 
 
-
 			reg(ModSeeds.ConstantanSeeds);
 			reg(ModItems.ConstantanEssence);
 		}
@@ -199,8 +197,7 @@ public class ItemRenderRegistry {
 		}
 
 
-
-			if(Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("forestry") || Loader.isModLoaded("immersiveengineering")) {
+		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("forestry") || Loader.isModLoaded("immersiveengineering")) {
 			reg(ModSeeds.CopperSeeds);
 			reg(ModItems.CopperEssence);
 			reg(ModItems.CopperIngot);
@@ -209,7 +206,7 @@ public class ItemRenderRegistry {
 			reg(ModItems.TinIngot);
 		}
 
-		if(Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep")|| Loader.isModLoaded("immersiveengineering")) {
+		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("immersiveengineering")) {
 			reg(ModSeeds.SilverSeeds);
 			reg(ModItems.SilverEssence);
 			reg(ModItems.SilverIngot);
@@ -218,18 +215,18 @@ public class ItemRenderRegistry {
 			reg(ModItems.LeadIngot);
 		}
 
-		if(Loader.isModLoaded("Mekanism")) {
-			 reg(ModSeeds.OsmiumSeeds);
-			 reg(ModItems.OsmiumEssence);
-             reg(ModItems.OsmiumIngot);
+		if (Loader.isModLoaded("Mekanism")) {
+			reg(ModSeeds.OsmiumSeeds);
+			reg(ModItems.OsmiumEssence);
+			reg(ModItems.OsmiumIngot);
 		}
 
 
-		}
+	}
 
-	    public static void reg(Item item) {
-	        ModelResourceLocation res = new ModelResourceLocation(item.getRegistryName().toString(), "inventory");
+	public static void reg(Item item) {
+		ModelResourceLocation res = new ModelResourceLocation(item.getRegistryName().toString(), "inventory");
 
-	        ModelLoader.setCustomModelResourceLocation(item, 0, res);
-	    }
+		ModelLoader.setCustomModelResourceLocation(item, 0, res);
+	}
 }

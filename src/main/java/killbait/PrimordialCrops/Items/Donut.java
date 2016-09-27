@@ -5,9 +5,9 @@ import net.minecraft.item.ItemFood;
 
 public class Donut extends ItemFood {
 
-    public Donut(int amount, boolean isWolfFood) {
-        super(amount, isWolfFood);
-        this.setCreativeTab(PrimordialCrops.PrimordialCrops);
-        this.setUnlocalizedName("Donut");
-    }
+	public Donut(int amount, boolean isWolfFood) {
+		super(amount, isWolfFood);
+		this.setCreativeTab(PrimordialCrops.PrimordialCrops);
+		this.setUnlocalizedName("Donut");
+	}
 }

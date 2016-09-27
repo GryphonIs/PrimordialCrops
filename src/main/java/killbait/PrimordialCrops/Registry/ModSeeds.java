@@ -44,17 +44,17 @@ public class ModSeeds {
 	public static Item WaterSeeds;
 
 	public static Item BlazeSeeds;
-    public static Item ChickenSeeds;
-    public static Item CowSeeds;
-    public static Item CreeperSeeds;
-    public static Item EnderSeeds;
-    public static Item GhastSeeds;
-    public static Item PigSeeds;
-    public static Item SheepSeeds;
-    public static Item SkeletonSeeds;
-    public static Item SlimeSeeds;
-    public static Item SpiderSeeds;
-    public static Item WitherSeeds;
+	public static Item ChickenSeeds;
+	public static Item CowSeeds;
+	public static Item CreeperSeeds;
+	public static Item EnderSeeds;
+	public static Item GhastSeeds;
+	public static Item PigSeeds;
+	public static Item SheepSeeds;
+	public static Item SkeletonSeeds;
+	public static Item SlimeSeeds;
+	public static Item SpiderSeeds;
+	public static Item WitherSeeds;
 	public static Item ZombieSeeds;
 
 	// Food
@@ -93,9 +93,6 @@ public class ModSeeds {
 	public static Item DragonEggSeeds;
 
 
-
-
-
 	public static void init() {
 
 		MinicioSeeds = regSeeds("MinicioSeeds", ModBlocks.MinicioCrop);
@@ -123,17 +120,17 @@ public class ModSeeds {
 		CakeSeeds = regSeeds("CakeSeeds", ModBlocks.CakeCrop);
 
 		BlazeSeeds = regSeeds("BlazeSeeds", ModBlocks.BlazeCrop);
-        ChickenSeeds = regSeeds("ChickenSeeds", ModBlocks.ChickenCrop);
-        CowSeeds = regSeeds("CowSeeds", ModBlocks.CowCrop);
+		ChickenSeeds = regSeeds("ChickenSeeds", ModBlocks.ChickenCrop);
+		CowSeeds = regSeeds("CowSeeds", ModBlocks.CowCrop);
 		CreeperSeeds = regSeeds("CreeperSeeds", ModBlocks.CreeperCrop);
-        EnderSeeds = regSeeds("EnderSeeds", ModBlocks.EnderCrop);
-        GhastSeeds = regSeeds("GhastSeeds", ModBlocks.GhastCrop);
-        PigSeeds = regSeeds("PigSeeds", ModBlocks.PigCrop);
-        SheepSeeds = regSeeds("SheepSeeds", ModBlocks.SheepCrop);
-        SkeletonSeeds = regSeeds("SkeletonSeeds", ModBlocks.SkeletonCrop);
-        SlimeSeeds = regSeeds("SlimeSeeds", ModBlocks.SlimeCrop);
-        SpiderSeeds = regSeeds("SpiderSeeds", ModBlocks.SpiderCrop);
-        WitherSeeds = regSeeds("WitherSeeds", ModBlocks.WitherCrop);
+		EnderSeeds = regSeeds("EnderSeeds", ModBlocks.EnderCrop);
+		GhastSeeds = regSeeds("GhastSeeds", ModBlocks.GhastCrop);
+		PigSeeds = regSeeds("PigSeeds", ModBlocks.PigCrop);
+		SheepSeeds = regSeeds("SheepSeeds", ModBlocks.SheepCrop);
+		SkeletonSeeds = regSeeds("SkeletonSeeds", ModBlocks.SkeletonCrop);
+		SlimeSeeds = regSeeds("SlimeSeeds", ModBlocks.SlimeCrop);
+		SpiderSeeds = regSeeds("SpiderSeeds", ModBlocks.SpiderCrop);
+		WitherSeeds = regSeeds("WitherSeeds", ModBlocks.WitherCrop);
 		ZombieSeeds = regSeeds("ZombieSeeds", ModBlocks.ZombieCrop);
 
 		NetherStarSeeds = regSpecialSeeds("NetherStarSeeds", ModBlocks.NetherStarCrop);
@@ -189,7 +186,7 @@ public class ModSeeds {
 			TinSeeds = regSeeds("TinSeeds", ModBlocks.TinCrop);
 		}
 
-		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep")|| Loader.isModLoaded("immersiveengineering")) {
+		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("immersiveengineering")) {
 			SilverSeeds = regSeeds("SilverSeeds", ModBlocks.SilverCrop);
 			LeadSeeds = regSeeds("LeadSeeds", ModBlocks.LeadCrop);
 		}

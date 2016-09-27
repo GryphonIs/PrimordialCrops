@@ -28,7 +28,7 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
     public final String regName;
 
     public CropBlocks(String regName) {
-    	super();
+        super();
         this.regName = regName;
         this.setDefaultState(blockState.getBaseState().withProperty(AGE, 0));
     }
@@ -52,7 +52,7 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
     protected Item getSeeds() {
         final Item seeds = ModSeeds.seedsMap.get(this);
 
-        if(seeds == null) {
+        if (seeds == null) {
             FMLLog.bigWarning("No seeds detected!");
             return new Item();
         }
@@ -71,7 +71,7 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
 
     protected Item getHarvestedItem() {
         final Item harvestedItem = ModItems.harvestedItemMap.get(this);
-        if(harvestedItem == null) {
+        if (harvestedItem == null) {
             FMLLog.bigWarning("No drop registered!");
             return new Item();
         }
@@ -87,13 +87,13 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
     public void updateTick(World world, BlockPos pos, IBlockState state, Random rnd) {
         this.checkAndDropBlock(world, pos, state);
 
-        if(world.getLightFromNeighbors(pos.up()) >= 9) {
+        if (world.getLightFromNeighbors(pos.up()) >= 9) {
             int i = this.getMetaFromState(state);
 
-            if(i < this.getHarvestReadyAge()) {
+            if (i < this.getHarvestReadyAge()) {
                 float f = getGrowthChance(this, world, pos);
 
-                if(rnd.nextInt((int) (25.0F / f) + 1) == 0) {
+                if (rnd.nextInt((int) (25.0F / f) + 1) == 0) {
                     world.setBlockState(pos, this.getStateFromMeta(i + 1), 2);
                 }
             }
@@ -102,9 +102,9 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
 
     @Override
     public Item getItemDropped(IBlockState state, Random rnd, int fortune) {
-        if(!isHarvestReady(state)) {
+        if (!isHarvestReady(state)) {
             return getSeeds();
-        }else{
+        } else {
             return getHarvestedItem();
         }
     }
@@ -163,7 +163,7 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
         int newGrowth = getMetaFromState(state) + getRandomInt(world);
         int maxGrowth = getHarvestReadyAge();
 
-        if(newGrowth > maxGrowth) {
+        if (newGrowth > maxGrowth) {
             newGrowth = maxGrowth;
         }
 
@@ -191,19 +191,19 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
 
         // how many essence to give
         int count = quantityDropped(state, fortune, rnd);
-        for(int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             Item item = this.getItemDropped(state, rnd, fortune);
-            if(item != null) {
+            if (item != null) {
                 ret.add(new ItemStack(item, 1, this.damageDropped(state)));
             }
         }
 
         // how many seeds to give
-        if(age >= getHarvestReadyAge()) {
+        if (age >= getHarvestReadyAge()) {
             if ((Math.random() * 100) <= 20) { // TODO replace chance % with config file option
                 //System.out.println("Extra seed chance");
                 extraseed = 1 + (1 * fortune);
-            }else {
+            } else {
                 extraseed = 0;
             }
             ret.add(new ItemStack(this.getSeeds(), 1 + extraseed, 0));

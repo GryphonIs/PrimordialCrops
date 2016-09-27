@@ -3,7 +3,6 @@ package killbait.PrimordialCrops.Seeds;
 import killbait.PrimordialCrops.PrimordialCrops;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemSeeds;
-import scala.Int;
 
 public class CropSeeds extends ItemSeeds {
 

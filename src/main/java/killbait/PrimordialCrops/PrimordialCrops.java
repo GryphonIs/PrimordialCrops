@@ -11,44 +11,36 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 // TODO: Add config file support
-// TODO: Dragon Egg/Nether Star Crops with altered seed mechanic
 // TODO: Tier'ed seed give more essence back?
 // TODO: Save the world/Feed The Whales/Cure world hunger and other misc stuff :)
 
 @Mod(modid = Info.MODID, version = Info.VERSION, name = Info.MODNAME)
 public class PrimordialCrops {
-		
-	@SidedProxy(clientSide="killbait.PrimordialCrops.proxy.ClientProxy", serverSide="killbait.PrimordialCrops.proxy.ServerProxy")
+
+	@SidedProxy(clientSide = "killbait.PrimordialCrops.proxy.ClientProxy", serverSide = "killbait.PrimordialCrops.proxy.ServerProxy")
 	public static killbait.PrimordialCrops.proxy.CommonProxy proxy;
-	
-	 @EventHandler
-	    public void preInit(FMLPreInitializationEvent e) 
-	    {
-		 this.proxy.preInit(e);
-	    }
+	public static CreativeTabs PrimordialCrops = new CreativeTabs("PrimordialCrops") {
+		@Override
+		public Item getTabIconItem() {
+			return ModSeeds.MinicioSeeds;
+		}
 
-	    @EventHandler
-	    public void init(FMLInitializationEvent e) 
-	    {
-		 this.proxy.init(e);
-	    }
+	};
 
-	    @EventHandler
-	    public void postInit(FMLPostInitializationEvent e) 
-	    {
-	    	this.proxy.postInit(e);
-	    	
-	    }
-	    
-	    
-	    public static CreativeTabs PrimordialCrops = new CreativeTabs("PrimordialCrops")
-	    {
-	        @Override
-	        public Item getTabIconItem()
-	        {
-	            return ModSeeds.MinicioSeeds;
-	        }
-	        
-	    };
-	    
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent e) {
+		this.proxy.preInit(e);
+	}
+
+	@EventHandler
+	public void init(FMLInitializationEvent e) {
+		this.proxy.init(e);
+	}
+
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent e) {
+		this.proxy.postInit(e);
+
+	}
+
 }

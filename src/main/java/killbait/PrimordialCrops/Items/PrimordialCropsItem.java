@@ -5,17 +5,17 @@ import net.minecraft.item.Item;
 
 public class PrimordialCropsItem extends Item {
 
-    protected String name;
+	protected String name;
 
-    public PrimordialCropsItem(String name) {
-        this.name = name;
-        setUnlocalizedName(name);
-        setRegistryName(name);
-    }
+	public PrimordialCropsItem(String name) {
+		this.name = name;
+		setUnlocalizedName(name);
+		setRegistryName(name);
+	}
 
-    @Override
-    public PrimordialCropsItem setCreativeTab(CreativeTabs tab) {
-        super.setCreativeTab(tab);
-        return this;
-    }
+	@Override
+	public PrimordialCropsItem setCreativeTab(CreativeTabs tab) {
+		super.setCreativeTab(tab);
+		return this;
+	}
 }
