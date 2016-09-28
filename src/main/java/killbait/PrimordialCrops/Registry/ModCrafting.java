@@ -2,6 +2,7 @@ package killbait.PrimordialCrops.Registry;
 
 
 import killbait.PrimordialCrops.Utils.LogHelper;
+import killbait.PrimordialCrops.Utils.PrimordialConfig;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -220,14 +221,22 @@ public class ModCrafting {
 
 		// Special Stuff
 
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.NetherStarSeeds), new Object[]{"aga", "g1g", "aga", 'a', ModItems.ZivicioEssence, 'g', Items.NETHER_STAR, '1', "InfusionStoneT5Plus"}));
-		GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), new Object[]{"sss", "szs", "sss", 's', ModItems.NetherStarEssence, 'z', ModItems.ZivicioEssence});
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DragonEggSeeds), new Object[]{"zdz", "e5e", "zez", 'z', ModItems.ZivicioEssence, 'd', Blocks.DRAGON_EGG, '5', "InfusionStoneT5Plus", 'e', ModItems.EnderEssence}));
-		GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG, 1), new Object[]{"ddd", "dzd", "ddd", 'd', ModItems.DragonEggEssence, 'z', ModItems.ZivicioEssence});
+		if (PrimordialConfig.specialCropsAreTooHard) {
+			// Easy recipes
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.NetherStarSeeds), new Object[]{"aga", "n1n", "aga", 'a', ModItems.CrucioEssence, 'g', Items.NETHER_STAR, 'n', ModItems.NetherEssence, '1', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), new Object[]{"sss", "s s", "sss", 's', ModItems.NetherStarEssence});
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DragonEggSeeds), new Object[]{"zdz", "e5e", "zez", 'z', ModItems.CrucioEssence, 'd', Blocks.DRAGON_EGG, '5', "InfusionStoneT3Plus", 'e', ModItems.EnderEssence}));
+			GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG, 1), new Object[]{"ddd", "d d", "ddd", 'd', ModItems.DragonEggEssence});
+		} else {
+			//Hard Recipes
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.NetherStarSeeds), new Object[]{"aga", "g1g", "aga", 'a', ModItems.ZivicioEssence, 'g', Items.NETHER_STAR, '1', "InfusionStoneT5Plus"}));
+			GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), new Object[]{"sss", "szs", "sss", 's', ModItems.NetherStarEssence, 'z', ModItems.ZivicioEssence});
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DragonEggSeeds), new Object[]{"zdz", "e5e", "zez", 'z', ModItems.ZivicioEssence, 'd', Blocks.DRAGON_EGG, '5', "InfusionStoneT5Plus", 'e', ModItems.EnderEssence}));
+			GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG, 1), new Object[]{"ddd", "dzd", "ddd", 'd', ModItems.DragonEggEssence, 'z', ModItems.ZivicioEssence});
+		}
 
 
 		// Random Stuff
-		//GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG), new Object[]{"XXX","XYX","XXX", 'X', ModItems.ZivicioEssence, 'Y', Items.NETHER_STAR});
 		GameRegistry.addRecipe(new ItemStack(Items.GOLDEN_APPLE), new Object[]{"XXX", "XYX", "XXX", 'X', ModItems.GoldEssence, 'Y', Items.APPLE});
 		GameRegistry.addRecipe(new ItemStack(Items.BUCKET), new Object[]{"   ", "X X", " X ", 'X', ModItems.IronEssence});
 		GameRegistry.addRecipe(new ItemStack(Items.SADDLE), new Object[]{"XYX", "YDY", "   ", 'X', ModItems.FireEssence, 'Y', ModItems.EarthEssence, 'D', ModItems.DiamondEssence});

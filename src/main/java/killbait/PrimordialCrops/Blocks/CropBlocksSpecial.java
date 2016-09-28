@@ -2,6 +2,7 @@ package killbait.PrimordialCrops.Blocks;
 
 import killbait.PrimordialCrops.Registry.ModItems;
 import killbait.PrimordialCrops.Registry.ModSeeds;
+import killbait.PrimordialCrops.Utils.PrimordialConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.IGrowable;
@@ -201,8 +202,7 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 
 		// how many seeds to give
 		if (age >= getHarvestReadyAge()) {
-			if ((Math.random() * 100) <= 3) { // TODO replace chance % with config file option
-				//System.out.println("Extra seed chance");
+			if ((Math.random() * 100) <= PrimordialConfig.specialSeedExtraChance) {
 				extraseed = 1 + (1 * fortune);
 			} else {
 				extraseed = 0;
