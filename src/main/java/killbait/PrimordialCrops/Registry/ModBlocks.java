@@ -87,11 +87,14 @@ public class ModBlocks {
 	public static Block LudicriteCrop;
 	public static Block CyaniteCrop;
 	public static Block BlutoniumCrop;
+	public static Block DraconiumCrop;
+	public static Block AwakeDraconiumCrop;
 
 	public static Block NetherStarCrop;
 	public static Block DragonEggCrop;
 
 	public static Block MinicioOre;
+	public static Block UraniumOre;
 
 	public static void init() {
 
@@ -175,6 +178,7 @@ public class ModBlocks {
 
 		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("immersiveengineering")) {
 			UraniumCrop = registerBlockCrop("UraniumCrop");
+			UraniumOre = registerMiscBlock("UraniumOre").setHardness(2);
 			SteelCrop = registerBlockCrop("SteelCrop");
 		}
 
@@ -207,7 +211,13 @@ public class ModBlocks {
 			OsmiumCrop = registerBlockCrop("OsmiumCrop");
 		}
 
+		if (Loader.isModLoaded("draconicevolution")) {
+			DraconiumCrop = registerBlockCrop("DraconiumCrop");
+			AwakeDraconiumCrop = registerBlockCrop("AwakeDraconiumCrop");
+		}
+
 		MinicioOre = registerMiscBlock("MinicioOre").setHardness(2);
+
 
 	}
 

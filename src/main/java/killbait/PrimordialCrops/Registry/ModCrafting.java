@@ -322,6 +322,13 @@ public class ModCrafting {
 			GameRegistry.addRecipe(getOreDictItemWithMeta("ingotOsmium", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.OsmiumEssence});
 		}
 
+		if (Loader.isModLoaded("draconicevolution")) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.DraconiumSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotDraconium", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
+			GameRegistry.addRecipe(getOreDictItemWithMeta("ingotDraconium", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.DraconiumEssence});
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.AwakeDraconiumSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotDraconiumAwakened", 'X', ModItems.ZivicioEssence, 'Z', "InfusionStoneT5Plus"}));
+			GameRegistry.addRecipe(getOreDictItemWithMeta("ingotDraconiumAwakened", 4), new Object[]{"XXX", "XzX", "XXX", 'X', ModItems.AwakeDraconiumEssence, 'z', ModItems.ZivicioEssence});
+		}
+
 		//
 		// Hacky way to detect common mod items, so we don't register the same thing multiple times
 		//
@@ -331,43 +338,43 @@ public class ModCrafting {
 		if (OreDictionary.doesOreNameExist("ingotBronze")) {
 			LogHelper.info("Detected oreDictionary name 'ingotBronze', adding support for Bronze seeds/crafting recipes");
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.BronzeSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotBronze", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"}));
-			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotBronze", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.BronzeEssence}));
+			GameRegistry.addRecipe(new ItemStack(ModItems.BronzeIngot, 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.BronzeEssence});
 		}
 
 		if (OreDictionary.doesOreNameExist("oreUranium")) {
 			LogHelper.info("Detected oreDictionary name 'oreUranium', adding support for Uranium seeds/crafting recipes");
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.UraniumSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "oreUranium", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
-			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("oreUranium", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.UraniumEssence}));
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.UraniumOre, 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.UraniumEssence});
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotSteel")) {
 			LogHelper.info("Detected oreDictionary name 'ingotSteel', adding support for Steel seeds/crafting recipes");
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.SteelSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotSteel", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"}));
-			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotSteel", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.SteelEssence}));
+			GameRegistry.addRecipe(new ItemStack(ModItems.SteelIngot, 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.SteelEssence});
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotCopper")) {
 			LogHelper.info("Detected oreDictionary name 'ingotCopper', adding support for Copper seeds/crafting recipes");
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.CopperSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotCopper", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
-			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotCopper", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.CopperEssence}));
+			GameRegistry.addRecipe(new ItemStack(ModItems.CopperIngot, 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.CopperEssence});
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotTin")) {
 			LogHelper.info("Detected oreDictionary name 'ingotTin', adding support for Tin seeds/crafting recipes");
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.TinSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotTin", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
-			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotTin", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.TinEssence}));
+			GameRegistry.addRecipe(new ItemStack(ModItems.TinIngot, 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.TinEssence});
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotLead")) {
 			LogHelper.info("Detected oreDictionary name 'ingotLead', adding support for Lead seeds/crafting recipes");
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.LeadSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotLead", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
-			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotLead", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.LeadEssence}));
+			GameRegistry.addRecipe(new ItemStack(ModItems.LeadIngot, 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.LeadEssence});
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotSilver")) {
 			LogHelper.info("Detected oreDictionary name 'ingotSilver', adding support for Silver seeds/crafting recipes");
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModSeeds.SilverSeeds), new Object[]{"XYX", "YZY", "XYX", 'Y', "ingotSilver", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"}));
-			GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("ingotSilver", 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.SilverEssence}));
+			GameRegistry.addRecipe(new ItemStack(ModItems.SilverIngot, 4), new Object[]{"XXX", "X X", "XXX", 'X', ModItems.SilverEssence});
 		}
 	}
 

@@ -88,6 +88,8 @@ public class ModSeeds {
 	public static Item LudicriteSeeds;
 	public static Item CyaniteSeeds;
 	public static Item BlutoniumSeeds;
+	public static Item DraconiumSeeds;
+	public static Item AwakeDraconiumSeeds;
 
 	public static Item NetherStarSeeds;
 	public static Item DragonEggSeeds;
@@ -193,6 +195,11 @@ public class ModSeeds {
 
 		if (Loader.isModLoaded("Mekanism")) {
 			OsmiumSeeds = regSeeds("OsmiumSeeds", ModBlocks.OsmiumCrop);
+		}
+
+		if (Loader.isModLoaded("draconicevolution")) {
+			DraconiumSeeds = regSeeds("DraconiumSeeds", ModBlocks.DraconiumCrop);
+			AwakeDraconiumSeeds = regSeeds("AwakeDraconiumSeeds", ModBlocks.AwakeDraconiumCrop);
 		}
 
 		//MCSeeds = new Item[] {CoalSeeds, IronSeeds, GoldSeeds, DiamondSeeds, LapisSeeds, RedstoneSeeds, QuartzSeeds, ObsidianSeeds, NetherSeeds, NatureSeeds, LapisSeeds, GlowstoneSeeds, FireSeeds, ExperienceSeeds, EmeraldSeeds, EnderSeeds, EarthSeeds, DyeSeeds, AirSeeds, MinicioSeeds};

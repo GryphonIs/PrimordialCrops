@@ -117,6 +117,8 @@ public class ModItems {
 	public static Item LudicriteEssence;
 	public static Item CyaniteEssence;
 	public static Item BlutoniumEssence;
+	public static Item DraconiumEssence;
+	public static Item AwakeDraconiumEssence;
 	public static Item CakeEssence;
 	public static Item NetherStarEssence;
 	public static Item DragonEggEssence;
@@ -127,6 +129,8 @@ public class ModItems {
 	public static Item SilverIngot;
 	public static Item LeadIngot;
 	public static Item OsmiumIngot;
+	public static Item BronzeIngot;
+	public static Item SteelIngot;
 
 	public static void init() {
 
@@ -223,10 +227,12 @@ public class ModItems {
 		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("immersiveengineering")) {
 			UraniumEssence = regHarvestItem("UraniumEssence", ModBlocks.UraniumCrop);
 			SteelEssence = regHarvestItem("SteelEssence", ModBlocks.SteelCrop);
+			SteelIngot = regCraftItem("SteelIngot");
 		}
 
 		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("forestry")) {
 			BronzeEssence = regHarvestItem("BronzeEssence", ModBlocks.BronzeCrop);
+			BronzeIngot = regCraftItem("BronzeIngot");
 		}
 
 		if (Loader.isModLoaded("forestry")) {
@@ -259,6 +265,11 @@ public class ModItems {
 		if (Loader.isModLoaded("Mekanism")) {
 			OsmiumIngot = regCraftItem("OsmiumIngot");
 			OsmiumEssence = regHarvestItem("OsmiumEssence", ModBlocks.OsmiumCrop);
+		}
+
+		if (Loader.isModLoaded("draconicevolution")) {
+			DraconiumEssence = regHarvestItem("DraconiumEssence", ModBlocks.DraconiumCrop);
+			AwakeDraconiumEssence = regHarvestItem("AwakeDraconiumEssence", ModBlocks.AwakeDraconiumCrop);
 		}
 
 

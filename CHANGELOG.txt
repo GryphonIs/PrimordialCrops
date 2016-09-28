@@ -6,9 +6,9 @@
  * V1.6b Changelog
  * ---------------
  *
- * Added 20 Mod based crops
- * Added 2 Special Crops (Nether Star, Dragon Egg)
- * Added 1 Food Crop
+ * Added 23 new Mod based crops.
+ * Added 2 Special Crops (Nether Star, Dragon Egg).
+ * Added 1 Food Crop.
  *
  * Primordial Crops now has crops for the following mod resources.
  *
@@ -20,19 +20,24 @@
  * - IC2 Experimental : (Rubber, Copper, Lead, Silver, Tin, Uranium, Bronze, Steel)
  * - Forestry: (Bronze, Tin, Copper, Apatite)
  * - Extreme Reactors : (Yellorite, Ludicrite, Cyanite, Blutonium)
+ * - Draconic Evolution : (Draconium, Awakened Draconium)
  *
+ *  Any suggestions for mods to support/add crops for, let me know in comments section.
  *
  * New Special Crops added for NetherStars and DragonEgg.
  *
- * -- Special Crops have a VERY low chance of dropping extra seeds (2%)
- *    and need high tier items for crafting the seeds.
+ * -- Special Crops have a VERY low chance of dropping extra seeds (3%)
+ *    and need high tier items to craft them.
 
  *    please leave feedback if you think these 2 crops have balance/recipe issues, please note
- *    the recipe's and extra seed % are "Work In Progress".
+ *    the recipe's and extra seed percentage are "Work In Progress".
  *
  *
- * Cake Crop added - *cough* Mana Production *cough* :-P
- *
+ * - Cake Crop added - *cough* Mana Production *cough* :-P
+
+ * - Worldgen change
+ *   Minicio Ore should now generate in every dimension apart from the nether and the end.
+ *   A retrogen mod will be need to update existing worlds.
  *
  * v1.6a Changelog - First update by me (KillBait!)
  * ---------------

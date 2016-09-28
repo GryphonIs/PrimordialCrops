@@ -61,6 +61,10 @@ item.BlutoniumSeeds.name=Blutonium Seed
 item.QuartzEnIronSeeds.name=Quartz Enriched Iron Seed
 item.NetherStarSeeds.name=NetherStar Seed
 item.DragonEggSeeds.name=DragonEgg Seed
+item.RubberSeeds.name=Rubber Seed
+item.DraconiumSeeds.name=Draconium Seed
+item.AwakeDraconiumSeeds.name=Awakened Draconium Seed
+item.CakeSeeds.name=Cake Seed
 
 item.AirEssence.name=Air Essence
 item.CoalEssence.name=Coal Essence
@@ -122,6 +126,10 @@ item.BlutoniumEssence.name=Blutonium Essence
 item.QuartzEnIronEssence.name=Quartz Enriched Iron Essence
 item.NetherStarEssence.name=NetherStar Essence
 item.DragonEggEssence.name=DragonEgg Essence
+item.RubberEssence.name=Rubber Essence
+item.DraconiumEssence.name=Draconium Essence
+item.AwakeDraconiumEssence.name=Awakened Draconium Essence
+item.CakeEssence.name=Cake Essence
 
 
 
@@ -141,9 +149,12 @@ item.CopperIngot.name=Copper Ingot
 item.SilverIngot.name=Silver Ingot
 item.TinIngot.name=Tin Ingot
 item.OsmiumIngot.name=Osmium Ingot
+item.BronzeIngot.name=Bronze Ingot
+item.SteelIngot.name=Steel Ingot
 
 item.MinicioEssence.name=Minicio Essence
 tile.MinicioOre.name=Minicio Ore
+tile.UraniumOre.name=Uranium Ore
 item.Donut.name=Donut
 
 item.ZivicioSword.name=Zivicio Sword

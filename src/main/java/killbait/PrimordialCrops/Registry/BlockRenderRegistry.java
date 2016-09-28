@@ -10,6 +10,7 @@ public class BlockRenderRegistry {
 	public static void registerBlockRenderer() {
 
 		reg(ModBlocks.MinicioOre);
+		reg(ModBlocks.UraniumOre);
 	}
 
 	public static void reg(Block block) {

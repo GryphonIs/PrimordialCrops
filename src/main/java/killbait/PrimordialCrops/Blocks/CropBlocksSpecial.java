@@ -201,7 +201,7 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 
 		// how many seeds to give
 		if (age >= getHarvestReadyAge()) {
-			if ((Math.random() * 100) <= 5) { // TODO replace chance % with config file option
+			if ((Math.random() * 100) <= 3) { // TODO replace chance % with config file option
 				//System.out.println("Extra seed chance");
 				extraseed = 1 + (1 * fortune);
 			} else {

@@ -173,11 +173,14 @@ public class ItemRenderRegistry {
 			reg(ModItems.UraniumEssence);
 			reg(ModSeeds.SteelSeeds);
 			reg(ModItems.SteelEssence);
+			reg(ModItems.SteelIngot);
+
 		}
 
 		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("forestry")) {
 			reg(ModSeeds.BronzeSeeds);
 			reg(ModItems.BronzeEssence);
+			reg(ModItems.BronzeIngot);
 		}
 
 		if (Loader.isModLoaded("forestry")) {
@@ -219,6 +222,13 @@ public class ItemRenderRegistry {
 			reg(ModSeeds.OsmiumSeeds);
 			reg(ModItems.OsmiumEssence);
 			reg(ModItems.OsmiumIngot);
+		}
+
+		if (Loader.isModLoaded("draconicevolution")) {
+			reg(ModSeeds.DraconiumSeeds);
+			reg(ModItems.DraconiumEssence);
+			reg(ModSeeds.AwakeDraconiumSeeds);
+			reg(ModItems.AwakeDraconiumEssence);
 		}
 
 

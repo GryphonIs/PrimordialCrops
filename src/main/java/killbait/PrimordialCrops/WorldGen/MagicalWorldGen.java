@@ -38,15 +38,14 @@ public class MagicalWorldGen implements IWorldGenerator {
 						 IChunkProvider chunkProvider) {
 
 		switch (world.provider.getDimension()) {
-			case 0: //Overworld
-				this.runGenerator(this.MinicioOre, world, random, chunkX, chunkZ, 20, 0, 64);
-
-				break;
 			case -1: //Nether
 
 				break;
 			case 1: //End
 
+				break;
+			default:
+				this.runGenerator(this.MinicioOre, world, random, chunkX, chunkZ, 20, 0, 64);
 				break;
 		}
 

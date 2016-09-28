@@ -48,6 +48,14 @@ public class OreDictonaryRegistry {
 
 		OreDictionary.registerOre("InfusionStoneT5Plus", new ItemStack(ModItems.InfusionStoneT5));
 
+		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("immersiveengineering")) {
+			OreDictionary.registerOre("oreUranium", new ItemStack(ModBlocks.UraniumOre));
+			OreDictionary.registerOre("ingotSteel", new ItemStack(ModItems.SteelIngot));
+		}
+
+		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("forestry")) {
+			OreDictionary.registerOre("ingotBronze", new ItemStack(ModItems.BronzeIngot));
+		}
 
 		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("forestry") || Loader.isModLoaded("immersiveengineering")) {
 			OreDictionary.registerOre("ingotCopper", new ItemStack(ModItems.CopperIngot));
