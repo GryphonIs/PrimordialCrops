@@ -1,17 +1,20 @@
 package killbait.PrimordialCrops.Blocks;
 
-import killbait.PrimordialCrops.Registry.ModItems;
-import killbait.PrimordialCrops.Registry.ModSeeds;
-import killbait.PrimordialCrops.Utils.PrimordialConfig;
+import killbait.PrimordialCrops.Registry.ModCrops;
+import killbait.PrimordialCrops.Config.PrimordialConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -52,7 +55,7 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 	}
 
 	protected Item getSeeds() {
-		final Item seeds = ModSeeds.seedsMapSpecial.get(this);
+		final Item seeds = ModCrops.seedsMapSpecial.get(this);
 
 		if (seeds == null) {
 			FMLLog.bigWarning("No seeds detected!");
@@ -72,7 +75,7 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 	}
 
 	protected Item getHarvestedItem() {
-		final Item harvestedItem = ModItems.harvestedItemMapSpecial.get(this);
+		final Item harvestedItem = ModCrops.harvestedItemMapSpecial.get(this);
 		if (harvestedItem == null) {
 			FMLLog.bigWarning("No drop registered!");
 			return new Item();
@@ -122,15 +125,11 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 		return this.isSuitableForPlant(soilBlock);
 	}
 
-    /*
-	 * this is used for right click harvest, remove the /*  to activate
-     * TODO: Add as config option
-     *
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
-                                    ItemStack stack, EnumFacing side, float hitX, float hitY, float hitZ) {
-        if(isHarvestReady(state)) {
-            if(world.isRemote) {
+									ItemStack stack, EnumFacing side, float hitX, float hitY, float hitZ) {
+		if (PrimordialConfig.rightClickHarvest && isHarvestReady(state)) {
+			if(world.isRemote) {
                 return true;
             }
 
@@ -144,7 +143,7 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
         }
         return false;
     }
-    */
+
 
 	@Override
 	public EnumPlantType getPlantType(IBlockAccess world, BlockPos pos) {

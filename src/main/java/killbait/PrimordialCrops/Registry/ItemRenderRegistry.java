@@ -1,5 +1,6 @@
 package killbait.PrimordialCrops.Registry;
 
+import killbait.PrimordialCrops.Config.PrimordialConfig;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
@@ -11,90 +12,321 @@ public class ItemRenderRegistry {
 	public static void registerItemRenderer() {
 
 		// Vanilla/Elemental Seeds
-		reg(ModSeeds.DiamondSeeds);
-		reg(ModSeeds.IronSeeds);
-		reg(ModSeeds.GoldSeeds);
-		reg(ModSeeds.CoalSeeds);
-		reg(ModSeeds.RedstoneSeeds);
-		reg(ModSeeds.QuartzSeeds);
-		reg(ModSeeds.ObsidianSeeds);
-		reg(ModSeeds.NetherSeeds);
-		reg(ModSeeds.NatureSeeds);
-		reg(ModSeeds.LapisSeeds);
-		reg(ModSeeds.GlowstoneSeeds);
-		reg(ModSeeds.FireSeeds);
-		reg(ModSeeds.ExperienceSeeds);
-		reg(ModSeeds.EmeraldSeeds);
-		reg(ModSeeds.EarthSeeds);
-		reg(ModSeeds.DyeSeeds);
-		reg(ModSeeds.AirSeeds);
-		reg(ModSeeds.WaterSeeds);
-		reg(ModSeeds.MinicioSeeds);
+
+		reg(ModCrops.MinicioSeeds);
+		reg(ModCrops.MinicioEssence);
+
+		if (PrimordialConfig.enableAirCrop) {
+			reg(ModCrops.AirSeeds);
+			reg(ModCrops.AirEssence);
+		}
+		if (PrimordialConfig.enableBlazeCrop) {
+			reg(ModCrops.BlazeSeeds);
+			reg(ModCrops.BlazeEssence);
+		}
+		if (PrimordialConfig.enableDiamondCrop) {
+			reg(ModCrops.DiamondSeeds);
+			reg(ModCrops.DiamondEssence);
+		}
+		if (PrimordialConfig.enableIronCrop) {
+			reg(ModCrops.IronSeeds);
+			reg(ModCrops.IronEssence);
+		}
+		if (PrimordialConfig.enableGoldCrop) {
+			reg(ModCrops.GoldSeeds);
+			reg(ModCrops.GoldEssence);
+		}
+		if (PrimordialConfig.enableCoalCrop) {
+			reg(ModCrops.CoalSeeds);
+			reg(ModCrops.CoalEssence);
+		}
+		if (PrimordialConfig.enableRedstoneCrop) {
+			reg(ModCrops.RedstoneSeeds);
+			reg(ModCrops.RedstoneEssence);
+		}
+		if (PrimordialConfig.enableQuartzCrop) {
+			reg(ModCrops.QuartzSeeds);
+			reg(ModCrops.QuartzEssence);
+		}
+		if (PrimordialConfig.enableObsidianCrop) {
+			reg(ModCrops.ObsidianSeeds);
+			reg(ModCrops.ObsidianEssence);
+		}
+		if (PrimordialConfig.enableNetherCrop) {
+			reg(ModCrops.NetherSeeds);
+			reg(ModCrops.NetherEssence);
+		}
+		if (PrimordialConfig.enableNatureCrop) {
+			reg(ModCrops.NatureSeeds);
+			reg(ModCrops.NatureEssence);
+		}
+		if (PrimordialConfig.enableLapisCrop) {
+			reg(ModCrops.LapisSeeds);
+			reg(ModCrops.LapisEssence);
+		}
+		if (PrimordialConfig.enableGlowstoneCrop) {
+			reg(ModCrops.GlowstoneSeeds);
+			reg(ModCrops.GlowstoneEssence);
+		}
+		if (PrimordialConfig.enableFireCrop) {
+			reg(ModCrops.FireSeeds);
+			reg(ModCrops.FireEssence);
+		}
+		if (PrimordialConfig.enableExperienceCrop) {
+			reg(ModCrops.ExperienceSeeds);
+			reg(ModCrops.ExperienceEssence);
+		}
+		if (PrimordialConfig.enableEmeraldCrop) {
+			reg(ModCrops.EmeraldSeeds);
+			reg(ModCrops.EmeraldEssence);
+		}
+		if (PrimordialConfig.enableEarthCrop) {
+			reg(ModCrops.EarthSeeds);
+			reg(ModCrops.EarthEssence);
+		}
+		if (PrimordialConfig.enableDyeCrop) {
+			reg(ModCrops.DyeSeeds);
+			reg(ModCrops.DyeEssence);
+		}
+		if (PrimordialConfig.enableWaterCrop) {
+			reg(ModCrops.WaterSeeds);
+			reg(ModCrops.WaterEssence);
+		}
 
 		// Special Seeds
 
-		reg(ModSeeds.NetherStarSeeds);
-		reg(ModSeeds.DragonEggSeeds);
+		if (PrimordialConfig.enableNetherCrop) {
+			reg(ModCrops.NetherStarSeeds);
+			reg(ModCrops.NetherStarEssence);
+		}
+		if (PrimordialConfig.enableDragonEggCrop) {
+			reg(ModCrops.DragonEggSeeds);
+			reg(ModCrops.DragonEggEssence);
+		}
+
+		// Food Seeds
+
+		if (PrimordialConfig.enableDonutCrop) {
+			reg(ModCrops.DonutSeeds);
+			reg(ModCrops.Donut);
+			reg(ModCrops.DonutEssence);
+		}
+
+		if (PrimordialConfig.enableCakeCrop) {
+			reg(ModCrops.CakeSeeds);
+			reg(ModCrops.CakeEssence);
+		}
 
 		// Mob Seeds
 
-		reg(ModSeeds.BlazeSeeds);
-		reg(ModSeeds.ChickenSeeds);
-		reg(ModSeeds.CowSeeds);
-		reg(ModSeeds.CreeperSeeds);
-		reg(ModSeeds.EnderSeeds);
-		reg(ModSeeds.GhastSeeds);
-		reg(ModSeeds.PigSeeds);
-		reg(ModSeeds.SheepSeeds);
-		reg(ModSeeds.SkeletonSeeds);
-		reg(ModSeeds.SlimeSeeds);
-		reg(ModSeeds.SpiderSeeds);
-		reg(ModSeeds.WitherSeeds);
-		reg(ModSeeds.ZombieSeeds);
+		if (PrimordialConfig.enableChickenCrop) {
+			reg(ModCrops.ChickenSeeds);
+			reg(ModCrops.ChickenEssence);
+		}
+		if (PrimordialConfig.enableCowCrop) {
+			reg(ModCrops.CowSeeds);
+			reg(ModCrops.CowEssence);
+
+		}
+		if (PrimordialConfig.enableCreeperCrop) {
+			reg(ModCrops.CreeperSeeds);
+			reg(ModCrops.CreeperEssence);
+		}
+		if (PrimordialConfig.enableEnderCrop) {
+			reg(ModCrops.EnderSeeds);
+			reg(ModCrops.EnderEssence);
+		}
+		if (PrimordialConfig.enableGhastCrop) {
+			reg(ModCrops.GhastSeeds);
+			reg(ModCrops.GhastEssence);
+		}
+		if (PrimordialConfig.enablePigCrop) {
+			reg(ModCrops.PigSeeds);
+			reg(ModCrops.PigEssence);
+		}
+		if (PrimordialConfig.enableSheepCrop) {
+			reg(ModCrops.SheepSeeds);
+			reg(ModCrops.SheepEssence);
+		}
+		if (PrimordialConfig.enableSkeletonCrop) {
+			reg(ModCrops.SkeletonSeeds);
+			reg(ModCrops.SkeletonEssence);
+		}
+		if (PrimordialConfig.enableSlimeCrop) {
+			reg(ModCrops.SlimeSeeds);
+			reg(ModCrops.SlimeEssence);
+		}
+		if (PrimordialConfig.enableSpiderCrop) {
+			reg(ModCrops.SpiderSeeds);
+			reg(ModCrops.SpiderEssence);
+		}
+		if (PrimordialConfig.enableWitherCrop) {
+			reg(ModCrops.WitherSeeds);
+			reg(ModCrops.WitherEssence);
+		}
+		if (PrimordialConfig.enableZombieCrop) {
+			reg(ModCrops.ZombieSeeds);
+			reg(ModCrops.ZombieEssence);
+		}
+
+		// Mod Support
+
+		if (Loader.isModLoaded("tconstruct")) {
+			if (PrimordialConfig.enableArditeCrop) {
+				reg(ModCrops.ArditeSeeds);
+				reg(ModCrops.ArditeEssence);
+			}
+			if (PrimordialConfig.enableCobaltCrop) {
+				reg(ModCrops.CobaltSeeds);
+				reg(ModCrops.CobaltEssence);
+			}
+			if (PrimordialConfig.enableManyullynCrop) {
+				reg(ModCrops.ManyullynSeeds);
+				reg(ModCrops.ManyullynEssence);
+			}
+			if (PrimordialConfig.enableKnightSlimeCrop) {
+				reg(ModCrops.KnightSlimeSeeds);
+				reg(ModCrops.KnightSlimeEssence);
+			}
+			if (PrimordialConfig.enablePigIronCrop) {
+				reg(ModCrops.PigIronSeeds);
+				reg(ModCrops.PigIronEssence);
+			}
+		}
+
+		if (Loader.isModLoaded("immersiveengineering")) {
+			if (PrimordialConfig.enableAluminumCrop) {
+				reg(ModCrops.AluminumSeeds);
+				reg(ModCrops.AluminumEssence);
+			}
+			if (PrimordialConfig.enableNickelCrop) {
+				reg(ModCrops.NickelSeeds);
+				reg(ModCrops.NickelEssence);
+			}
+			if (PrimordialConfig.enableElectrumCrop) {
+				reg(ModCrops.ElectrumSeeds);
+				reg(ModCrops.ElectrumEssence);
+			}
+			if (PrimordialConfig.enableConstantanCrop) {
+				reg(ModCrops.ConstantanSeeds);
+				reg(ModCrops.ConstantanEssence);
+			}
+		}
+
+		if (Loader.isModLoaded("botania") || Loader.isModLoaded("Botania")) {
+			if (PrimordialConfig.enableManaSteelCrop) {
+				reg(ModCrops.ManaSteelSeeds);
+				reg(ModCrops.ManaSteelEssence);
+			}
+			if (PrimordialConfig.enableTerraSteelCrop) {
+				reg(ModCrops.TerraSteelSeeds);
+				reg(ModCrops.TerraSteelEssence);
+			}
+			if (PrimordialConfig.enableElementiumCrop) {
+				reg(ModCrops.ElementiumSeeds);
+				reg(ModCrops.ElementiumEssence);
+			}
+		}
+
+		if (Loader.isModLoaded("IC2")) {
+			if (PrimordialConfig.enableRubberCrop) {
+				reg(ModCrops.RubberSeeds);
+				reg(ModCrops.RubberEssence);
+			}
+		}
+
+		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("immersiveengineering")) {
+			if (PrimordialConfig.enableUraniumCrop) {
+				reg(ModCrops.UraniumSeeds);
+				reg(ModCrops.UraniumEssence);
+			}
+			if (PrimordialConfig.enableSteelCrop) {
+				reg(ModCrops.SteelSeeds);
+				reg(ModCrops.SteelEssence);
+				reg(ModCrops.SteelIngot);
+			}
+
+		}
+
+		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("forestry")) {
+			if (PrimordialConfig.enableBronzeCrop) {
+				reg(ModCrops.BronzeSeeds);
+				reg(ModCrops.BronzeEssence);
+				reg(ModCrops.BronzeIngot);
+			}
+		}
+
+		if (Loader.isModLoaded("forestry")) {
+			if (PrimordialConfig.enableApatiteCrop) {
+				reg(ModCrops.ApatiteSeeds);
+				reg(ModCrops.ApatiteEssence);
+			}
+		}
+
+		if (Loader.isModLoaded("bigreactors")) {
+			if (PrimordialConfig.enableYelloriteCrop) {
+				reg(ModCrops.YelloriteSeeds);
+				reg(ModCrops.YelloriteEssence);
+			}
+			if (PrimordialConfig.enableLudicriteCrop) {
+				reg(ModCrops.LudicriteSeeds);
+				reg(ModCrops.LudicriteEssence);
+			}
+			if (PrimordialConfig.enableCyaniteCrop) {
+				reg(ModCrops.CyaniteSeeds);
+				reg(ModCrops.CyaniteEssence);
+			}
+			if (PrimordialConfig.enableBlutoniumCrop) {
+				reg(ModCrops.BlutoniumSeeds);
+				reg(ModCrops.BlutoniumEssence);
+			}
+		}
 
 
-		// Vanilla/Elemental Essence
+		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("forestry") || Loader.isModLoaded("immersiveengineering")) {
+			if (PrimordialConfig.enableCopperCrop) {
+				reg(ModCrops.CopperSeeds);
+				reg(ModCrops.CopperEssence);
+				reg(ModCrops.CopperIngot);
+			}
+			if (PrimordialConfig.enableTinCrop) {
+				reg(ModCrops.TinSeeds);
+				reg(ModCrops.TinEssence);
+				reg(ModCrops.TinIngot);
+			}
+		}
 
-		reg(ModItems.DiamondEssence);
-		reg(ModItems.IronEssence);
-		reg(ModItems.GoldEssence);
-		reg(ModItems.CoalEssence);
-		reg(ModItems.RedstoneEssence);
-		reg(ModItems.QuartzEssence);
-		reg(ModItems.ObsidianEssence);
-		reg(ModItems.NetherEssence);
-		reg(ModItems.NatureEssence);
-		reg(ModItems.LapisEssence);
-		reg(ModItems.GlowstoneEssence);
-		reg(ModItems.FireEssence);
-		reg(ModItems.ExperienceEssence);
-		reg(ModItems.EmeraldEssence);
-		reg(ModItems.EarthEssence);
-		reg(ModItems.DyeEssence);
-		reg(ModItems.AirEssence);
-		reg(ModItems.WaterEssence);
-		reg(ModItems.MinicioEssence);
+		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("immersiveengineering")) {
+			if (PrimordialConfig.enableSilverCrop) {
+				reg(ModCrops.SilverSeeds);
+				reg(ModCrops.SilverEssence);
+				reg(ModCrops.SilverIngot);
+			}
+			if (PrimordialConfig.enableLeadCrop) {
+				reg(ModCrops.LeadSeeds);
+				reg(ModCrops.LeadEssence);
+				reg(ModCrops.LeadIngot);
+			}
+		}
 
-		// Special Essence
+		if (Loader.isModLoaded("Mekanism")) {
+			if (PrimordialConfig.enableOsmiumCrop) {
+				reg(ModCrops.OsmiumSeeds);
+				reg(ModCrops.OsmiumEssence);
+				//reg(ModCrops.OsmiumIngot);
+			}
+		}
 
-		reg(ModItems.NetherStarEssence);
-		reg(ModItems.DragonEggEssence);
-
-		// Mob Essence
-
-		reg(ModItems.BlazeEssence);
-		reg(ModItems.ChickenEssence);
-		reg(ModItems.CowEssence);
-		reg(ModItems.CreeperEssence);
-		reg(ModItems.EnderEssence);
-		reg(ModItems.GhastEssence);
-		reg(ModItems.PigEssence);
-		reg(ModItems.SheepEssence);
-		reg(ModItems.SkeletonEssence);
-		reg(ModItems.SlimeEssence);
-		reg(ModItems.SpiderEssence);
-		reg(ModItems.WitherEssence);
-		reg(ModItems.ZombieEssence);
+		if (Loader.isModLoaded("draconicevolution")) {
+			if (PrimordialConfig.enableDraconiumCrop) {
+				reg(ModCrops.DraconiumSeeds);
+				reg(ModCrops.DraconiumEssence);
+			}
+			if (PrimordialConfig.enableAwakeDraconiumCrop) {
+				reg(ModCrops.AwakeDraconiumSeeds);
+				reg(ModCrops.AwakeDraconiumEssence);
+			}
+		}
 
 		// Crafting Essence
 
@@ -111,126 +343,15 @@ public class ItemRenderRegistry {
 		reg(ModItems.InfusionStoneT4);
 		reg(ModItems.InfusionStoneT5);
 
-		// Food
 
-		reg(ModSeeds.DonutSeeds);
-		reg(ModItems.Donut);
-		reg(ModItems.DonutEssence);
-
-		reg(ModSeeds.CakeSeeds);
-		reg(ModItems.CakeEssence);
 		// Tools
 
-		reg(ModItems.ZivicioSword);
-		reg(ModItems.AccioSword);
-		reg(ModItems.CrucioSword);
-		reg(ModItems.ImperioSword);
-
-		// Mod Support
-
-		if (Loader.isModLoaded("tconstruct")) {
-			reg(ModSeeds.ArditeSeeds);
-			reg(ModItems.ArditeEssence);
-			reg(ModSeeds.CobaltSeeds);
-			reg(ModItems.CobaltEssence);
-			reg(ModSeeds.ManyullynSeeds);
-			reg(ModItems.ManyullynEssence);
-			reg(ModSeeds.KnightSlimeSeeds);
-			reg(ModItems.KnightSlimeEssence);
-			reg(ModSeeds.PigIronSeeds);
-			reg(ModItems.PigIronEssence);
+		if (PrimordialConfig.enableWeapons) {
+			reg(ModItems.ZivicioSword);
+			reg(ModItems.AccioSword);
+			reg(ModItems.CrucioSword);
+			reg(ModItems.ImperioSword);
 		}
-
-		if (Loader.isModLoaded("immersiveengineering")) {
-			reg(ModSeeds.AluminumSeeds);
-			reg(ModItems.AluminumEssence);
-			reg(ModSeeds.NickelSeeds);
-			reg(ModItems.NickelEssence);
-			reg(ModSeeds.ElectrumSeeds);
-			reg(ModItems.ElectrumEssence);
-
-
-			reg(ModSeeds.ConstantanSeeds);
-			reg(ModItems.ConstantanEssence);
-		}
-
-		if (Loader.isModLoaded("botania") || Loader.isModLoaded("Botania")) {
-			reg(ModSeeds.ManaSteelSeeds);
-			reg(ModItems.ManaSteelEssence);
-			reg(ModSeeds.TerraSteelSeeds);
-			reg(ModItems.TerraSteelEssence);
-			reg(ModSeeds.ElementiumSeeds);
-			reg(ModItems.ElementiumEssence);
-		}
-
-		if (Loader.isModLoaded("IC2")) {
-			reg(ModSeeds.RubberSeeds);
-			reg(ModItems.RubberEssence);
-		}
-
-		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("immersiveengineering")) {
-			reg(ModSeeds.UraniumSeeds);
-			reg(ModItems.UraniumEssence);
-			reg(ModSeeds.SteelSeeds);
-			reg(ModItems.SteelEssence);
-			reg(ModItems.SteelIngot);
-
-		}
-
-		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("forestry")) {
-			reg(ModSeeds.BronzeSeeds);
-			reg(ModItems.BronzeEssence);
-			reg(ModItems.BronzeIngot);
-		}
-
-		if (Loader.isModLoaded("forestry")) {
-			reg(ModSeeds.ApatiteSeeds);
-			reg(ModItems.ApatiteEssence);
-		}
-
-		if (Loader.isModLoaded("bigreactors")) {
-			reg(ModSeeds.YelloriteSeeds);
-			reg(ModItems.YelloriteEssence);
-			reg(ModSeeds.LudicriteSeeds);
-			reg(ModItems.LudicriteEssence);
-			reg(ModSeeds.CyaniteSeeds);
-			reg(ModItems.CyaniteEssence);
-			reg(ModSeeds.BlutoniumSeeds);
-			reg(ModItems.BlutoniumEssence);
-		}
-
-
-		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("forestry") || Loader.isModLoaded("immersiveengineering")) {
-			reg(ModSeeds.CopperSeeds);
-			reg(ModItems.CopperEssence);
-			reg(ModItems.CopperIngot);
-			reg(ModSeeds.TinSeeds);
-			reg(ModItems.TinEssence);
-			reg(ModItems.TinIngot);
-		}
-
-		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("immersiveengineering")) {
-			reg(ModSeeds.SilverSeeds);
-			reg(ModItems.SilverEssence);
-			reg(ModItems.SilverIngot);
-			reg(ModSeeds.LeadSeeds);
-			reg(ModItems.LeadEssence);
-			reg(ModItems.LeadIngot);
-		}
-
-		if (Loader.isModLoaded("Mekanism")) {
-			reg(ModSeeds.OsmiumSeeds);
-			reg(ModItems.OsmiumEssence);
-			reg(ModItems.OsmiumIngot);
-		}
-
-		if (Loader.isModLoaded("draconicevolution")) {
-			reg(ModSeeds.DraconiumSeeds);
-			reg(ModItems.DraconiumEssence);
-			reg(ModSeeds.AwakeDraconiumSeeds);
-			reg(ModItems.AwakeDraconiumEssence);
-		}
-
 
 	}
 

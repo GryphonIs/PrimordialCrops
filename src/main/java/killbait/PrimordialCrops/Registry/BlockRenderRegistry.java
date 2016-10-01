@@ -1,5 +1,6 @@
 package killbait.PrimordialCrops.Registry;
 
+import killbait.PrimordialCrops.Config.PrimordialConfig;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -10,7 +11,7 @@ public class BlockRenderRegistry {
 	public static void registerBlockRenderer() {
 
 		reg(ModBlocks.MinicioOre);
-		reg(ModBlocks.UraniumOre);
+		if (PrimordialConfig.enableUraniumCrop) reg(ModBlocks.UraniumOre);
 	}
 
 	public static void reg(Block block) {

@@ -11,8 +11,8 @@ public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent e) {
 		ModBlocks.init();
-		ModSeeds.init();
 		ModItems.init();
+		ModCrops.init();
 		OreDictonaryRegistry.regOreDic();
 	}
 
