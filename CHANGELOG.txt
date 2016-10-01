@@ -5,7 +5,40 @@
  * V1.6c Changelog
  * ---------------
  *
- * Added Config file support.
+ * Added Config file support. (3000% more painfull than i first thought)
+ *
+ * NOTE: recipes for disabled crops are not registered, ANY recipe that relies
+ *       on a crops essence will become unavailable (one exception detailed below).
+ *
+ * NOTE 2: Some recipes have alternate's, if certain essences are not available,
+ *         they are replaced with vanilla items, this is off by default, enable
+ *         it from config.
+ *             (Use this with caution as it can break mod progression!!!)
+ *
+ * Due to the fact every crop is now togglable,some hard coded safeguards have been put
+ * in place to preserve mod progression. e.g. if none of the essences are available for
+ * for crafting a certain tier infusion stone, an alternate recipe using a vanilla item
+ * is used instead. (i dont want people complaining the mod is broken because somebody
+ * changed the config and didnt check if it messed things up!)
+ *
+ * i have tested the config options to the best of my ability with the time i have,
+ * but the different combinatons are huge in number. if you dont see a recipe, there is
+ * a good chance a disabled crop/essence was used in its crafting.
+ *
+ * The new config options are:-
+ *
+ * - You can now disable and crop you choose.
+ * - Special crops now have a Hard and Easy recipe (togglable, default to hard recipes)
+ * - Weapons can now be disabled (on by default)
+ * - Tools and Armour options are in but not yet implimented
+ * - Minico seed drops from breaking grass is toggable (on by default)
+ * - % Chance of extra seed on harvest of regular crop can now be 0% - 100% (default 20%)
+ * - % Chance of extra seed on harvest of special crop can now be 0% - 100% (default 3%)
+ * - Harvest On Right click ( toggable, off by default, ignored if Pam's HarvestCraft installed)
+ * - Infusion stones can now have durability ( off by deafult )
+ * - Max uses of Infusion stone with durability can be changed (0 - 1000 uses, 100 be default)
+ *
+ *
  *
  * V1.6b Changelog
  * ---------------
