@@ -313,7 +313,7 @@ public class ItemRenderRegistry {
 			if (PrimordialConfig.enableOsmiumCrop) {
 				reg(ModCrops.OsmiumSeeds);
 				reg(ModCrops.OsmiumEssence);
-				//reg(ModCrops.OsmiumIngot);
+				reg(ModCrops.OsmiumIngot);
 			}
 		}
 

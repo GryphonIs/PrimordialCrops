@@ -294,7 +294,7 @@ public class ModCrops {
 	public static Block OsmiumCrop;
 	public static Item OsmiumSeeds;
 	public static Item OsmiumEssence;
-	//public static Item OsmiumIngot;
+	public static Item OsmiumIngot;
 
 	public static Block DraconiumCrop;
 	public static Item DraconiumSeeds;
@@ -683,7 +683,7 @@ public class ModCrops {
 				OsmiumCrop = registerBlockCrop("OsmiumCrop");
 				OsmiumSeeds = regSeeds("OsmiumSeeds", OsmiumCrop);
 				OsmiumEssence = regHarvestItem("OsmiumEssence", OsmiumCrop);
-				//OsmiumIngot = regCraftItem("OsmiumIngot");
+				OsmiumIngot = regCraftItem("OsmiumIngot");
 			}
 		}
 
