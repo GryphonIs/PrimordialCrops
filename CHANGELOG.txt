@@ -30,7 +30,6 @@
  * - You can now disable any crop you choose.
  * - Special crops now have a Hard and Easy recipe (togglable, default to hard recipes)
  * - Weapons can now be disabled (on by default)
- * - Tools and Armour options are in but not yet implimented
  * - Minico seed drops from breaking grass is toggable (on by default)
  * - % Chance of extra seed on harvest of regular crop can now be 0% - 100% (default 20%)
  * - % Chance of extra seed on harvest of special crop can now be 0% - 100% (default 3%)
