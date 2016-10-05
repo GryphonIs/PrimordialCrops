@@ -2,6 +2,20 @@
  *
  * v1.6a and beyond now maintained by KillBait
  *
+ * V1.6e Changelog
+ * ---------------
+ *
+ * Fixed crash due to recipe registration using OreDictionary and not taking into
+ * account unsupported mods.
+ *
+ *
+ * V1.6d Changelog
+ * ---------------
+ *
+ * Fixed Osmium Ingots not registering
+ *
+ *
+ *
  * V1.6c Changelog
  * ---------------
  *

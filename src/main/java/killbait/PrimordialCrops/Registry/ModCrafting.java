@@ -616,58 +616,72 @@ public class ModCrafting {
 		//
 
 		if (OreDictionary.doesOreNameExist("ingotBronze")) {
-			if (PrimordialConfig.enableBronzeCrop) {
-				LogHelper.info("Detected oreDictionary name 'ingotBronze', adding support for Bronze seeds/crafting recipes");
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.BronzeSeeds), "XYX", "YZY", "XYX", 'Y', "ingotBronze", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"));
-				GameRegistry.addRecipe(new ItemStack(ModCrops.BronzeIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.BronzeEssence);
+			if (Loader.isModLoaded("IC2") || Loader.isModLoaded("forestry")) {
+				if (PrimordialConfig.enableBronzeCrop) {
+					LogHelper.info("Detected oreDictionary name 'ingotBronze', adding support for Bronze seeds/crafting recipes");
+					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.BronzeSeeds), "XYX", "YZY", "XYX", 'Y', "ingotBronze", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"));
+					GameRegistry.addRecipe(new ItemStack(ModCrops.BronzeIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.BronzeEssence);
+				}
 			}
 		}
 
 		if (OreDictionary.doesOreNameExist("oreUranium")) {
-			if (PrimordialConfig.enableUraniumCrop) {
-				LogHelper.info("Detected oreDictionary name 'oreUranium', adding support for Uranium seeds/crafting recipes");
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.UraniumSeeds), "XYX", "YZY", "XYX", 'Y', "oreUranium", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"));
-				GameRegistry.addRecipe(new ItemStack(ModBlocks.UraniumOre, 4), "XXX", "X X", "XXX", 'X', ModCrops.UraniumEssence);
+			if (Loader.isModLoaded("IC2") || Loader.isModLoaded("immersiveengineering")) {
+				if (PrimordialConfig.enableUraniumCrop) {
+					LogHelper.info("Detected oreDictionary name 'oreUranium', adding support for Uranium seeds/crafting recipes");
+					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.UraniumSeeds), "XYX", "YZY", "XYX", 'Y', "oreUranium", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"));
+					GameRegistry.addRecipe(new ItemStack(ModBlocks.UraniumOre, 4), "XXX", "X X", "XXX", 'X', ModCrops.UraniumEssence);
+				}
 			}
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotSteel")) {
-			if (PrimordialConfig.enableSteelCrop) {
-				LogHelper.info("Detected oreDictionary name 'ingotSteel', adding support for Steel seeds/crafting recipes");
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.SteelSeeds), "XYX", "YZY", "XYX", 'Y', "ingotSteel", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"));
-				GameRegistry.addRecipe(new ItemStack(ModCrops.SteelIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.SteelEssence);
+			if (Loader.isModLoaded("IC2") || Loader.isModLoaded("immersiveengineering")) {
+				if (PrimordialConfig.enableSteelCrop) {
+					LogHelper.info("Detected oreDictionary name 'ingotSteel', adding support for Steel seeds/crafting recipes");
+					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.SteelSeeds), "XYX", "YZY", "XYX", 'Y', "ingotSteel", 'X', ModItems.CrucioEssence, 'Z', "InfusionStoneT3Plus"));
+					GameRegistry.addRecipe(new ItemStack(ModCrops.SteelIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.SteelEssence);
+				}
 			}
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotCopper")) {
-			if (PrimordialConfig.enableCopperCrop) {
-				LogHelper.info("Detected oreDictionary name 'ingotCopper', adding support for Copper seeds/crafting recipes");
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.CopperSeeds), "XYX", "YZY", "XYX", 'Y', "ingotCopper", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"));
-				GameRegistry.addRecipe(new ItemStack(ModCrops.CopperIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.CopperEssence);
+			if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("forestry") || Loader.isModLoaded("immersiveengineering")) {
+				if (PrimordialConfig.enableCopperCrop) {
+					LogHelper.info("Detected oreDictionary name 'ingotCopper', adding support for Copper seeds/crafting recipes");
+					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.CopperSeeds), "XYX", "YZY", "XYX", 'Y', "ingotCopper", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"));
+					GameRegistry.addRecipe(new ItemStack(ModCrops.CopperIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.CopperEssence);
+				}
 			}
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotTin")) {
-			if (PrimordialConfig.enableTinCrop) {
-				LogHelper.info("Detected oreDictionary name 'ingotTin', adding support for Tin seeds/crafting recipes");
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.TinSeeds), "XYX", "YZY", "XYX", 'Y', "ingotTin", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"));
-				GameRegistry.addRecipe(new ItemStack(ModCrops.TinIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.TinEssence);
+			if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("forestry") || Loader.isModLoaded("immersiveengineering")) {
+				if (PrimordialConfig.enableTinCrop) {
+					LogHelper.info("Detected oreDictionary name 'ingotTin', adding support for Tin seeds/crafting recipes");
+					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.TinSeeds), "XYX", "YZY", "XYX", 'Y', "ingotTin", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"));
+					GameRegistry.addRecipe(new ItemStack(ModCrops.TinIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.TinEssence);
+				}
 			}
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotLead")) {
-			if (PrimordialConfig.enableLeadCrop) {
-				LogHelper.info("Detected oreDictionary name 'ingotLead', adding support for Lead seeds/crafting recipes");
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.LeadSeeds), "XYX", "YZY", "XYX", 'Y', "ingotLead", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"));
-				GameRegistry.addRecipe(new ItemStack(ModCrops.LeadIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.LeadEssence);
+			if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("immersiveengineering")) {
+				if (PrimordialConfig.enableLeadCrop) {
+					LogHelper.info("Detected oreDictionary name 'ingotLead', adding support for Lead seeds/crafting recipes");
+					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.LeadSeeds), "XYX", "YZY", "XYX", 'Y', "ingotLead", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"));
+					GameRegistry.addRecipe(new ItemStack(ModCrops.LeadIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.LeadEssence);
+				}
 			}
 		}
 
 		if (OreDictionary.doesOreNameExist("ingotSilver")) {
-			if (PrimordialConfig.enableSilverCrop) {
-				LogHelper.info("Detected oreDictionary name 'ingotSilver', adding support for Silver seeds/crafting recipes");
-				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.SilverSeeds), "XYX", "YZY", "XYX", 'Y', "ingotSilver", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"));
-				GameRegistry.addRecipe(new ItemStack(ModCrops.SilverIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.SilverEssence);
+			if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("immersiveengineering")) {
+				if (PrimordialConfig.enableSilverCrop) {
+					LogHelper.info("Detected oreDictionary name 'ingotSilver', adding support for Silver seeds/crafting recipes");
+					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.SilverSeeds), "XYX", "YZY", "XYX", 'Y', "ingotSilver", 'X', ModItems.ImperioEssence, 'Z', "InfusionStoneT3Plus"));
+					GameRegistry.addRecipe(new ItemStack(ModCrops.SilverIngot, 4), "XXX", "X X", "XXX", 'X', ModCrops.SilverEssence);
+				}
 			}
 		}
 	}
