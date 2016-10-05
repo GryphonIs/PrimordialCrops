@@ -2,7 +2,13 @@ package killbait.PrimordialCrops.Items;
 
 import killbait.PrimordialCrops.PrimordialCrops;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
 
 public class PrimordialBook extends Item {
 
@@ -18,13 +24,13 @@ public class PrimordialBook extends Item {
 		this.setUnlocalizedName("PrimoirdialBook");
 		this.setMaxStackSize(1);
 	}
-	
+
 	@Override
-    public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn) {
-        if (worldIn.isRemote) {
-            playerIn.openGui(PrimordialCrops.instance, 0, worldIn, (int) playerIn.posX, (int) playerIn.posY, (int) playerIn.posZ);
-        }
-        return itemStackIn;
-    }
-    
+	public ActionResult onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+		if (worldIn.isRemote) {
+			playerIn.openGui(PrimordialCrops.instance, 0, worldIn, (int) playerIn.posX, (int) playerIn.posY, (int) playerIn.posZ);
+		}
+		return new ActionResult(EnumActionResult.PASS, itemStackIn);
+	}
+
 }
