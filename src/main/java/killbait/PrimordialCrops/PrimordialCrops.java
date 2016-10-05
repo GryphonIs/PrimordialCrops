@@ -16,7 +16,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Info.MODID, version = Info.VERSION, name = Info.MODNAME)
 public class PrimordialCrops {
-
+	
+	@Instance(Info.MODID)
+        public static PrimordialCrops instance;
+	
 	@SidedProxy(clientSide = "killbait.PrimordialCrops.proxy.ClientProxy", serverSide = "killbait.PrimordialCrops.proxy.ServerProxy")
 	public static killbait.PrimordialCrops.proxy.CommonProxy proxy;
 	public static CreativeTabs PrimordialCrops = new CreativeTabs("PrimordialCrops") {
