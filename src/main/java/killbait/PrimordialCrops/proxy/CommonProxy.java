@@ -19,6 +19,7 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent e) {
 		GameRegistry.registerWorldGenerator(new MagicalWorldGen(), 0);
 		ModCrafting.initCrafting();
+	        NetworkRegistry.INSTANCE.registerGuiHandler(PrimordialCrops.instance, new GuiHandler());
 	}
 
 	public void postInit(FMLPostInitializationEvent e) {
