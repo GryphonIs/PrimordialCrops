@@ -21,6 +21,9 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class PrimordialCrops {
 
+	@Mod.Instance(Info.MODID)
+	public static PrimordialCrops instance;
+	
 	@SidedProxy(clientSide = "killbait.PrimordialCrops.proxy.ClientProxy", serverSide = "killbait.PrimordialCrops.proxy.ServerProxy")
 
 	public static killbait.PrimordialCrops.proxy.CommonProxy proxy;
