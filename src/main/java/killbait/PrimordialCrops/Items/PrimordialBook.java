@@ -16,6 +16,7 @@ public class PrimordialBook extends Item {
 		super();
 		this.setCreativeTab(PrimordialCrops.PrimordialCrops);
 		this.setUnlocalizedName("PrimoirdialBook");
+		this.setMaxStackSize(1);
 	}
 	
 	@Override
