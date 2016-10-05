@@ -118,7 +118,7 @@ public class PrimordialConfig {
 		config.addCustomCategoryComment(CATEGORY_MOD, "Mod Settings");
 		infusionStoneDurability = config.getBoolean("infusionStonesHaveDurability", CATEGORY_MOD, false, "Set to true if you want Infusions stones to have durability");
 		infusionStoneMaxUses = config.getInt("infusionStoneMaxUses", CATEGORY_MOD, 100, 0, 1000, "How many uses an infusions stone has before it breaks (if infusionStoneDurability is true)");
-		enableWeapons = config.getBoolean("enableWeapons", CATEGORY_MOD, true, "Set to false if you dont want the mods Weapons");
+		enableWeapons = config.getBoolean("enableWeapons", CATEGORY_MOD, false, "Set to false if you dont want the mods Weapons");
 		enableTools = config.getBoolean("enableTools", CATEGORY_MOD, true, "Set to false if you dont want the mods Tools (not yet implimented)");
 		enableArmour = config.getBoolean("enableArmour", CATEGORY_MOD, true, "Set to false if you dont want the mods Armour (not yet implimented)");
 		regularSeedExtraChance = config.getInt("extraSeedChanceRegular", CATEGORY_MOD, 20, 0, 100, "Percentage chance you get an extra seed from regular crops");

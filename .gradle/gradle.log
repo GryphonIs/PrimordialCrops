@@ -1,4 +1,4 @@
-Version string '1.6e' does not match SemVer specification 
+Version string '1.6f' does not match SemVer specification 
 You should try SemVer : http://semver.org/
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
@@ -35,4 +35,4 @@ remapping source...
 
 BUILD SUCCESSFUL
 
-Total time: 11.876 secs
+Total time: 8.986 secs

@@ -5,13 +5,18 @@ import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.Loader;
 
 public class BlockRenderRegistry {
 
 	public static void registerBlockRenderer() {
 
 		reg(ModBlocks.MinicioOre);
-		if (PrimordialConfig.enableUraniumCrop) reg(ModBlocks.UraniumOre);
+		if (Loader.isModLoaded("IC2") || Loader.isModLoaded("immersiveengineering")) {
+			if (PrimordialConfig.enableUraniumCrop) {
+				reg(ModBlocks.UraniumOre);
+			}
+		}
 	}
 
 	public static void reg(Block block) {

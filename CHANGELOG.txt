@@ -2,6 +2,13 @@
  *
  * v1.6a and beyond now maintained by KillBait
  *
+ * V1.6f Changelog
+ * ---------------
+ *
+ * Fixed crash in block registry.
+ *
+ *
+ *
  * V1.6e Changelog
  * ---------------
  *
