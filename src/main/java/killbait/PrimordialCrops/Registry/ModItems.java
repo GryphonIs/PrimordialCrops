@@ -4,6 +4,7 @@ import killbait.PrimordialCrops.Blocks.CropBlocks;
 import killbait.PrimordialCrops.Blocks.CropBlocksSpecial;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
 import killbait.PrimordialCrops.Items.Donut;
+import killbait.PrimordialCrops.Items.PrimordialBook;
 import killbait.PrimordialCrops.Items.PrimordialCropsItem;
 import killbait.PrimordialCrops.Tools.Swords;
 import killbait.PrimordialCrops.Utils.LogHelper;
@@ -40,12 +41,15 @@ public class ModItems {
 	public static Item CrucioSword = new Swords(CrucioSwordMaterial, "CrucioSword");
 	public static Item ImperioSword = new Swords(ImperioSwordMaterial, "ImperioSword");
 
+	public static Item PrimordialBook = new PrimordialBook();
+
 	public static void init() {
 
 		CrucioEssence = regCraftItem("CrucioEssence");
 		ImperioEssence = regCraftItem("ImperioEssence");
 		ZivicioEssence = regCraftItem("ZivicioEssence");
 		AccioEssence = regCraftItem("AccioEssence");
+
 
 		if (PrimordialConfig.infusionStoneDurability) {
 			LogHelper.info("*** Infusion Stone Durabitily Enabled, Max Uses is " + PrimordialConfig.infusionStoneMaxUses + " ***");
@@ -69,6 +73,8 @@ public class ModItems {
 			GameRegistry.register(CrucioSword.setRegistryName("CrucioSword"));
 			GameRegistry.register(ImperioSword.setRegistryName("ImperioSword"));
 		}
+
+		GameRegistry.register(PrimordialBook.setRegistryName("PrimordialBook"));
 	}
 
 	public static Item regCraftItem(String regName) {
