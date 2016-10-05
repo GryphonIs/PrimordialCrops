@@ -87,7 +87,10 @@ public class ModItems {
 	public static Item AccioSword = new Swords(AccioSwordMaterial, "AccioSword");
 	public static Item CrucioSword = new Swords(CrucioSwordMaterial, "CrucioSword");
 	public static Item ImperioSword = new Swords(ImperioSwordMaterial, "ImperioSword");
-
+	
+	//book
+	public static Item PrimordialBook = new PrimordialBook("PrimordialBook");
+	
 	//modded items
 
 	public static Item CopperEssence;
@@ -131,6 +134,7 @@ public class ModItems {
 	public static Item OsmiumIngot;
 	public static Item BronzeIngot;
 	public static Item SteelIngot;
+	
 
 	public static void init() {
 
@@ -198,6 +202,8 @@ public class ModItems {
 		GameRegistry.register(AccioSword.setRegistryName("AccioSword"));
 		GameRegistry.register(CrucioSword.setRegistryName("CrucioSword"));
 		GameRegistry.register(ImperioSword.setRegistryName("ImperioSword"));
+		
+		GameRegistry.register(PrimordialBook.setRegistryName("PrimordialBook"));
 
 		if (Loader.isModLoaded("tconstruct")) {
 			ArditeEssence = regHarvestItem("ArditeEssence", ModBlocks.ArditeCrop);
