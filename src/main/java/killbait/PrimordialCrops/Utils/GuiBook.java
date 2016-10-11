@@ -8,6 +8,15 @@ public class GuiBook extends GuiScreen {
     int xSize, ySize, left, top;
     
     
+	@Override
+	public void initGui() {
+		xSize = 256;
+		ySize = 184;
+		left = (width - xSize) / 2;
+		top = (height - ySize) / 2;
+
+	}
+	
 @Override
 public void drawScreen(int mouseX, int mouseY, float partialTicks) {
     drawDefaultBackground();
@@ -26,14 +35,5 @@ public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 public boolean doesGuiPauseGame() {
     return false;
 }
-
-@Override
-	public void initGui() {
-		xSize = 256;
-		ySize = 184;
-		left = (width - xSize) / 2;
-		top = (height - ySize) / 2;
-
-	}
 
 }
