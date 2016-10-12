@@ -11,7 +11,7 @@ import net.minecraft.util.text.translation.I18n;
 
 public class GuiBook extends GuiScreen {
 
-	public static final ResourceLocation texture = new ResourceLocation("maingui.png");
+	public static final ResourceLocation texture = new ResourceLocation("mc:textures/maingui.png");
 	int xSize, ySize, left, top;
 
 	@Override
