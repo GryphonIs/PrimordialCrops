@@ -92,6 +92,10 @@ public class ItemRenderRegistry {
 			reg(ModCrops.WaterSeeds);
 			reg(ModCrops.WaterEssence);
 		}
+		if (PrimordialConfig.enablePrismarineShardCrop) {
+			reg(ModCrops.PrismarineShardSeeds);
+			reg(ModCrops.PrismarineShardEssence);
+		}
 
 		// Special Seeds
 
@@ -328,6 +332,17 @@ public class ItemRenderRegistry {
 			}
 		}
 
+		if (Loader.isModLoaded("appliedenergistics2")) {
+			if (PrimordialConfig.enableCertusCrop) {
+				reg(ModCrops.CertusQuartzSeeds);
+				reg(ModCrops.CertusQuartzEssence);
+			}
+			if (PrimordialConfig.enableFluixCrop) {
+				reg(ModCrops.FluixSeeds);
+				reg(ModCrops.FluixEssence);
+			}
+		}
+
 		// Crafting Essence
 
 		reg(ModItems.AccioEssence);
@@ -351,6 +366,10 @@ public class ItemRenderRegistry {
 			reg(ModItems.AccioSword);
 			reg(ModItems.CrucioSword);
 			reg(ModItems.ImperioSword);
+		}
+
+		if (PrimordialConfig.enableIngameBook) {
+			reg(ModItems.PrimordialBook);
 		}
 
 	}

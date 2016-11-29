@@ -64,7 +64,10 @@ item.DragonEggSeeds.name=DragonEgg Seed
 item.RubberSeeds.name=Rubber Seed
 item.DraconiumSeeds.name=Draconium Seed
 item.AwakeDraconiumSeeds.name=Awakened Draconium Seed
+item.PrismarineShardSeeds.name=Prismarine Shard Seed
+item.PrismarineCrystalSeeds.name=Prismarine Crystal Seed
 item.CakeSeeds.name=Cake Seed
+
 
 item.AirEssence.name=Air Essence
 item.CoalEssence.name=Coal Essence
@@ -129,6 +132,8 @@ item.DragonEggEssence.name=DragonEgg Essence
 item.RubberEssence.name=Rubber Essence
 item.DraconiumEssence.name=Draconium Essence
 item.AwakeDraconiumEssence.name=Awakened Draconium Essence
+item.PrismarineShardEssence.name=Prismarine Shard Essence
+item.PrismarineCrystalEssence.name=Prismarine Crystal Essence
 item.CakeEssence.name=Cake Essence
 
 
@@ -161,4 +166,6 @@ item.ZivicioSword.name=Zivicio Sword
 item.AccioSword.name=Accio Sword
 item.CrucioSword.name=Crucio Sword
 item.ImperioSword.name=Imperio Sword
+
+item.PrimordialBook.name=PrimodrialCrops Manual
  

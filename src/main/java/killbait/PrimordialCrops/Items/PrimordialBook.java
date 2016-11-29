@@ -1,7 +1,6 @@
 package killbait.PrimordialCrops.Items;
 
 import killbait.PrimordialCrops.PrimordialCrops;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -9,6 +8,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class PrimordialBook extends Item {
 
@@ -23,6 +24,10 @@ public class PrimordialBook extends Item {
 		this.setCreativeTab(PrimordialCrops.PrimordialCrops);
 		this.setUnlocalizedName("PrimordialBook");
 		this.setMaxStackSize(1);
+	}
+
+	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
+		list.add("\u00A7aWork In Progress... Not Yet Available");
 	}
 
 	@Override

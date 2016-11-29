@@ -1,7 +1,7 @@
 package killbait.PrimordialCrops.Blocks;
 
-import killbait.PrimordialCrops.Registry.ModCrops;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
+import killbait.PrimordialCrops.Registry.ModCrops;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.IGrowable;
@@ -72,6 +72,15 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
     public boolean canGrow(World worl, BlockPos pos, IBlockState state, boolean isClient) {
         return !isHarvestReady(state);
     }
+
+	@Override
+	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
+		if (PrimordialConfig.enableBonemealUse) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
     protected Item getHarvestedItem() {
         final Item harvestedItem = ModCrops.harvestedItemMap.get(this);
@@ -209,13 +218,4 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
         return ret;
     }
 
-/*    @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list)
-    {
-        list.add(new ItemStack(itemIn));
-        list.add(new ItemStack(itemIn, 1, 1));
-        list.add(new ItemStack(itemIn, 1, 2));
-        list.add(new ItemStack(itemIn, 1, 3));
-        list.add(new ItemStack(itemIn, 1, 4));
-    }*/
 }

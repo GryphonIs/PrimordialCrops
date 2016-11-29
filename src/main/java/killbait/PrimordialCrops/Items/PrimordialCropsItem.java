@@ -2,7 +2,6 @@ package killbait.PrimordialCrops.Items;
 
 import killbait.PrimordialCrops.Config.PrimordialConfig;
 import killbait.PrimordialCrops.PrimordialCrops;
-import killbait.PrimordialCrops.Utils.LogHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

@@ -109,6 +109,10 @@ public class ModCrops {
 	public static Item RedstoneSeeds;
 	public static Item RedstoneEssence;
 
+	public static Block PrismarineShardCrop;
+	public static Item PrismarineShardSeeds;
+	public static Item PrismarineShardEssence;
+
 	//
 	// Mob Crops
 	//
@@ -304,6 +308,14 @@ public class ModCrops {
 	public static Item AwakeDraconiumSeeds;
 	public static Item AwakeDraconiumEssence;
 
+	public static Block CertusQuartzCrop;
+	public static Item CertusQuartzSeeds;
+	public static Item CertusQuartzEssence;
+
+	public static Block FluixCrop;
+	public static Item FluixSeeds;
+	public static Item FluixEssence;
+
 
 	public static void init() {
 
@@ -400,6 +412,12 @@ public class ModCrops {
 			RedstoneCrop = registerBlockCrop("RedstoneCrop");
 			RedstoneSeeds = regSeeds("RedstoneSeeds", RedstoneCrop);
 			RedstoneEssence = regHarvestItem("RedstoneEssence", RedstoneCrop);
+		}
+
+		if (PrimordialConfig.enablePrismarineShardCrop) {
+			PrismarineShardCrop = registerBlockCrop("PrismarineShardCrop");
+			PrismarineShardSeeds = regSeeds("PrismarineShardSeeds", PrismarineShardCrop);
+			PrismarineShardEssence = regHarvestItem("PrismarineShardEssence", PrismarineShardCrop);
 		}
 
 		//-----------------------------------------------------
@@ -509,7 +527,7 @@ public class ModCrops {
 		//-----------------------------------------------------
 
 		if (Loader.isModLoaded("tconstruct")) {
-			LogHelper.info("Tinkers Construct Detected, adding crops");
+			LogHelper.info("Tinkers Construct Detected, adding crops if config allows");
 			if (PrimordialConfig.enableArditeCrop) {
 				ArditeCrop = registerBlockCrop("ArditeCrop");
 				ArditeSeeds = regSeeds("ArditeSeeds", ArditeCrop);
@@ -538,7 +556,7 @@ public class ModCrops {
 		}
 
 		if (Loader.isModLoaded("immersiveengineering")) {
-			LogHelper.info("Immersive Engineering Detected, adding crops");
+			LogHelper.info("Immersive Engineering Detected, adding crops if config allows");
 			if (PrimordialConfig.enableAluminumCrop) {
 				AluminumCrop = registerBlockCrop("AluminumCrop");
 				AluminumSeeds = regSeeds("AluminumSeeds", AluminumCrop);
@@ -562,7 +580,7 @@ public class ModCrops {
 		}
 
 		if (Loader.isModLoaded("botania") || Loader.isModLoaded("Botania")) {
-			LogHelper.info("Botania Detected, adding crops");
+			LogHelper.info("Botania Detected, adding crops if config allows");
 			if (PrimordialConfig.enableManaSteelCrop) {
 				ManaSteelCrop = registerBlockCrop("ManaSteelCrop");
 				ManaSteelSeeds = regSeeds("ManaSteelSeeds", ManaSteelCrop);
@@ -581,7 +599,7 @@ public class ModCrops {
 		}
 
 		if (Loader.isModLoaded("IC2")) {
-			LogHelper.info("IC2 Detected, adding crops");
+			LogHelper.info("IC2 Detected, adding crops if config allows");
 			if (PrimordialConfig.enableRubberCrop) {
 				RubberCrop = registerBlockCrop("RubberCrop");
 				RubberSeeds = regSeeds("RubberSeeds", RubberCrop);
@@ -615,7 +633,7 @@ public class ModCrops {
 		}
 
 		if (Loader.isModLoaded("forestry")) {
-			LogHelper.info("Forestry Detected, adding crops");
+			LogHelper.info("Forestry Detected, adding crops if config allows");
 			if (PrimordialConfig.enableApatiteCrop) {
 				ApatiteCrop = registerBlockCrop("ApatiteCrop");
 				ApatiteSeeds = regSeeds("ApatiteSeeds", ApatiteCrop);
@@ -624,7 +642,7 @@ public class ModCrops {
 		}
 
 		if (Loader.isModLoaded("bigreactors")) {
-			LogHelper.info("Extreme Reactors Detected, adding crops");
+			LogHelper.info("Extreme Reactors Detected, adding crops if config allows");
 			if (PrimordialConfig.enableYelloriteCrop) {
 				YelloriteCrop = registerBlockCrop("YelloriteCrop");
 				YelloriteSeeds = regSeeds("YelloriteSeeds", YelloriteCrop);
@@ -678,7 +696,7 @@ public class ModCrops {
 		}
 
 		if (Loader.isModLoaded("Mekanism")) {
-			LogHelper.info("Mekanism Detected, adding crops");
+			LogHelper.info("Mekanism Detected, adding crops if config allows");
 			if (PrimordialConfig.enableOsmiumCrop) {
 				OsmiumCrop = registerBlockCrop("OsmiumCrop");
 				OsmiumSeeds = regSeeds("OsmiumSeeds", OsmiumCrop);
@@ -688,7 +706,7 @@ public class ModCrops {
 		}
 
 		if (Loader.isModLoaded("draconicevolution")) {
-			LogHelper.info("Draconic Evolution Detected, adding crops");
+			LogHelper.info("Draconic Evolution Detected, adding crops if config allows");
 			if (PrimordialConfig.enableDraconiumCrop) {
 				DraconiumCrop = registerBlockCrop("DraconiumCrop");
 				DraconiumSeeds = regSeeds("DraconiumSeeds", DraconiumCrop);
@@ -698,6 +716,20 @@ public class ModCrops {
 				AwakeDraconiumCrop = registerBlockCrop("AwakeDraconiumCrop");
 				AwakeDraconiumSeeds = regSeeds("AwakeDraconiumSeeds", AwakeDraconiumCrop);
 				AwakeDraconiumEssence = regHarvestItem("AwakeDraconiumEssence", AwakeDraconiumCrop);
+			}
+		}
+
+		if (Loader.isModLoaded("appliedenergistics2")) {
+			LogHelper.info("AE2 Detected, adding crops if config allows");
+			if (PrimordialConfig.enableCertusCrop) {
+				CertusQuartzCrop = registerBlockCrop("CertusQuartzCrop");
+				CertusQuartzSeeds = regSeeds("CertusQuartzSeeds", CertusQuartzCrop);
+				CertusQuartzEssence = regHarvestItem("CertusQuartzEssence", CertusQuartzCrop);
+			}
+			if (PrimordialConfig.enableFluixCrop) {
+				FluixCrop = registerBlockCrop("FluixCrop");
+				FluixSeeds = regSeeds("FluixSeeds", FluixCrop);
+				FluixEssence = regHarvestItem("FluixEssence", FluixCrop);
 			}
 		}
 

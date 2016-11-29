@@ -2,6 +2,22 @@
  *
  * v1.6a and beyond now maintained by KillBait
  *
+ * V1.7 Changelog
+ * ---------------
+ *
+ * Bumped version number and beta build for mc 1.11
+ *
+ * New config option - Disable bonemeal speeding up crop growth ( bonemeal is still used, just no growth speedup)
+ *
+ * Added 1 Vanilla Crop for Prismarine
+ *
+ * Mod support for AE2
+ *  - Added Crops for Certus Quartz and Fluix
+ *
+ * Added Essence Based Recipes for:
+ *  Prismarine Crystals
+ *
+ *
  * V1.6f Changelog
  * ---------------
  *

@@ -28,6 +28,12 @@ public class PrimordialConfig {
 	public static boolean rightClickHarvest;
 	public static boolean addMinicioSeedToGrassDrop;
 
+	// 1.6g new stuff
+	public static boolean enableBonemealUse;
+
+	// WIP
+	public static boolean enableIngameBook;
+
 	// Crops
 
 	public static boolean enableAirCrop;
@@ -95,6 +101,14 @@ public class PrimordialConfig {
 	public static boolean enableYelloriteCrop;
 	public static boolean enableZombieCrop;
 
+	// 1.6g new Stuff
+	public static boolean enableCertusCrop;
+	public static boolean enableChargedCertusCrop;
+	public static boolean enableFluixCrop;
+	public static boolean enablePrismarineShardCrop;
+	//public static boolean enablePrismarineCrystalCrop;
+
+
 	public static boolean useAlternateIfDisabled;
 
 	public static void init(FMLPreInitializationEvent event) {
@@ -126,6 +140,9 @@ public class PrimordialConfig {
 		specialSeedExtraChance = config.getInt("extraSeedChanceSpecial", CATEGORY_MOD, 3, 0, 100, "Percentage chance you get an extra seed from special crops");
 		rightClickHarvest = config.getBoolean("harvestOnRightClick", CATEGORY_MOD, false, "Set to true if you want right click harvesting of crops (not yet implimented) (this option is ignored if Pams Harvestcraft installed)");
 		addMinicioSeedToGrassDrop = config.getBoolean("grassDropsMinicioSeed", CATEGORY_MOD, true, "Set to false if you don't want minicio seeds as a chance drop from breaking grass");
+		enableBonemealUse = config.getBoolean("allowBonemealCrops", CATEGORY_MOD, true, "Set to false if you don't want bonemeal to speed up crop growth");
+		// Work In Progress (Not Yet Craftable)
+		enableIngameBook = config.getBoolean("enableInGameBook", CATEGORY_MOD, true, "Set to false if you don't want to use the Ingame Manual");
 
 		config.addCustomCategoryComment(CATEGORY_CROPS, "Enable/Disable individual crops (also disables/Enables the seeds)");
 		enableAirCrop = config.getBoolean("enableAirCrop", CATEGORY_CROPS, true, "Set to false to disable Air Crops/Seeds/Essence");
@@ -192,6 +209,11 @@ public class PrimordialConfig {
 		enableWitherCrop = config.getBoolean("enableWitherCrop", CATEGORY_CROPS, true, "Set to false to disable Wither Crops/Seeds/Essence");
 		enableYelloriteCrop = config.getBoolean("enableYelloriteCrop", CATEGORY_CROPS, true, "Set to false to disable Yellorite Crops/Seeds/Essence");
 		enableZombieCrop = config.getBoolean("enableZombieCrop", CATEGORY_CROPS, true, "Set to false to disable Zombie Crops/Seeds/Essence");
+
+		// 1.6g new stuff
+		enableCertusCrop = config.getBoolean("enableCertusCrop", CATEGORY_CROPS, true, "Set to false to disable AE2 Certus Quartz Crops/Seeds/Essence");
+		enableFluixCrop = config.getBoolean("enableFluixCrystalCrop", CATEGORY_CROPS, true, "Set to false to disable AE2 Fluix Crystal Crops/Seeds/Essence");
+		enablePrismarineShardCrop = config.getBoolean("enablePrismarineShardCrop", CATEGORY_CROPS, true, "Set to false to disable Prismarine Shard Crops/Seeds/Essence");
 
 		config.addCustomCategoryComment(CATEGORY_DANGER, "DANGER AREA!!! - useAlternateRecipeIfCropDisabled Can unbalanace mod if true, Use at your own risk!!!");
 		useAlternateIfDisabled = config.getBoolean("useAlternateRecipeIfCropDisabled", CATEGORY_DANGER, false, "If true, certain recipes that use disabled crop essence will use vanilla items instead, can make items too easy to make");

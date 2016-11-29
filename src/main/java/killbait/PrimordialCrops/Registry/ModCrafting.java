@@ -1,11 +1,10 @@
 package killbait.PrimordialCrops.Registry;
 
 
-import killbait.PrimordialCrops.Utils.LogHelper;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
+import killbait.PrimordialCrops.Utils.LogHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
@@ -70,6 +69,11 @@ public class ModCrafting {
 		if (PrimordialConfig.enableGlowstoneCrop) {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.GlowstoneSeeds), "cgc", "g3g", "cgc", 'c', ModItems.ImperioEssence, 'g', Items.GLOWSTONE_DUST, '3', "InfusionStoneT3Plus"));
 		}
+
+		if (PrimordialConfig.enablePrismarineShardCrop) {
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.PrismarineShardSeeds), "epe", "pip", "epe", 'i', "InfusionStoneT2Plus", 'p', Items.PRISMARINE_SHARD, 'e', ModItems.CrucioEssence));
+		}
+
 		if (PrimordialConfig.enableFireCrop) {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.FireSeeds), "XYX", "Y3Y", "XYX", '3', "InfusionStoneT3Plus", 'Y', Items.LAVA_BUCKET, 'X', ModItems.ImperioEssence));
 		}
@@ -443,6 +447,10 @@ public class ModCrafting {
 		// Random Stuff
 		//
 
+		if (PrimordialConfig.enablePrismarineShardCrop) {
+			GameRegistry.addRecipe(new ItemStack(Items.PRISMARINE_SHARD, 8), "sss", "s s", "sss", 's', ModCrops.PrismarineShardEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.PRISMARINE_CRYSTALS, 8), "sss", "sns", "sss", 's', ModCrops.PrismarineShardEssence, 'n', Items.WHEAT_SEEDS);
+		}
 		if (PrimordialConfig.enableGoldCrop)
 			GameRegistry.addRecipe(new ItemStack(Items.GOLDEN_APPLE), "XXX", "XYX", "XXX", 'X', ModCrops.GoldEssence, 'Y', Items.APPLE);
 		if (PrimordialConfig.enableIronCrop)
@@ -454,6 +462,7 @@ public class ModCrafting {
 				}
 			}
 		}
+
 
 		if (PrimordialConfig.infusionStoneDurability) {
 			// Crafting Essence
@@ -606,6 +615,17 @@ public class ModCrafting {
 			if (PrimordialConfig.enableAwakeDraconiumCrop) {
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.AwakeDraconiumSeeds), "XYX", "YZY", "XYX", 'Y', "ingotDraconiumAwakened", 'X', ModItems.ZivicioEssence, 'Z', "InfusionStoneT5Plus"));
 				GameRegistry.addRecipe(getOreDictItemWithMeta("ingotDraconiumAwakened", 4), "XXX", "XzX", "XXX", 'X', ModCrops.AwakeDraconiumEssence, 'z', ModItems.ZivicioEssence);
+			}
+		}
+
+		if (Loader.isModLoaded("appliedenergistics2")) {
+			if (PrimordialConfig.enableCertusCrop) {
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.CertusQuartzSeeds), "XYX", "YZY", "XYX", 'Y', "crystalCertusQuartz", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("crystalCertusQuartz", 8), "XXX", "X X", "XXX", 'X', ModCrops.CertusQuartzEssence));
+			}
+			if (PrimordialConfig.enableFluixCrop) {
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.FluixSeeds), "XYX", "YZY", "XYX", 'Y', "crystalFluix", 'X', ModItems.AccioEssence, 'Z', "InfusionStoneT2Plus"));
+				GameRegistry.addRecipe(new ShapedOreRecipe(getOreDictItemWithMeta("crystalFluix", 8), "XXX", "X X", "XXX", 'X', ModCrops.FluixEssence));
 			}
 		}
 
