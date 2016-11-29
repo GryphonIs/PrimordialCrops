@@ -534,22 +534,22 @@ public class ModCrops {
 				ArditeEssence = regHarvestItem("ArditeEssence", ArditeCrop);
 			}
 			if (PrimordialConfig.enableCobaltCrop) {
-				registerBlockCrop("CobaltCrop");
+				CobaltCrop = registerBlockCrop("CobaltCrop");
 				CobaltSeeds = regSeeds("CobaltSeeds", CobaltCrop);
 				CobaltEssence = regHarvestItem("CobaltEssence", CobaltCrop);
 			}
 			if (PrimordialConfig.enableManyullynCrop) {
-				registerBlockCrop("ManyullynCrop");
+				ManyullynCrop = registerBlockCrop("ManyullynCrop");
 				ManyullynSeeds = regSeeds("ManyullynSeeds", ManyullynCrop);
 				ManyullynEssence = regHarvestItem("ManyullynEssence", ManyullynCrop);
 			}
 			if (PrimordialConfig.enableKnightSlimeCrop) {
-				registerBlockCrop("KnightSlimeCrop");
+				KnightSlimeCrop = registerBlockCrop("KnightSlimeCrop");
 				KnightSlimeSeeds = regSeeds("KnightSlimeSeeds", KnightSlimeCrop);
 				KnightSlimeEssence = regHarvestItem("KnightSlimeEssence", KnightSlimeCrop);
 			}
 			if (PrimordialConfig.enablePigIronCrop) {
-				registerBlockCrop("PigIronCrop");
+				PigIronCrop = registerBlockCrop("PigIronCrop");
 				PigIronSeeds = regSeeds("PigIronSeeds", PigIronCrop);
 				PigIronEssence = regHarvestItem("PigIronEssence", PigIronCrop);
 			}
