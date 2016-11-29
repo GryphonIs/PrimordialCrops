@@ -2,6 +2,13 @@
  *
  * v1.6a and beyond now maintained by KillBait
  *
+ *
+ * V1.7a Changelog
+ * ---------------
+ *
+ * Fixed crash when planting Tinkers Construct seeds
+ *
+ *
  * V1.7 Changelog
  * ---------------
  *
