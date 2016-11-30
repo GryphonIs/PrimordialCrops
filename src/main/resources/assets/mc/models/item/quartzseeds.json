@@ -1,0 +1,6 @@
+{
+  "parent": "mc:item/standardSeedItem",
+  "textures": {
+    "layer0": "mc:items/QuartzSeeds"
+  }
+}

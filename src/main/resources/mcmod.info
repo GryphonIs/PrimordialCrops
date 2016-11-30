@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mc",
+  "name": "Primordial Crops",
+  "description": "Magical Crops invisioned in 1.9.4+ changed up",
+  "version": "1.7a",
+  "mcversion": "1.11",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["abused_master v1.0 - v1.6 /KillBait v1.6a onwards"],
+  "credits": "Mod idea from Magical Crops",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

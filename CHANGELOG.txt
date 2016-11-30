@@ -1,0 +1,174 @@
+/* v1.0 - v1.6 by abused_master (see Curse Page)
+ *
+ * v1.6a and beyond now maintained by KillBait
+ *
+ *
+ * V1.7a Changelog
+ * ---------------
+ *
+ * Fixed crash when planting Tinkers Construct seeds
+ *
+ *
+ * V1.7 Changelog
+ * ---------------
+ *
+ * Bumped version number and beta build for mc 1.11
+ *
+ * New config option - Disable bonemeal speeding up crop growth ( bonemeal is still used, just no growth speedup)
+ *
+ * Added 1 Vanilla Crop for Prismarine
+ *
+ * Mod support for AE2
+ *  - Added Crops for Certus Quartz and Fluix
+ *
+ * Added Essence Based Recipes for:
+ *  Prismarine Crystals
+ *
+ *
+ * V1.6f Changelog
+ * ---------------
+ *
+ * Fixed crash in block registry.
+ *
+ *
+ *
+ * V1.6e Changelog
+ * ---------------
+ *
+ * Fixed crash due to recipe registration using OreDictionary and not taking into
+ * account unsupported mods.
+ *
+ *
+ * V1.6d Changelog
+ * ---------------
+ *
+ * Fixed Osmium Ingots not registering
+ *
+ *
+ *
+ * V1.6c Changelog
+ * ---------------
+ *
+ * Added Config file support. (3000% more painfull than i first thought)
+ *
+ * NOTE: recipes for disabled crops are not registered, ANY recipe that relies
+ *       on a crops essence will become unavailable (one exception detailed below).
+ *
+ * NOTE 2: Some recipes have alternate's, if certain essences are not available,
+ *         they are replaced with vanilla items, this is off by default, enable
+ *         it from config.
+ *             (Use this with caution as it can break mod progression!!!)
+ *
+ * Due to the fact every crop is now togglable,some hard coded safeguards have been put
+ * in place to preserve mod progression. e.g. if none of the essences are available for
+ * for crafting a certain tier infusion stone, an alternate recipe using a vanilla item
+ * is used instead. (i dont want people complaining the mod is broken because somebody
+ * changed the config and didnt check if it messed things up!)
+ *
+ * i have tested the config options to the best of my ability with the time i have,
+ * but the different combinatons are huge in number. if you dont see a recipe, there is
+ * a good chance a disabled crop/essence was used in its crafting.
+ *
+ * The new config options are:-
+ *
+ * - You can now disable any crop you choose.
+ * - Special crops now have a Hard and Easy recipe (togglable, default to hard recipes)
+ * - Weapons can now be disabled (on by default)
+ * - Minico seed drops from breaking grass is toggable (on by default)
+ * - % Chance of extra seed on harvest of regular crop can now be 0% - 100% (default 20%)
+ * - % Chance of extra seed on harvest of special crop can now be 0% - 100% (default 3%)
+ * - Harvest On Right click ( toggable, off by default, ignored if Pam's HarvestCraft installed)
+ * - Infusion stones can now have durability ( off by deafult )
+ * - Max uses of Infusion stone with durability can be changed (0 - 1000 uses, 100 be default)
+ *
+ *
+ *
+ * V1.6b Changelog
+ * ---------------
+ *
+ * Added 23 new Mod based crops.
+ * Added 2 Special Crops (Nether Star, Dragon Egg).
+ * Added 1 Food Crop.
+ *
+ * Primordial Crops now has crops for the following mod resources.
+ *
+ * - Tinkers Construct : (Cobalt, Ardite, Manyullyn, KnighSlime, PigIron)
+ * - Immersive Engineering:
+ *   (Bauxite/Aluminum, Nickel, Uranium, Electrum, Steel, Constantan, Copper
+ *    Lead, Silver)
+ * - Botania : (Manasteel, Terrasteel, Elementium)
+ * - IC2 Experimental : (Rubber, Copper, Lead, Silver, Tin, Uranium, Bronze, Steel)
+ * - Forestry: (Bronze, Tin, Copper, Apatite)
+ * - Extreme Reactors : (Yellorite, Ludicrite, Cyanite, Blutonium)
+ * - Draconic Evolution : (Draconium, Awakened Draconium)
+ *
+ *  Any suggestions for mods to support/add crops for, let me know in comments section.
+ *
+ * New Special Crops added for NetherStars and DragonEgg.
+ *
+ * -- Special Crops have a VERY low chance of dropping extra seeds (3%)
+ *    and need high tier items to craft them.
+
+ *    please leave feedback if you think these 2 crops have balance/recipe issues, please note
+ *    the recipe's and extra seed percentage are "Work In Progress".
+ *
+ *
+ * - Cake Crop added - *cough* Mana Production *cough* :-P
+
+ * - Worldgen change
+ *   Minicio Ore should now generate in every dimension apart from the nether and the end.
+ *   A retrogen mod will be need to update existing worlds.
+ *
+ * v1.6a Changelog - First update by me (KillBait!)
+ * ---------------
+ *
+ * - Reduced size of mod by 50% compared to v1.6
+ *
+ * - Fixed recipe typo making diamond seeds uncraftable.
+ *
+ * - Major rework of recipe registration, seed recipes now use ore dictionary
+ *   (eliminated duplicate recipes for each tier of infusion stones)
+ *   (please report any recipe errors, i may have derped something in the process)
+ *
+ * - Crop blocks are no longer registered as ItemBlocks, removes them from JEI view.
+ *   **NOTE: You will get "missing item CropXXXX" on world load, safe to ignore them**
+ *
+ * - Essence dropped on harvest are no longer plantable as seeds, changed code to register
+ *   essence as items, not seeds.
+ *
+ * - Fixed bug causing EnderIO farming station to not give/collect essence on harvest
+ *   (related to essence being registered as seeds)
+ *
+ * - A Broken crop will now give back it's seed 100% of the time, with additional 20% chance
+ *   of second seed if fully grown. (extra seed % will be changable through config file later on)
+ *
+ * - MinicioOre now registered with ore dictionary name "oreMinicio", primary for ease of use with
+ *   mekanism digital miner searching.
+ *
+ * - Added 11 new mob based crops
+ *    Blaze, Chicken, Cow, Ghast, Pig, Sheep, Skeleton, Slime, Spider, Wither, Zombie
+ *    Craft seeds using standard mob drops and the following infusion stone/essence tier
+ *     - Tier 2/Accio Eseence   - Chicken ,Cow ,Pig ,Sheep
+ *     - Tier 3/Crucio Essence  - Skeleton ,Slime ,Spider ,Zombie ,Creeper
+ *     - Tier 4/Imperio Essence - Wither ,Ghast ,Blaze
+ *
+ * - Added Water essence/Crop
+ *
+ * - Recipe Changes
+ *    Any recipe results for mob drop items now use there associated mob essence to create them
+ *    dye seed recipes now uses ore dictionary, use any 4 dye to craft. (24 recipes condensed to 3)
+ *    changed recipe for mycelium to use small red/brown mushrooms instead of mushroom block
+ *    changed gunpowder recipe, now gives 8 gunpowder
+ *    changed ender pearl recipe, now gives 4 pearls
+ *    changed wither skull recipe to use wither essence instead of diamond essence
+ *    changed feather recipe to use chicken essence instead of air essence
+ *
+ * - Added recipes for the following items/quantities.
+ *    SnowBalls(32), PodZol(16), Sand(32), RedSand (32), Cobblestone(32), Gravel(32), Water Bucket
+ *    Oak/Spruce/Birch/Jungle/Acacia/DarkOak wood (16), Eye Of Ender(4), Chorus Flower(2), Ghast Tear(8),
+ *    Porkchops/Cooked Porkchops (16), all Vanilla Music Discs, Rotten Flesh (16), Slimeball (8)
+ *    Magma Cream (8), Creeper/Zombie/Skeleton Heads, Blaze Rods (6), Blaze Powder (16)
+ *    String (8), Spider Eye (8), Fermented Spider Eye (8), Beef/Steak (16),  Mutton/Cooked Mutton (16)
+ *    Raw Chicken/Cooked Chicken (16), All Vanilla Wool Colours
+ *
+ */
