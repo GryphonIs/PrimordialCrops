@@ -16,6 +16,12 @@ public class ItemRenderRegistry {
 		reg(ModCrops.MinicioSeeds);
 		reg(ModCrops.MinicioEssence);
 
+		reg(ModItems.accioIngot);
+		reg(ModItems.crucioIngot);
+		reg(ModItems.imperioIngot);
+		reg(ModItems.zivicioIngot);
+
+
 		if (PrimordialConfig.enableAirCrop) {
 			reg(ModCrops.AirSeeds);
 			reg(ModCrops.AirEssence);
@@ -362,10 +368,32 @@ public class ItemRenderRegistry {
 		// Tools
 
 		if (PrimordialConfig.enableWeapons) {
-			reg(ModItems.ZivicioSword);
 			reg(ModItems.AccioSword);
 			reg(ModItems.CrucioSword);
 			reg(ModItems.ImperioSword);
+			reg(ModItems.ZivicioSword);
+		}
+
+		if (PrimordialConfig.enableTools) {
+			reg(ModItems.AccioPickAxe);
+			reg(ModItems.AccioAxe);
+			reg(ModItems.AccioShovel);
+			reg(ModItems.AccioHoe);
+
+			reg(ModItems.CrucioPickAxe);
+			reg(ModItems.CrucioAxe);
+			reg(ModItems.CrucioShovel);
+			reg(ModItems.CrucioHoe);
+
+			reg(ModItems.ImperioPickAxe);
+			reg(ModItems.ImperioAxe);
+			reg(ModItems.ImperioShovel);
+			reg(ModItems.ImperioHoe);
+
+			reg(ModItems.ZivicioPickAxe);
+			reg(ModItems.ZivicioAxe);
+			reg(ModItems.ZivicioShovel);
+			reg(ModItems.ZivicioHoe);
 		}
 
 		if (PrimordialConfig.enableIngameBook) {

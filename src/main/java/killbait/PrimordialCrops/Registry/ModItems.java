@@ -3,7 +3,7 @@ package killbait.PrimordialCrops.Registry;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
 import killbait.PrimordialCrops.Items.PrimordialBook;
 import killbait.PrimordialCrops.Items.PrimordialCropsItem;
-import killbait.PrimordialCrops.Tools.Swords;
+import killbait.PrimordialCrops.Items.Tools.*;
 import killbait.PrimordialCrops.Utils.LogHelper;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
@@ -24,15 +24,56 @@ public class ModItems {
 	public static Item InfusionStoneT4;
 	public static Item InfusionStoneT5;
 
-	public static Item.ToolMaterial ZivicioSwordMaterial = EnumHelper.addToolMaterial("ZivicioSwordMaterial", 2, 20000, 1.0F, 22, 30);
-	public static Item.ToolMaterial AccioSwordMaterial = EnumHelper.addToolMaterial("AccioSwordMaterial", 2, 3000, 1.0F, 9, 30);
-	public static Item.ToolMaterial CrucioSwordMaterial = EnumHelper.addToolMaterial("CrucioSwordMaterial", 2, 8000, 1.0F, 11, 30);
-	public static Item.ToolMaterial ImperioSwordMaterial = EnumHelper.addToolMaterial("ImperioSwordMaterial", 2, 16000, 1.0F, 15, 30);
+	public static Item accioIngot;
+	public static Item crucioIngot;
+	public static Item imperioIngot;
+	public static Item zivicioIngot;
 
-	public static Item ZivicioSword = new Swords(ZivicioSwordMaterial, "ZivicioSword");
-	public static Item AccioSword = new Swords(AccioSwordMaterial, "AccioSword");
-	public static Item CrucioSword = new Swords(CrucioSwordMaterial, "CrucioSword");
-	public static Item ImperioSword = new Swords(ImperioSwordMaterial, "ImperioSword");
+	public static final Item.ToolMaterial accioToolMaterial = EnumHelper.addToolMaterial("ACCIO", 2, 1500, 8, 4, 22);
+	public static final Item.ToolMaterial crucioToolMaterial = EnumHelper.addToolMaterial("CRUCIO", 2, 2500, 12, 6, 22);
+	public static final Item.ToolMaterial imperioToolMaterial = EnumHelper.addToolMaterial("IMPERIO", 3, 4500, 18, 8, 22);
+	public static final Item.ToolMaterial zivicioToolMaterial = EnumHelper.addToolMaterial("ZIVICIO", 3, 0, 24, 10, 22);
+
+	// standard tool material above make even the accio shovel almost insta break dirt, so we create a new set of materials
+	public static final Item.ToolMaterial accioShovelMaterial = EnumHelper.addToolMaterial("ACCIOSHOVEL", 2, 1500, 3, 4, 22);
+	public static final Item.ToolMaterial crucioShovelMaterial = EnumHelper.addToolMaterial("CRUCIOSHOVEL", 2, 2500, 8, 6, 22);
+	public static final Item.ToolMaterial imperioShovelMaterial = EnumHelper.addToolMaterial("IMPERIOSHOVEL", 3, 4500, 12, 8, 22);
+	public static final Item.ToolMaterial zivicioShovelMaterial = EnumHelper.addToolMaterial("ZIVICIOSHOVEL", 3, 0, 18, 10, 22);
+
+
+	public static final Item.ToolMaterial AccioSwordMaterial = EnumHelper.addToolMaterial("AccioSwordMaterial", 2, 1500, 1.0F, 9, 22);
+	public static final Item.ToolMaterial CrucioSwordMaterial = EnumHelper.addToolMaterial("CrucioSwordMaterial", 2, 3000, 1.0F, 11, 22);
+	public static final Item.ToolMaterial ImperioSwordMaterial = EnumHelper.addToolMaterial("ImperioSwordMaterial", 2, 6000, 1.0F, 15, 22);
+	public static final Item.ToolMaterial ZivicioSwordMaterial = EnumHelper.addToolMaterial("ZivicioSwordMaterial", 2, 0, 1.0F, 22, 22);
+
+	public static Item ZivicioSword = new PrimordialSword(ZivicioSwordMaterial, "ZivicioSword");
+	public static Item AccioSword = new PrimordialSword(AccioSwordMaterial, "AccioSword");
+	public static Item CrucioSword = new PrimordialSword(CrucioSwordMaterial, "CrucioSword");
+	public static Item ImperioSword = new PrimordialSword(ImperioSwordMaterial, "ImperioSword");
+
+	public static Item AccioPickAxe = new PrimordialPickAxe(accioToolMaterial, "AccioPickAxe");
+	public static Item CrucioPickAxe = new PrimordialPickAxe(crucioToolMaterial, "CrucioPickAxe");
+	public static Item ImperioPickAxe = new PrimordialPickAxe(imperioToolMaterial, "ImperioPickAxe");
+	public static Item ZivicioPickAxe = new PrimordialPickAxe(zivicioToolMaterial, "ZivicioPickAxe");
+
+	public static Item AccioAxe = new PrimordialAxe(accioToolMaterial, "AccioAxe", 5, -3f);
+	public static Item CrucioAxe = new PrimordialAxe(crucioToolMaterial, "CrucioAxe", 7, -3f);
+	public static Item ImperioAxe = new PrimordialAxe(imperioToolMaterial, "ImperioAxe", 9, -3f);
+	public static Item ZivicioAxe = new PrimordialAxe(zivicioToolMaterial, "ZivicioAxe", 11, -3f);
+
+	public static Item AccioShovel = new PrimordialShovel(accioShovelMaterial, "AccioShovel");
+	public static Item CrucioShovel = new PrimordialShovel(crucioShovelMaterial, "CrucioShovel");
+	public static Item ImperioShovel = new PrimordialShovel(imperioShovelMaterial, "ImperioShovel");
+	public static Item ZivicioShovel = new PrimordialShovel(zivicioShovelMaterial, "ZivicioShovel");
+
+	public static Item AccioHoe = new PrimordialHoe(accioToolMaterial, "AccioHoe");
+	public static Item CrucioHoe = new PrimordialHoe(crucioToolMaterial, "CrucioHoe");
+	public static Item ImperioHoe = new PrimordialHoe(imperioToolMaterial, "ImperioHoe");
+	public static Item ZivicioHoe = new PrimordialHoe(zivicioToolMaterial, "ZivicioHoe");
+
+
+
+
 
 	public static Item PrimordialBook = new PrimordialBook();
 
@@ -42,6 +83,11 @@ public class ModItems {
 		ImperioEssence = regCraftItem("ImperioEssence");
 		ZivicioEssence = regCraftItem("ZivicioEssence");
 		AccioEssence = regCraftItem("AccioEssence");
+
+		accioIngot = regCraftItem("accioIngot");
+		crucioIngot = regCraftItem("crucioIngot");
+		imperioIngot = regCraftItem("imperioIngot");
+		zivicioIngot = regCraftItem("zivicioIngot");
 
 
 		if (PrimordialConfig.infusionStoneDurability) {
@@ -66,6 +112,30 @@ public class ModItems {
 			GameRegistry.register(CrucioSword.setRegistryName("CrucioSword"));
 			GameRegistry.register(ImperioSword.setRegistryName("ImperioSword"));
 		}
+
+		if (PrimordialConfig.enableTools) {
+			GameRegistry.register(AccioPickAxe.setRegistryName("Accio_PickAxe"));
+			GameRegistry.register(AccioAxe.setRegistryName("Accio_Axe"));
+			GameRegistry.register(AccioShovel.setRegistryName("Accio_Shovel"));
+			GameRegistry.register(AccioHoe.setRegistryName("Accio_Hoe"));
+
+			GameRegistry.register(CrucioPickAxe.setRegistryName("Crucio_PickAxe"));
+			GameRegistry.register(CrucioAxe.setRegistryName("Crucio_Axe"));
+			GameRegistry.register(CrucioShovel.setRegistryName("Crucio_Shovel"));
+			GameRegistry.register(CrucioHoe.setRegistryName("Crucio_Hoe"));
+
+			GameRegistry.register(ImperioPickAxe.setRegistryName("Imperio_PickAxe"));
+			GameRegistry.register(ImperioAxe.setRegistryName("Imperio_Axe"));
+			GameRegistry.register(ImperioShovel.setRegistryName("Imperio_Shovel"));
+			GameRegistry.register(ImperioHoe.setRegistryName("Imperio_Hoe"));
+
+			GameRegistry.register(ZivicioPickAxe.setRegistryName("Zivicio_PickAxe"));
+			GameRegistry.register(ZivicioAxe.setRegistryName("Zivicio_Axe"));
+			GameRegistry.register(ZivicioShovel.setRegistryName("Zivicio_Shovel"));
+			GameRegistry.register(ZivicioHoe.setRegistryName("Zivicio_Hoe"));
+		}
+
+
 
 		if (PrimordialConfig.enableIngameBook) {
 			GameRegistry.register(PrimordialBook.setRegistryName("PrimordialBook"));

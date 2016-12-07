@@ -1,4 +1,13 @@
-Version string 'v1.7a_mc1.9.4' does not match SemVer specification 
+#################################################
+         ForgeGradle 2.2-SNAPSHOT-c438b06        
+  https://github.com/MinecraftForge/ForgeGradle  
+#################################################
+               Powered by MCP unknown               
+             http://modcoderpack.com             
+         by: Searge, ProfMobius, Fesh0r,         
+         R4wk, ZeuX, IngisKahn, bspkrs           
+#################################################
+Version string 'v1.7b_mc1.9.4' does not match SemVer specification 
 You should try SemVer : http://semver.org/
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
@@ -6,11 +15,9 @@ You should try SemVer : http://semver.org/
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
-:sourceMainJava UP-TO-DATE
+:sourceMainJava
 :compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
-Note: F:\Projects\Minecraft\1.10.2\PrimordialCrops\build\sources\main\java\killbait\PrimordialCrops\Utils\GuiBook.java uses or overrides a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: F:\Projects\Minecraft\1.10.2\PrimordialCrops\build\sources\main\java\killbait\PrimordialCrops\Items\PrimordialBook.java uses unchecked or unsafe operations.
+Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 1 warning
 
@@ -39,4 +46,4 @@ remapping source...
 
 BUILD SUCCESSFUL
 
-Total time: 7.385 secs
+Total time: 21.691 secs

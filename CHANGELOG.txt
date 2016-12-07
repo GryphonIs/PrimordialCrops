@@ -3,6 +3,28 @@
  * v1.6a and beyond now maintained by KillBait
  *
  *
+ * V1.7b Changelog
+ * ---------------
+ *
+ * Fixed Osmium Ingot not being Ore Dictorary compatible.
+ *
+ * Changed Obsidian seed recipe to require Imperio Essence/T3 infusion stone
+ * (prevoiusly Zivicio Essence/T4 infusion stone)
+ *
+ * Added craftable Accio/Crucio/Imperio and Zivicio ingots
+ *
+ * Essence versions of vanilla tools are now in the mod. Some things to note:
+ * - All tiers have minimum 1500 uses, durability/speed goes up the higher the tier.
+ * - All tiers are gold level of enchantability
+ * - Zivicio Level tools are unbreakable
+ * - Textures are not final and may be reworked later on.
+ *
+ * Swords textures redone and can now be crafted.
+ *  NOTE: If swords are not visible ingame, check if they are enabled in config file
+ *        or that the modpack your using has them disabled by default.
+ * - Textures are not final and may be reworked later on.
+ *
+ *
  * V1.7a Changelog
  * ---------------
  *
