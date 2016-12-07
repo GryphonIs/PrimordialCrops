@@ -19,6 +19,9 @@
  * - Zivicio Level tools are unbreakable
  * - Textures are not final and may be reworked later on.
  *
+ * NOTE: For some reason Essence hoe's do not currently work in EnderIO Farming stations
+ *       , axe work fine, investigating why the hoe doesn't
+ *
  * Swords textures redone and can now be crafted.
  *  NOTE: If swords are not visible ingame, check if they are enabled in config file
  *        or that the modpack your using has them disabled by default.
