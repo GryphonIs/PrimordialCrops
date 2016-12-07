@@ -16,11 +16,27 @@
  * Essence versions of vanilla tools are now in the mod. Some things to note:
  * - All tiers have minimum 1500 uses, durability/speed goes up the higher the tier.
  * - All tiers are gold level of enchantability
- * - Zivicio Level tools are unbreakable
+ * - Zivicio Level Tools/Swords are unbreakable
  * - Textures are not final and may be reworked later on.
  *
- * NOTE: For some reason Essence hoe's do not currently work in EnderIO Farming stations
- *       , axe work fine, investigating why the hoe doesn't
+ * EnderIO Farming Station Users
+ *   IMPORTANT: The EnderIO Farming station uses a whitelist of what hoe's it can use,
+ *         you will have to add the essence hoes to the EnderIO config for them to work
+ *
+ *         Open config/enderio/EnderIO.cfg in a text editor and find the key S:farmHoes
+ *         edit the key to look like the following.
+
+            S:farmHoes <
+           	mc:Accio_Hoe
+           	mc:Crucio_Hoe
+           	mc:Imperio_Hoe
+           	mc:Zivicio_Hoe
+            >
+
+ *          Save the config file and re-run client/server and you should be able to use them.
+ *
+ *          (There is no other short term workaround i can see, i will be contacting the EnderIO
+ *           devs to see if i can get the hoe's added to their default whitelist)
  *
  * Swords textures redone and can now be crafted.
  *  NOTE: If swords are not visible ingame, check if they are enabled in config file
