@@ -192,5 +192,25 @@ item.ZivicioAxe.name=Zivicio Axe
 item.ZivicioShovel.name=Zivicio Shovel
 item.ZivicioHoe.name=Zivicio Hoe
 
+item.accioHelmet.name=Accio Helmet
+item.accioChestPlate.name=Accio ChestPlate
+item.accioLeggings.name=Accio Leggings
+item.accioBoots.name=Accio Boots
+
+item.crucioHelmet.name=Crucio Helmet
+item.crucioChestPlate.name=Crucio ChestPlate
+item.crucioLeggings.name=Crucio Leggings
+item.crucioBoots.name=Crucio Boots
+
+item.imperioHelmet.name=Imperio Helmet
+item.imperioChestPlate.name=Imperio ChestPlate
+item.imperioLeggings.name=Imperio Leggings
+item.imperioBoots.name=Imperio Boots
+
+item.zivicioHelmet.name=Zivicio Helmet
+item.zivicioChestPlate.name=Zivicio ChestPlate
+item.zivicioLeggings.name=Zivicio Leggings
+item.zivicioBoots.name=Zivicio Boots
+
 item.PrimordialBook.name=PrimodrialCrops Manual
  
