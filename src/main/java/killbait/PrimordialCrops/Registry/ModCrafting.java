@@ -32,10 +32,21 @@ public class ModCrafting {
 		GameRegistry.addSmelting(ModBlocks.MinicioOre, new ItemStack(ModCrops.MinicioEssence, 4), 3.5F);
 
 		//
+		// Ingots
+		//
+
+		GameRegistry.addRecipe(new ItemStack(ModItems.accioIngot, 2), "nin", "iei", "nin", 'n', Items.GOLD_NUGGET, 'i', Items.IRON_INGOT, 'e', ModItems.AccioEssence);
+		GameRegistry.addRecipe(new ItemStack(ModItems.crucioIngot, 2), "nin", "iei", "nin", 'n', Items.GOLD_NUGGET, 'i', Items.IRON_INGOT, 'e', ModItems.CrucioEssence);
+		GameRegistry.addRecipe(new ItemStack(ModItems.imperioIngot, 2), "nin", "iei", "nin", 'n', Items.GOLD_NUGGET, 'i', Items.IRON_INGOT, 'e', ModItems.ImperioEssence);
+		GameRegistry.addRecipe(new ItemStack(ModItems.zivicioIngot, 2), "nin", "iei", "nin", 'n', Items.GOLD_NUGGET, 'i', Items.IRON_INGOT, 'e', ModItems.ZivicioEssence);
+
+		//
 		// Seeds
 		//
 
 		GameRegistry.addRecipe(new ItemStack(ModCrops.MinicioSeeds), " m ", "msm", " m ", 'm', ModCrops.MinicioEssence, 's', Items.WHEAT_SEEDS);
+
+
 		if (PrimordialConfig.enableCoalCrop) {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.CoalSeeds), "scs", "c1c", "scs", 's', ModCrops.MinicioEssence, 'c', Items.COAL, '1', "InfusionStoneT1Plus"));
 		}
@@ -55,7 +66,7 @@ public class ModCrafting {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.QuartzSeeds), "aqa", "q3q", "aqa", 'a', ModItems.ImperioEssence, 'q', Items.QUARTZ, '3', "InfusionStoneT3Plus"));
 		}
 		if (PrimordialConfig.enableObsidianCrop) {
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.ObsidianSeeds), "ara", "r4r", "ara", 'a', ModItems.ZivicioEssence, 'r', Blocks.OBSIDIAN, '4', "InfusionStoneT4Plus"));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.ObsidianSeeds), "ara", "r4r", "ara", 'a', ModItems.ImperioEssence, 'r', Blocks.OBSIDIAN, '4', "InfusionStoneT3Plus"));
 		}
 		if (PrimordialConfig.enableNetherCrop) {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.NetherSeeds), "ara", "r3r", "ara", 'a', ModItems.ImperioEssence, 'r', Blocks.NETHERRACK, '3', "InfusionStoneT3Plus"));
@@ -177,14 +188,13 @@ public class ModCrafting {
 				GameRegistry.addRecipe(new ItemStack(Blocks.DIRT, 16, 2), "ee ", "nn ", "   ", 'n', ModCrops.NatureEssence, 'e', ModCrops.EarthEssence); // reverse Grass = Podzol recipe
 				GameRegistry.addRecipe(new ItemStack(Blocks.SAND, 32), "se ", "es ", "   ", 's', ModCrops.EarthEssence, 'e', ModCrops.NatureEssence);
 				GameRegistry.addRecipe(new ItemStack(Blocks.SAND, 32, 1), "es ", "se ", "   ", 's', ModCrops.EarthEssence, 'e', ModCrops.NatureEssence); // Red Sand
-			/*}else{
-				GameRegistry.addRecipe(new ItemStack(Blocks.GRASS, 16), new Object[]{"nn ", "ee ", "   ", 'n', Items.WHEAT_SEEDS, 'e', ModCrops.EarthEssence});
-				GameRegistry.addRecipe(new ItemStack(Blocks.DIRT, 16, 2), new Object[]{"ee ", "nn ", "   ", 'n', Items.WHEAT_SEEDS, 'e', ModCrops.EarthEssence}); // reverse Grass = Podzol recipe
-				GameRegistry.addRecipe(new ItemStack(Blocks.SAND, 32), new Object[]{"se ", "es ", "   ", 's', ModCrops.EarthEssence, 'e', Items.WHEAT_SEEDS});
-				GameRegistry.addRecipe(new ItemStack(Blocks.SAND, 32, 1), new Object[]{"es ", "se ", "   ", 's', ModCrops.EarthEssence, 'e', Items.WHEAT_SEEDS}); // Red Sand*/
+				if (PrimordialConfig.enableFireCrop) {
+					GameRegistry.addRecipe(new ItemStack(Blocks.GLASS, 32), " e ", "nfn", " e ", 'n', ModCrops.NatureEssence, 'e', ModCrops.EarthEssence, 'f', ModCrops.FireEssence); // Glass
+				}
 			}
 			if (PrimordialConfig.enableFireCrop) {
-				GameRegistry.addRecipe(new ItemStack(Blocks.GRAVEL, 32), "ss ", "ee ", "   ", 's', ModCrops.EarthEssence, 'e', ModCrops.FireEssence);
+				GameRegistry.addRecipe(new ItemStack(Blocks.GRAVEL, 32), "ee ", "ff ", "   ", 'e', ModCrops.EarthEssence, 'f', ModCrops.FireEssence);
+				GameRegistry.addRecipe(new ItemStack(Items.FLINT, 32), "ff ", "ee ", "   ", 'e', ModCrops.EarthEssence, 'f', ModCrops.FireEssence);
 			}
 		}
 
@@ -200,7 +210,6 @@ public class ModCrafting {
 		// Fire Essence
 		if (PrimordialConfig.enableFireCrop) {
 			GameRegistry.addRecipe(new ItemStack(Items.LAVA_BUCKET), " n ", "nbn", " n ", 'b', Items.BUCKET, 'n', ModCrops.FireEssence);
-			GameRegistry.addRecipe(new ItemStack(ModCrops.MinicioEssence, 4), "fff", "f f", "fff", 'f', ModCrops.FireEssence); // remove when world gen changes?
 		}
 
 		//Water Essence
@@ -213,6 +222,9 @@ public class ModCrafting {
 				GameRegistry.addRecipe(new ItemStack(Blocks.LOG, 16, 3), "nn ", "nw ", "   ", 'w', ModCrops.WaterEssence, 'n', ModCrops.NatureEssence); // Jungle Wood
 				GameRegistry.addRecipe(new ItemStack(Blocks.LOG2, 16), "ww ", "nn ", "   ", 'w', ModCrops.WaterEssence, 'n', ModCrops.NatureEssence); // Acacia Wood
 				GameRegistry.addRecipe(new ItemStack(Blocks.LOG2, 16, 1), "nn ", "ww ", "   ", 'w', ModCrops.WaterEssence, 'n', ModCrops.NatureEssence); // Dark Oak Wood
+			}
+			if (PrimordialConfig.enableEarthCrop) {
+				GameRegistry.addRecipe(new ItemStack(Items.CLAY_BALL, 32), "we ", "ew ", "   ", 'e', ModCrops.EarthEssence, 'w', ModCrops.WaterEssence); // clay ball
 			}
 		}
 
@@ -310,6 +322,7 @@ public class ModCrafting {
 		if (PrimordialConfig.enableCowCrop) {
 			GameRegistry.addRecipe(new ItemStack(Items.BEEF, 16), "ddd", "d d", "ddd", 'd', ModCrops.CowEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.LEATHER, 8), "ll ", "ll ", "   ", 'l', ModCrops.CowEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.MILK_BUCKET), " c ", "cbc", " c ", 'c', ModCrops.CowEssence, 'b', Items.BUCKET);
 			if (PrimordialConfig.enableFireCrop) {
 				GameRegistry.addRecipe(new ItemStack(Items.COOKED_BEEF, 16), "ddd", "dfd", "ddd", 'd', ModCrops.CowEssence, 'f', ModCrops.FireEssence);
 			}
@@ -501,6 +514,67 @@ public class ModCrafting {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.InfusionStoneT4, 1), "XXX", "XYX", "XXX", 'X', "T4Essence", 'Y', ModItems.InfusionStoneT3));
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.InfusionStoneT5, 1), "XXX", "XYX", "XXX", 'X', "T5Essence", 'Y', ModItems.InfusionStoneT4));
 		}
+
+		//
+		// Weapons
+		//
+
+		if (PrimordialConfig.enableWeapons) {
+			GameRegistry.addRecipe(new ItemStack(ModItems.AccioSword), " e ", "ese", " e ", 'e', ModItems.AccioEssence, 's', Items.DIAMOND_SWORD);
+			GameRegistry.addRecipe(new ItemStack(ModItems.CrucioSword), " e ", "ese", " e ", 'e', ModItems.CrucioEssence, 's', ModItems.AccioSword);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ImperioSword), " e ", "ese", " e ", 'e', ModItems.ImperioEssence, 's', ModItems.CrucioSword);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ZivicioSword), " e ", "ese", " e ", 'e', ModItems.ZivicioEssence, 's', ModItems.ImperioSword);
+		}
+
+		//
+		// Tools
+		//
+
+		if (PrimordialConfig.enableTools) {
+			GameRegistry.addRecipe(new ItemStack(ModItems.AccioPickAxe), "iii", " s ", " s ", 'i', ModItems.accioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.AccioAxe), "ii ", "is ", " s ", 'i', ModItems.accioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.AccioShovel), " i ", " s ", " s ", 'i', ModItems.accioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.AccioHoe), "ii ", " s ", " s ", 'i', ModItems.accioIngot, 's', Items.STICK);
+
+			GameRegistry.addRecipe(new ItemStack(ModItems.CrucioPickAxe), "iii", " s ", " s ", 'i', ModItems.crucioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.CrucioAxe), "ii ", "is ", " s ", 'i', ModItems.crucioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.CrucioShovel), " i ", " s ", " s ", 'i', ModItems.crucioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.CrucioHoe), "ii ", " s ", " s ", 'i', ModItems.crucioIngot, 's', Items.STICK);
+
+			GameRegistry.addRecipe(new ItemStack(ModItems.ImperioPickAxe), "iii", " s ", " s ", 'i', ModItems.imperioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ImperioAxe), "ii ", "is ", " s ", 'i', ModItems.imperioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ImperioShovel), " i ", " s ", " s ", 'i', ModItems.imperioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ImperioHoe), "ii ", " s ", " s ", 'i', ModItems.imperioIngot, 's', Items.STICK);
+
+			GameRegistry.addRecipe(new ItemStack(ModItems.ZivicioPickAxe), "iii", " s ", " s ", 'i', ModItems.zivicioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ZivicioAxe), "ii ", "is ", " s ", 'i', ModItems.zivicioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ZivicioShovel), " i ", " s ", " s ", 'i', ModItems.zivicioIngot, 's', Items.STICK);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ZivicioHoe), "ii ", " s ", " s ", 'i', ModItems.zivicioIngot, 's', Items.STICK);
+		}
+
+		if (PrimordialConfig.enableArmour) {
+			GameRegistry.addRecipe(new ItemStack(ModItems.AccioHelmet), "   ", "iii", "i i", 'i', ModItems.accioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.AccioChestPlate), "i i", "iii", "iii", 'i', ModItems.accioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.AccioLeggings), "iii", "i i", "i i", 'i', ModItems.accioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.AccioBoots), "   ", "i i", "i i", 'i', ModItems.accioIngot);
+
+			GameRegistry.addRecipe(new ItemStack(ModItems.CrucioHelmet), "   ", "iii", "i i", 'i', ModItems.crucioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.CrucioChestPlate), "i i", "iii", "iii", 'i', ModItems.crucioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.CrucioLeggings), "iii", "i i", "i i", 'i', ModItems.crucioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.CrucioBoots), "   ", "i i", "i i", 'i', ModItems.crucioIngot);
+
+			GameRegistry.addRecipe(new ItemStack(ModItems.ImperioHelmet), "   ", "iii", "i i", 'i', ModItems.imperioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ImperioChestPlate), "i i", "iii", "iii", 'i', ModItems.imperioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ImperioLeggings), "iii", "i i", "i i", 'i', ModItems.imperioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ImperioBoots), "   ", "i i", "i i", 'i', ModItems.imperioIngot);
+
+			GameRegistry.addRecipe(new ItemStack(ModItems.ZivicioHelmet), "   ", "iii", "i i", 'i', ModItems.zivicioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ZivicioChestPlate), "i i", "iii", "iii", 'i', ModItems.zivicioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ZivicioLeggings), "iii", "i i", "i i", 'i', ModItems.zivicioIngot);
+			GameRegistry.addRecipe(new ItemStack(ModItems.ZivicioBoots), "   ", "i i", "i i", 'i', ModItems.zivicioIngot);
+
+		}
+
 
 		//
 		// Mod Compatability

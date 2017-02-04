@@ -64,6 +64,11 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable {
 	}
 
 	@Override
+	protected Item getCrop() {
+		return ModCrops.harvestedItemMap.get(this);
+	}
+
+	@Override
 	public ItemStack getItem(World world, BlockPos pos, IBlockState state) {
 		return new ItemStack(getSeeds());
 	}

@@ -1,5 +1,6 @@
 package killbait.PrimordialCrops.WorldGen;
 
+import killbait.PrimordialCrops.Config.PrimordialConfig;
 import killbait.PrimordialCrops.Registry.ModBlocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -45,7 +46,9 @@ public class MagicalWorldGen implements IWorldGenerator {
 
 				break;
 			default:
-				this.runGenerator(this.MinicioOre, world, random, chunkX, chunkZ, 20, 0, 64);
+				if (PrimordialConfig.enableOreSpawn) {
+					this.runGenerator(this.MinicioOre, world, random, chunkX, chunkZ, PrimordialConfig.oreSpawnChance, PrimordialConfig.oreSpawnMinZ, PrimordialConfig.oreSpawnMaxZ);
+				}
 				break;
 		}
 

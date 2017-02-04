@@ -3,6 +3,67 @@
  * v1.6a and beyond now maintained by KillBait
  *
  *
+ * V1.7c ChangeLog
+  -----------------
+ *
+ * Tested mod with 1.11.2, everthing seems to work, let me know if things don't behave as intended.
+ * Fixed all crops showing as wheat in Hwyla
+ * Increased speed of all tools by ~25%
+ * Added Accio, Crucio, Imperio, Zivicio Armor (can be disabled in config)
+    - Durability and damage protection increases with the tiers
+ * Removed fire essence recipe that gave minicio essence (forgot to remove after worldgen testing)
+ *
+ * Added recipes for the following items/quantities.
+     - Glass(32), Clay Ball(32), Milk Bucket, Flint(32)
+ *
+ * Added Configurable WorldGen (DO NOT change these unless you know what they do!!)
+   - Enable/Disable Minicio ore generation completely
+   - Chance to spawn per chunk (5 min, 40 max) ( default 20)
+   - Min Z to spawn ore from (0 min, 64 max) ( default 5)
+   - Max Z to spawn ore to (0 min, 64 max) ( default 64)
+ *
+ *
+ * V1.7b Changelog
+ * ---------------
+ *
+ * Fixed Osmium Ingot not being Ore Dictorary compatible.
+ *
+ * Changed Obsidian seed recipe to require Imperio Essence/T3 infusion stone
+ * (prevoiusly Zivicio Essence/T4 infusion stone)
+ *
+ * Added craftable Accio/Crucio/Imperio and Zivicio ingots
+ *
+ * Essence versions of vanilla tools are now in the mod. Some things to note:
+ * - All tiers have minimum 1500 uses, durability/speed goes up the higher the tier.
+ * - All tiers are gold level of enchantability
+ * - Zivicio Level Tools/Swords are unbreakable
+ * - Textures are not final and may be reworked later on.
+ *
+ * EnderIO Farming Station Users
+ *   IMPORTANT: The EnderIO Farming station uses a whitelist of what hoe's it can use,
+ *         you will have to add the essence hoes to the EnderIO config for them to work
+ *
+ *         Open config/enderio/EnderIO.cfg in a text editor and find the key S:farmHoes
+ *         edit the key to look like the following.
+
+            S:farmHoes <
+           	mc:Accio_Hoe
+           	mc:Crucio_Hoe
+           	mc:Imperio_Hoe
+           	mc:Zivicio_Hoe
+            >
+
+ *          Save the config file and re-run client/server and you should be able to use them.
+ *
+ *          (There is no other short term workaround i can see, i will be contacting the EnderIO
+ *           devs to see if i can get the hoe's added to their default whitelist)
+ *
+ * Swords textures redone and can now be crafted.
+ *  NOTE: If swords are not visible ingame, check if they are enabled in config file
+ *        or that the modpack your using has them disabled by default.
+ * - Textures are not final and may be reworked later on.
+ *
+ *
  * V1.7a Changelog
  * ---------------
  *

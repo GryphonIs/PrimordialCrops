@@ -127,7 +127,8 @@ public class OreDictonaryRegistry {
 		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("forestry") || Loader.isModLoaded("immersiveengineering")) {
 			if (PrimordialConfig.enableCopperCrop)
 				OreDictionary.registerOre("ingotCopper", new ItemStack(ModCrops.CopperIngot));
-			if (PrimordialConfig.enableTinCrop) OreDictionary.registerOre("ingotTin", new ItemStack(ModCrops.TinIngot));
+			if (PrimordialConfig.enableTinCrop)
+				OreDictionary.registerOre("ingotTin", new ItemStack(ModCrops.TinIngot));
 		}
 
 		if (Loader.isModLoaded("FunOres") || Loader.isModLoaded("IC2") || Loader.isModLoaded("ep") || Loader.isModLoaded("immersiveengineering")) {
@@ -137,7 +138,18 @@ public class OreDictonaryRegistry {
 				OreDictionary.registerOre("ingotSilver", new ItemStack(ModCrops.SilverIngot));
 		}
 
+		if (Loader.isModLoaded("Mekanism")) {
+			if (PrimordialConfig.enableOsmiumCrop) {
+				OreDictionary.registerOre("ingotOsmium", new ItemStack(ModCrops.OsmiumIngot));
+			}
+		}
+
 		OreDictionary.registerOre("oreMinico", new ItemStack(ModBlocks.MinicioOre));
+		OreDictionary.registerOre("ingotAccio", new ItemStack(ModItems.accioIngot));
+		OreDictionary.registerOre("ingotCrucio", new ItemStack(ModItems.crucioIngot));
+		OreDictionary.registerOre("ingotImperio", new ItemStack(ModItems.imperioIngot));
+		OreDictionary.registerOre("ingotZivicio", new ItemStack(ModItems.zivicioIngot));
+
 	}
 
 	// returns an itemstack of the first block/Item id that matches the OreDict name

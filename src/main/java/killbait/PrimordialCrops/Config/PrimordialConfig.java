@@ -108,6 +108,12 @@ public class PrimordialConfig {
 	public static boolean enablePrismarineShardCrop;
 	//public static boolean enablePrismarineCrystalCrop;
 
+	public static boolean enableZivicioArmorFlight;
+	public static boolean enableOreSpawn;
+	public static int oreSpawnChance;
+	public static int oreSpawnMinZ;
+	public static int oreSpawnMaxZ;
+
 
 	public static boolean useAlternateIfDisabled;
 
@@ -132,9 +138,9 @@ public class PrimordialConfig {
 		config.addCustomCategoryComment(CATEGORY_MOD, "Mod Settings");
 		infusionStoneDurability = config.getBoolean("infusionStonesHaveDurability", CATEGORY_MOD, false, "Set to true if you want Infusions stones to have durability");
 		infusionStoneMaxUses = config.getInt("infusionStoneMaxUses", CATEGORY_MOD, 100, 0, 1000, "How many uses an infusions stone has before it breaks (if infusionStoneDurability is true)");
-		enableWeapons = config.getBoolean("enableWeapons", CATEGORY_MOD, false, "Set to false if you dont want the mods Weapons");
-		enableTools = config.getBoolean("enableTools", CATEGORY_MOD, true, "Set to false if you dont want the mods Tools (not yet implimented)");
-		enableArmour = config.getBoolean("enableArmour", CATEGORY_MOD, true, "Set to false if you dont want the mods Armour (not yet implimented)");
+		enableWeapons = config.getBoolean("enableWeapons", CATEGORY_MOD, true, "Set to false if you dont want the mods Weapons");
+		enableTools = config.getBoolean("enableTools", CATEGORY_MOD, true, "Set to false if you dont want the mods Tools");
+		enableArmour = config.getBoolean("enableArmour", CATEGORY_MOD, true, "Set to false if you dont want the mods Armour");
 		regularSeedExtraChance = config.getInt("extraSeedChanceRegular", CATEGORY_MOD, 20, 0, 100, "Percentage chance you get an extra seed from regular crops");
 		specialCropsAreTooHard = config.getBoolean("easySpecials", CATEGORY_MOD, false, "Set to true if you want easy crafting recipes for special crops");
 		specialSeedExtraChance = config.getInt("extraSeedChanceSpecial", CATEGORY_MOD, 3, 0, 100, "Percentage chance you get an extra seed from special crops");
@@ -143,6 +149,7 @@ public class PrimordialConfig {
 		enableBonemealUse = config.getBoolean("allowBonemealCrops", CATEGORY_MOD, true, "Set to false if you don't want bonemeal to speed up crop growth");
 		// Work In Progress (Not Yet Craftable)
 		enableIngameBook = config.getBoolean("enableInGameBook", CATEGORY_MOD, true, "Set to false if you don't want to use the Ingame Manual");
+		enableZivicioArmorFlight = config.getBoolean("enableZivicioArmourFlight", CATEGORY_MOD, true, "Set to false if you don't want wearing a full set of Zivicio Armour to grant flight");
 
 		config.addCustomCategoryComment(CATEGORY_CROPS, "Enable/Disable individual crops (also disables/Enables the seeds)");
 		enableAirCrop = config.getBoolean("enableAirCrop", CATEGORY_CROPS, true, "Set to false to disable Air Crops/Seeds/Essence");
@@ -217,5 +224,9 @@ public class PrimordialConfig {
 
 		config.addCustomCategoryComment(CATEGORY_DANGER, "DANGER AREA!!! - useAlternateRecipeIfCropDisabled Can unbalanace mod if true, Use at your own risk!!!");
 		useAlternateIfDisabled = config.getBoolean("useAlternateRecipeIfCropDisabled", CATEGORY_DANGER, false, "If true, certain recipes that use disabled crop essence will use vanilla items instead, can make items too easy to make");
+		enableOreSpawn = config.getBoolean("enableOreSpawn", CATEGORY_DANGER, true, "Set to false to disable minicio ore spawning (WARNING - Use at own Risk!!!)");
+		oreSpawnChance = config.getInt("oreSpawnChance", CATEGORY_DANGER, 20, 5, 40, "How many chances of Ore to Spawn per chunk(lower numbers = less to spawn)");
+		oreSpawnMinZ = config.getInt("oreSpawnMinZ", CATEGORY_DANGER, 5, 0, 64, "Minimum Z height for ore to start spawning (WARNING - If your not sure what this does, do not adjust it!!!)");
+		oreSpawnMaxZ = config.getInt("oreSpawnMaxZ", CATEGORY_DANGER, 64, 0, 64, "Maximum Z height for ore to stop spawning (WARNING - If your not sure what this does, do not adjust it!!!)");
 	}
 }
