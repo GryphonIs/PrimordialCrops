@@ -1,6 +1,7 @@
 package killbait.PrimordialCrops.Items;
 
 import killbait.PrimordialCrops.PrimordialCrops;
+import killbait.PrimordialCrops.Utils.Colours;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -27,7 +28,7 @@ public class PrimordialBook extends Item {
 	}
 
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-		list.add("\u00A7aWork In Progress... Not Yet Available");
+		list.add(Colours.LIGHTRED + "Work In Progress... Not Yet Available");
 	}
 
 	@Override

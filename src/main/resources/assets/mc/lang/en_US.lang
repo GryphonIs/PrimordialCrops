@@ -167,5 +167,30 @@ item.AccioSword.name=Accio Sword
 item.CrucioSword.name=Crucio Sword
 item.ImperioSword.name=Imperio Sword
 
+item.accioIngot.name=Accio Ingot
+item.crucioIngot.name=Crucio Ingot
+item.imperioIngot.name=Imperio Ingot
+item.zivicioIngot.name=Zivicio Ingot
+
+item.AccioPickAxe.name=Accio PickAxe
+item.AccioAxe.name=Accio Axe
+item.AccioShovel.name=Accio Shovel
+item.AccioHoe.name=Accio Hoe
+
+item.CrucioPickAxe.name=Crucio PickAxe
+item.CrucioAxe.name=Crucio Axe
+item.CrucioShovel.name=Crucio Shovel
+item.CrucioHoe.name=Crucio Hoe
+
+item.ImperioPickAxe.name=Imperio PickAxe
+item.ImperioAxe.name=Imperio Axe
+item.ImperioShovel.name=Imperio Shovel
+item.ImperioHoe.name=Imperio Hoe
+
+item.ZivicioPickAxe.name=Zivicio PickAxe
+item.ZivicioAxe.name=Zivicio Axe
+item.ZivicioShovel.name=Zivicio Shovel
+item.ZivicioHoe.name=Zivicio Hoe
+
 item.PrimordialBook.name=PrimodrialCrops Manual
  

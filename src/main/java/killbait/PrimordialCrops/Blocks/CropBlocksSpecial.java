@@ -1,7 +1,7 @@
 package killbait.PrimordialCrops.Blocks;
 
-import killbait.PrimordialCrops.Registry.ModCrops;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
+import killbait.PrimordialCrops.Registry.ModCrops;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.IGrowable;
@@ -62,6 +62,11 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 			return new Item();
 		}
 		return seeds;
+	}
+
+	@Override
+	protected Item getCrop() {
+		return ModCrops.harvestedItemMapSpecial.get(this);
 	}
 
 	@Override

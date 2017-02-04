@@ -396,6 +396,28 @@ public class ItemRenderRegistry {
 			reg(ModItems.ZivicioHoe);
 		}
 
+		if (PrimordialConfig.enableArmour) {
+			reg(ModItems.AccioHelmet);
+			reg(ModItems.AccioChestPlate);
+			reg(ModItems.AccioLeggings);
+			reg(ModItems.AccioBoots);
+
+			reg(ModItems.CrucioHelmet);
+			reg(ModItems.CrucioChestPlate);
+			reg(ModItems.CrucioLeggings);
+			reg(ModItems.CrucioBoots);
+
+			reg(ModItems.ImperioHelmet);
+			reg(ModItems.ImperioChestPlate);
+			reg(ModItems.ImperioLeggings);
+			reg(ModItems.ImperioBoots);
+
+			reg(ModItems.ZivicioHelmet);
+			reg(ModItems.ZivicioChestPlate);
+			reg(ModItems.ZivicioLeggings);
+			reg(ModItems.ZivicioBoots);
+		}
+
 		if (PrimordialConfig.enableIngameBook) {
 			reg(ModItems.PrimordialBook);
 		}

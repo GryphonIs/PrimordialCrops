@@ -1,6 +1,7 @@
 package killbait.PrimordialCrops.Items.Tools;
 
 import killbait.PrimordialCrops.PrimordialCrops;
+import killbait.PrimordialCrops.Utils.Colours;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemAxe;
@@ -19,6 +20,6 @@ public class PrimordialAxe extends ItemAxe {
 
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-		if (stack.getMaxDamage() == 0) list.add("\u00A7aUnbreakable");
+		if (stack.getMaxDamage() == 0) list.add(Colours.LIGHTGREEN + "Unbreakable");
 	}
 }

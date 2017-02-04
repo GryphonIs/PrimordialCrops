@@ -17,6 +17,7 @@ public class CommonProxy {
 		ModItems.init();
 		ModCrops.init();
 		OreDictonaryRegistry.regOreDic();
+		//MinecraftForge.EVENT_BUS.register(new EventHandler());
 	}
 
 	public void init(FMLInitializationEvent e) {

@@ -1,7 +1,7 @@
 package killbait.PrimordialCrops;
 
-import killbait.PrimordialCrops.Registry.ModCrops;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
+import killbait.PrimordialCrops.Registry.ModCrops;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
