@@ -17,6 +17,7 @@
     - Glass(32), Clay Ball(32), Milk Bucket, Flint(32)
  *
  * Added Configurable WorldGen (DO NOT change these unless you know what they do!!)
+  (will not retro-gen, setting changes will only effect new generated chunks)
    - Enable/Disable Minicio ore generation completely
    - Chance to spawn per chunk (5 min, 40 max) ( default 20)
    - Min Z to spawn ore from (0 min, 64 max) ( default 5)
