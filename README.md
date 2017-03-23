@@ -1,4 +1,5 @@
 # PrimordialCrops
+
 Primordial Crops is an invisionment of the mod you all know and loved from 1.7.10
 and is compatible with minecraft 1.9.4-1.10.2 and 1.11-1.11.2
 
@@ -13,7 +14,7 @@ Some Main Crops are (and there are much much more than these in the mod):
 Diamond Crop, Gold Crop, Iron Crop, Nether Crop, Earth Crop, Blaze Crop,
 Obsidian Crop, Nether Star Crop, Mob based crops and many more...
 
-Modded Support! Currently:
+##Mod Support! Currently:
 - Tinkers Construct : Cobalt, Ardite, Manyullyn, KnighSlime, PigIron
 - Immersive Engineering: Bauxite/Aluminum, Nickel, Uranium, Electrum, Steel, Constantan, Copper, Lead, Silver
 - Botania : Manasteel, Terrasteel, Elementium
@@ -25,25 +26,25 @@ Modded Support! Currently:
 
 More Crops added in the future, and here are some planned features also:
 
-Planned to Add:
+##Upcoming features:
 
  - More mod support on Request,
  - Decoration Blocks,
  - Food Crops (if Requested)
 
- - Please report any issues with the mod using the issue's section on CurseForge
+Please report any issues with the mod using the issue's section on CurseForge.
 
-Minimum Forge Requirements:
+##Minimum Forge Requirements:
 
-MC 1.94 - 1.10  (Forge 12.17.0.1976)
-MC 1.11 - 1.11.2 (Forge 13.19.0.2153)
+Minecraft 1.9.4 - 1.10.2 requires Forge 12.17.0.1976
+Minecraft 1.11 - 1.11.2 requires Forge 13.19.0.2153
 
-Disclaimer Stuff
+##Disclaimer Stuff
  - Nerf's will be added to things that are found to be a little too OP
  - You are free to use this Mod in your own/pre built Modpack as long as no cash charge is made for it, no permissions are needed.
  - You are free to do anything you like with this mod as long as your are following the license
 
-Help Wanted
+##Help Wanted
 
 Primordial crops is in dire need of a texture overhaul, i am in no way good enough an artist to
 do this. *Almost* all the textures are taken from the 1.7.10 Magical Crops mod. If anybody is
