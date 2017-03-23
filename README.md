@@ -36,7 +36,7 @@ More Crops added in the future, and here are some planned features also:
 
 ##Minimum Forge Requirements:
 
-Minecraft 1.9.4 - 1.10.2  (Forge 12.17.0.1976)
+Minecraft 1.9.4 - 1.10.2  (Forge 12.17.0.1976)  
 Minecraft 1.11 - 1.11.2 (Forge 13.19.0.2153)
 
 ##Disclaimer Stuff
