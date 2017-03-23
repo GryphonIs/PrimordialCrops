@@ -238,13 +238,21 @@ public class ModCrafting {
 
 		// Dye Essence
 		if (PrimordialConfig.enableDyeCrop) {
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 2, 1), "ddd", "   ", "   ", 'd', ModCrops.DyeEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 2, 2), "dd ", "  ", "  ", 'd', ModCrops.DyeEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 2, 3), "d  ", " d ", "  d", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 0), "dwd", "   ", "   ", 'd', ModCrops.DyeEssence, 'w', ModCrops.WaterEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 1), "ddd", "   ", "   ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 2), "dd ", "  ", "  ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 3), "d  ", " d ", "  d", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 4), "lll", "l l", "lll", 'l', ModCrops.LapisEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 2, 5), "d  ", "d  ", "d  ", 'd', ModCrops.DyeEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 2, 6), " d ", " d ", " d ", 'd', ModCrops.DyeEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 2, 7), "  d", " d ", "d  ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 5), "d  ", "d  ", "d  ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 6), " d ", " d ", " d ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 7), "  d", " d ", "d  ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 8), "  d", "  d", "  d", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 9), "  d", "  d", "   ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 10), "d  ", "d  ", "   ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 11), "   ", "   ", "ddd", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 12), "   ", "   ", "dd ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 13), "   ", "dd ", "   ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 6, 14), "   ", "ddd", "   ", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 2, 8), "  d", "  d", "  d", 'd', ModCrops.DyeEssence);
 		}
 

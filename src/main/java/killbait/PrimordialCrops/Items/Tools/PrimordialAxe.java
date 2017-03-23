@@ -9,6 +9,8 @@ import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
+import static killbait.PrimordialCrops.Registry.ModItems.zivicioToolMaterial;
+
 public class PrimordialAxe extends ItemAxe {
 
 	public PrimordialAxe(Item.ToolMaterial material, String regName, float damage, float speed) {
@@ -20,6 +22,13 @@ public class PrimordialAxe extends ItemAxe {
 
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-		if (stack.getMaxDamage() == 0) list.add(Colours.LIGHTGREEN + "Unbreakable");
+		if (this.getToolMaterial() == zivicioToolMaterial) list.add(Colours.LIGHTGREEN + "Unbreakable");
+	}
+
+	@Override
+	public void setDamage(ItemStack stack, int damage) {
+		if (this.getToolMaterial() != zivicioToolMaterial) {
+			super.setDamage(stack, damage);
+		}
 	}
 }

@@ -3,8 +3,18 @@
  * v1.6a and beyond now maintained by KillBait
  *
  *
+ * V1.7d Changelog
+ * ---------------
+ *
+ * Fixed not being able to enchant zicicio tools/swords/armour (changed how infinite durability is applied)
+ * Re-balanced armour damage resistance.
+ * Enabled zivicio armor flight code, hopefully it will play nice with other mods now.
+ * Added configurable bonemeal effect to Zivicio hoe right click (only works on primordial crops, on by default)
+ * Added missing dye's to dye seed recipes, also, you now get 6 dye's per craft.
+ *
+ *
  * V1.7c ChangeLog
- -----------------
+ * -----------------
  *
  * Tested mod with 1.11.2, everthing seems to work, let me know if things don't behave as intended.
  * Fixed all crops showing as wheat in Hwyla
