@@ -36,8 +36,8 @@ Please report any issues with the mod using the issue's section on CurseForge.
 
 ##Minimum Forge Requirements:
 
-Minecraft 1.9.4 - 1.10.2  (Forge 12.17.0.1976)  
-Minecraft 1.11 - 1.11.2 (Forge 13.19.0.2153)        
+Minecraft 1.9.4 - 1.10.2 requires Forge 12.17.0.1976  
+Minecraft 1.11 - 1.11.2 requires Forge 13.19.0.2153        
 
 ##Disclaimer Stuff
  - Nerf's will be added to things that are found to be a little too OP
