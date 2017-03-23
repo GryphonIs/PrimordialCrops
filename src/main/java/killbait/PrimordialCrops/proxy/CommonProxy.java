@@ -2,8 +2,10 @@ package killbait.PrimordialCrops.proxy;
 
 import killbait.PrimordialCrops.PrimordialCrops;
 import killbait.PrimordialCrops.Registry.*;
+import killbait.PrimordialCrops.Utils.EventHandler;
 import killbait.PrimordialCrops.Utils.GuiHandler;
 import killbait.PrimordialCrops.WorldGen.MagicalWorldGen;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,7 +19,7 @@ public class CommonProxy {
 		ModItems.init();
 		ModCrops.init();
 		OreDictonaryRegistry.regOreDic();
-		//MinecraftForge.EVENT_BUS.register(new EventHandler());
+		MinecraftForge.EVENT_BUS.register(new EventHandler());
 	}
 
 	public void init(FMLInitializationEvent e) {

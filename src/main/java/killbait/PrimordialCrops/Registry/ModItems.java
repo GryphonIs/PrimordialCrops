@@ -34,27 +34,27 @@ public class ModItems {
 	public static Item imperioIngot;
 	public static Item zivicioIngot;
 
-	public static final Item.ToolMaterial accioToolMaterial = EnumHelper.addToolMaterial("ACCIO", 2, 1500, 10, 4, 22);
-	public static final Item.ToolMaterial crucioToolMaterial = EnumHelper.addToolMaterial("CRUCIO", 2, 2500, 18, 6, 22);
-	public static final Item.ToolMaterial imperioToolMaterial = EnumHelper.addToolMaterial("IMPERIO", 3, 4500, 26, 8, 22);
-	public static final Item.ToolMaterial zivicioToolMaterial = EnumHelper.addToolMaterial("ZIVICIO", 3, 0, 38, 10, 22);
+	public static final Item.ToolMaterial accioToolMaterial = EnumHelper.addToolMaterial("ACCIOTOOL", 2, 1500, 10, 4, 22);
+	public static final Item.ToolMaterial crucioToolMaterial = EnumHelper.addToolMaterial("CRUCIOTOOL", 2, 2500, 18, 6, 22);
+	public static final Item.ToolMaterial imperioToolMaterial = EnumHelper.addToolMaterial("IMPERIOTOOL", 3, 4500, 26, 8, 22);
+	public static final Item.ToolMaterial zivicioToolMaterial = EnumHelper.addToolMaterial("ZIVICIOTOOL", 3, 10000, 38, 10, 50);
 
 	// standard tool material above make even the accio shovel almost insta break dirt, so we create a new set of materials
 	public static final Item.ToolMaterial accioShovelMaterial = EnumHelper.addToolMaterial("ACCIOSHOVEL", 2, 1500, 6, 4, 22);
 	public static final Item.ToolMaterial crucioShovelMaterial = EnumHelper.addToolMaterial("CRUCIOSHOVEL", 2, 2500, 9, 6, 22);
 	public static final Item.ToolMaterial imperioShovelMaterial = EnumHelper.addToolMaterial("IMPERIOSHOVEL", 3, 4500, 14, 8, 22);
-	public static final Item.ToolMaterial zivicioShovelMaterial = EnumHelper.addToolMaterial("ZIVICIOSHOVEL", 3, 0, 21, 10, 22);
+	public static final Item.ToolMaterial zivicioShovelMaterial = EnumHelper.addToolMaterial("ZIVICIOSHOVEL", 3, 10000, 21, 10, 50);
 
 
 	public static final Item.ToolMaterial AccioSwordMaterial = EnumHelper.addToolMaterial("AccioSwordMaterial", 2, 1500, 1.0F, 9, 22);
 	public static final Item.ToolMaterial CrucioSwordMaterial = EnumHelper.addToolMaterial("CrucioSwordMaterial", 2, 3000, 1.0F, 11, 22);
 	public static final Item.ToolMaterial ImperioSwordMaterial = EnumHelper.addToolMaterial("ImperioSwordMaterial", 2, 6000, 1.0F, 15, 22);
-	public static final Item.ToolMaterial ZivicioSwordMaterial = EnumHelper.addToolMaterial("ZivicioSwordMaterial", 2, 0, 1.0F, 22, 22);
+	public static final Item.ToolMaterial ZivicioSwordMaterial = EnumHelper.addToolMaterial("ZivicioSwordMaterial", 2, 10000, 1.0F, 22, 50);
 
-	public static final ItemArmor.ArmorMaterial accioArmorMaterial = EnumHelper.addArmorMaterial("ACCIO", Info.MODID + ":accio", 20, new int[]{2, 5, 4, 1}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-	public static final ItemArmor.ArmorMaterial crucioArmorMaterial = EnumHelper.addArmorMaterial("CRUCIO", Info.MODID + ":crucio", 30, new int[]{2, 6, 5, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-	public static final ItemArmor.ArmorMaterial imperioArmorMaterial = EnumHelper.addArmorMaterial("IMPERIO", Info.MODID + ":imperio", 40, new int[]{3, 8, 6, 3}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-	public static final ItemArmor.ArmorMaterial zivicioArmorMaterial = EnumHelper.addArmorMaterial("ZIVICIO", Info.MODID + ":zivicio", 0, new int[]{4, 9, 7, 4}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	public static final ItemArmor.ArmorMaterial accioArmorMaterial = EnumHelper.addArmorMaterial("ACCIOARMOR", Info.MODID + ":accio", 20, new int[]{2, 5, 6, 2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	public static final ItemArmor.ArmorMaterial crucioArmorMaterial = EnumHelper.addArmorMaterial("CRUCIOARMOR", Info.MODID + ":crucio", 30, new int[]{2, 6, 6, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	public static final ItemArmor.ArmorMaterial imperioArmorMaterial = EnumHelper.addArmorMaterial("IMPERIOARMOR", Info.MODID + ":imperio", 40, new int[]{3, 6, 7, 3}, 25, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	public static final ItemArmor.ArmorMaterial zivicioArmorMaterial = EnumHelper.addArmorMaterial("ZIVICIOARMOR", Info.MODID + ":zivicio", 50, new int[]{3, 7, 8, 3}, 50, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 
 	public static Item ZivicioSword = new PrimordialSword(ZivicioSwordMaterial, "ZivicioSword");
 	public static Item AccioSword = new PrimordialSword(AccioSwordMaterial, "AccioSword");
