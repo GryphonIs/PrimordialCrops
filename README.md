@@ -1,36 +1,50 @@
 # PrimordialCrops
 Primordial Crops is an invisionment of the mod you all know and loved from 1.7.10
+and is compatible with minecraft 1.9.4-1.10.2 and 1.11-1.11.2
 
-You are able to go mining to find the ore, that starts it all, use that to create new tiers of
- Infusion Stones, and Essence to continue with creating Crops.
+You are able to go mining to find Minicio Ore, that starts it all, use that to create new
+tiers of Infusion Stones, and Essence to continue with creating Crops/Tools and Weapons.
 
-Create The Crops to your choosing and earn unlimited resources, create a whole farm to gain more
- quickly, or create a small one, but effective!
+Create The Crops to your choosing and earn unlimited resources, create a whole farm
+to gain more quickly, or create a small one, but effective!
 
 Some Main Crops are (and there are much much more than these in the mod):
 
-Diamond Crop, Gold Crop, Iron Crop, Nether Crop, Earth Crop, Blaze Crop, Obsidian Crop, Mob based crops
+Diamond Crop, Gold Crop, Iron Crop, Nether Crop, Earth Crop, Blaze Crop,
+Obsidian Crop, Nether Star Crop, Mob based crops and many more...
 
-Modded Support! Currently: (More To be added soon!)
- - Copper Crop, Tin Crop, Silver Crop, Lead Crop, Mekanism Osmium Crop
+Modded Support! Currently:
+- Tinkers Construct : Cobalt, Ardite, Manyullyn, KnighSlime, PigIron
+- Immersive Engineering: Bauxite/Aluminum, Nickel, Uranium, Electrum, Steel, Constantan, Copper, Lead, Silver
+- Botania : Manasteel, Terrasteel, Elementium
+- IC2 Experimental : Rubber, Copper, Lead, Silver, Tin, Uranium, Bronze, Steel
+- Forestry: Bronze, Tin, Copper, Apatite
+- Extreme Reactors : Yellorite, Ludicrite, Cyanite, Blutonium
+- Draconic Evolution : Draconium, Awakened Draconium
+- AppliedEnergistics 2: Certus Quartz, Fluix Crystal
 
 More Crops added in the future, and here are some planned features also:
 
 Planned to Add:
 
- - More mod support,
+ - More mod support on Request,
  - Decoration Blocks,
- - More Vanilla Crops,
- - Tools,
- - Armor,
- - Weapons,
- - Food Crops
+ - Food Crops (if Requested)
 
-Nerf's will be added to things that are found to be a little too OP
+ - Please report any issues with the mod using the issue's section on CurseForge
 
-Please report any issues with the mod using issue's section on CurseForge
+Minimum Forge Requirements:
+
+MC 1.94 - 1.10  (Forge 12.17.0.1976)
+MC 1.11 - 1.11.2 (Forge 13.19.0.2153)
 
 Disclaimer Stuff
-
- - You are free to use this Mod in your Modpacks, no permissions needed (any msg relating to this will be ignored)
+ - Nerf's will be added to things that are found to be a little too OP
+ - You are free to use this Mod in your own/pre built Modpack as long as no cash charge is made for it, no permissions are needed.
  - You are free to do anything you like with this mod as long as your are following the license
+
+Help Wanted
+
+Primordial crops is in dire need of a texture overhaul, i am in no way good enough an artist to
+do this. *Almost* all the textures are taken from the 1.7.10 Magical Crops mod. If anybody is
+willing to donate some new art for ingame items or a new logo send me a PM here.
