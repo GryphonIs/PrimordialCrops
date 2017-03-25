@@ -147,7 +147,7 @@ public class PrimordialConfig {
 		regularSeedExtraChance = config.getInt("extraSeedChanceRegular", CATEGORY_MOD, 20, 0, 100, "Percentage chance you get an extra seed from regular crops");
 		specialCropsAreTooHard = config.getBoolean("easySpecials", CATEGORY_MOD, false, "Set to true if you want easy crafting recipes for special crops");
 		specialSeedExtraChance = config.getInt("extraSeedChanceSpecial", CATEGORY_MOD, 3, 0, 100, "Percentage chance you get an extra seed from special crops");
-		rightClickHarvest = config.getBoolean("harvestOnRightClick", CATEGORY_MOD, false, "Set to true if you want right click harvesting of crops (not yet implimented) (this option is ignored if Pams Harvestcraft installed)");
+		rightClickHarvest = config.getBoolean("harvestOnRightClick", CATEGORY_MOD, false, "Set to true if you want right click harvesting of crops (this option is ignored if Pam's Harvestcraft installed)");
 		addMinicioSeedToGrassDrop = config.getBoolean("grassDropsMinicioSeed", CATEGORY_MOD, true, "Set to false if you don't want minicio seeds as a chance drop from breaking grass");
 		enableBonemealUse = config.getBoolean("allowBonemealCrops", CATEGORY_MOD, true, "Set to false if you don't want bonemeal to speed up crop growth");
 		// Work In Progress (Not Yet Craftable)

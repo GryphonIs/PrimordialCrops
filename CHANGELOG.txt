@@ -11,7 +11,7 @@
  * Enabled zivicio armor flight code, hopefully it will play nice with other mods now.
  * Added (configuable) right click growth speedup to Zivicio hoe.
  * Added missing dye's to dye essence recipes, also, you now get 8 dye's per craft.
- * Added indicators to zivicio armor and hoe tooltip if there abilities are disabled from the config file.
+ * Added indicators to zivicio armor and hoe tooltip if their abilities are disabled from the config file.
  *
  *
  * V1.7c ChangeLog
