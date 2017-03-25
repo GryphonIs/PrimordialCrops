@@ -9,8 +9,8 @@
  * Fixed not being able to enchant zicicio tools/swords/armour (changed how infinite durability is applied)
  * Re-balanced armour damage resistance.
  * Enabled zivicio armor flight code, hopefully it will play nice with other mods now.
- * Added configurable bonemeal effect to Zivicio hoe right click (only works on primordial crops, on by default)
- * Added missing dye's to dye seed recipes, also, you now get 6 dye's per craft.
+ * Added (Configurable) right click growth speedup to Zivicio hoe.
+ * Added missing dye's to dye essence recipes, also, you now get 8 dye's per craft.
  *
  *
  * V1.7c ChangeLog
