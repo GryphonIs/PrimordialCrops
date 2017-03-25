@@ -26,7 +26,7 @@ public class PrimordialArmor extends ItemArmor {
 
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-		if (stack.getMaxDamage() == 0) {
+		if (this.getArmorMaterial() == zivicioArmorMaterial) {
 			list.add(Colours.LIGHTGREEN + "Unbreakable");
 			if (PrimordialConfig.enableZivicioArmorFlight) {
 				list.add(Colours.YELLOW + "Grants Creative Flight when full set equipped");
