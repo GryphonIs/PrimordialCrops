@@ -168,6 +168,9 @@ public class ModItems {
 			GameRegistry.register(ZivicioAxe.setRegistryName("Zivicio_Axe"));
 			GameRegistry.register(ZivicioShovel.setRegistryName("Zivicio_Shovel"));
 			GameRegistry.register(ZivicioHoe.setRegistryName("Zivicio_Hoe"));
+			if (PrimordialConfig.enableZivicioHoeSpeedup) {
+				LogHelper.info(" - Zivicio hoe right click speedup Enabled");
+			}
 		} else {
 			LogHelper.info("Eseence Based Tools Disabled");
 		}
@@ -193,6 +196,9 @@ public class ModItems {
 			GameRegistry.register(ZivicioChestPlate.setRegistryName("Zivicio_ChestPlate"));
 			GameRegistry.register(ZivicioLeggings.setRegistryName("Zivicio_Leggings"));
 			GameRegistry.register(ZivicioBoots.setRegistryName("Zivicio_Boots"));
+			if (PrimordialConfig.enableZivicioArmorFlight) {
+				LogHelper.info(" - Zivicio armour flight Enabled");
+			}
 		} else {
 			LogHelper.info("Eseence Based Armor Disabled");
 		}

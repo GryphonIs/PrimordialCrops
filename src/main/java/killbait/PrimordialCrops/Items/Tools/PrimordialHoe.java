@@ -1,10 +1,9 @@
 package killbait.PrimordialCrops.Items.Tools;
 
-import killbait.PrimordialCrops.Blocks.CropBlocks;
-import killbait.PrimordialCrops.Blocks.CropBlocksSpecial;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
 import killbait.PrimordialCrops.PrimordialCrops;
 import killbait.PrimordialCrops.Utils.Colours;
+import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -37,7 +36,7 @@ public class PrimordialHoe extends ItemHoe {
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
 		if (this.getMaterialName() == zivicioToolMaterial.toString()) list.add(Colours.LIGHTGREEN + "Unbreakable");
-		list.add(Colours.YELLOW + "Right click on primordial crops to speed up growth");
+		list.add(Colours.YELLOW + "Right click plants to speed up growth");
 	}
 
 	// there is no way to get a reference to the actual material used, getMaterialName() only returns a string
@@ -56,16 +55,21 @@ public class PrimordialHoe extends ItemHoe {
 		if (this.getMaterialName() == zivicioToolMaterial.toString() && PrimordialConfig.enableZivicioHoeSpeedup) {
 
 			IBlockState iblockstate = worldIn.getBlockState(pos);
+			Block block = iblockstate.getBlock();
 
-			if (iblockstate.getBlock() instanceof CropBlocks || iblockstate.getBlock() instanceof CropBlocksSpecial) {
-				IGrowable igrowable = (IGrowable) iblockstate.getBlock();
+			if (block != null && block instanceof IGrowable) {
+				IGrowable igrowable = (IGrowable) block;
 				if (igrowable.canGrow(worldIn, pos, iblockstate, worldIn.isRemote)) {
 					if (!worldIn.isRemote) {
 						if (igrowable.canUseBonemeal(worldIn, worldIn.rand, pos, iblockstate)) {
-							igrowable.grow(worldIn, worldIn.rand, pos, iblockstate);
+							//igrowable.grow(worldIn, worldIn.rand, pos, iblockstate); // no client side update
+							//iblockstate.getBlock().updateTick(worldIn, pos, iblockstate, worldIn.rand); // no client side update
+							//LogHelper.info("update");
+							worldIn.scheduleUpdate(pos, block, 1);
 						}
 					} else {
-						spawnBonemealParticles(worldIn, pos, 10);
+						//LogHelper.info("spawn" + igrowable.toString());
+						spawnBonemealParticles(worldIn, pos, 5);
 					}
 				}
 			}
