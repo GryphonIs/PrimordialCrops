@@ -34,7 +34,7 @@ public class PrimordialArmor extends ItemArmor {
 			}
 			else
 			{
-				list.add(Colours.LIGHTRED + "[DISABLED]" + Colours.YELLOW + " Grants Creative Flight when full set equipped ");
+				list.add(Colours.LIGHTRED + "[DISABLED] " + Colours.YELLOW + "Grants Creative Flight when full set equipped ");
 			}
 		}
 	}

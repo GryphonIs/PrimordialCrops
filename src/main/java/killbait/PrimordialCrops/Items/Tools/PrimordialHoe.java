@@ -36,7 +36,11 @@ public class PrimordialHoe extends ItemHoe {
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
 		if (this.getMaterialName() == zivicioToolMaterial.toString()) list.add(Colours.LIGHTGREEN + "Unbreakable");
-		list.add(Colours.YELLOW + "Right click plants to speed up growth");
+		if (PrimordialConfig.enableZivicioHoeSpeedup) {
+			list.add(Colours.YELLOW + "Right click plants to speed up growth");
+		} else {
+			list.add(Colours.LIGHTRED + "[DISABLED] " + Colours.YELLOW + "Right click plants to speed up growth");
+		}
 	}
 
 	// there is no way to get a reference to the actual material used, getMaterialName() only returns a string
