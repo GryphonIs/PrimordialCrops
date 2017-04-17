@@ -41,6 +41,15 @@ public class ModCrafting {
 		GameRegistry.addRecipe(new ItemStack(ModItems.zivicioIngot, 2), "nin", "iei", "nin", 'n', Items.GOLD_NUGGET, 'i', Items.IRON_INGOT, 'e', ModItems.ZivicioEssence);
 
 		//
+		// Reverse Eseence recipes
+		//
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ModCrops.MinicioEssence, 4), ModItems.AccioEssence);
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.AccioEssence, 4), ModItems.CrucioEssence);
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.CrucioEssence, 4), ModItems.ImperioEssence);
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.ImperioEssence, 4), ModItems.ZivicioEssence);
+
+		//
 		// Seeds
 		//
 
@@ -238,22 +247,29 @@ public class ModCrafting {
 
 		// Dye Essence
 		if (PrimordialConfig.enableDyeCrop) {
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 0), "dwd", "   ", "   ", 'd', ModCrops.DyeEssence, 'w', ModCrops.WaterEssence);
+			if (PrimordialConfig.enableWaterCrop) {
+				GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 0), "dwd", "   ", "   ", 'd', ModCrops.DyeEssence, 'w', ModCrops.WaterEssence);
+			}
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 1), "ddd", "   ", "   ", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 2), "dd ", "  ", "  ", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 3), "d  ", " d ", "  d", 'd', ModCrops.DyeEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 4), "lll", "l l", "lll", 'l', ModCrops.LapisEssence);
+
+			if (PrimordialConfig.enableLapisCrop) {
+				GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 4), "lll", "l l", "lll", 'l', ModCrops.LapisEssence);
+			}
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 5), "d  ", "d  ", "d  ", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 6), " d ", " d ", " d ", 'd', ModCrops.DyeEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 7), "  d", " d ", "d  ", 'd', ModCrops.DyeEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 8), "  d", "  d", "  d", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 7), "   ", "d  ", "d  ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 8), " d ", " d ", "   ", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 9), "  d", "  d", "   ", 'd', ModCrops.DyeEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 10), "d  ", "d  ", "   ", 'd', ModCrops.DyeEssence);
+			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 10), "  d", "   ", "  d", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 11), "   ", "   ", "ddd", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 12), "   ", "   ", "dd ", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 13), "   ", "dd ", "   ", 'd', ModCrops.DyeEssence);
 			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 14), "   ", "ddd", "   ", 'd', ModCrops.DyeEssence);
-			GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 15), "dsd", "   ", "   ", 'd', ModCrops.DyeEssence, 's', ModCrops.SkeletonEssence);
+			if (PrimordialConfig.enableSkeletonCrop) {
+				GameRegistry.addRecipe(new ItemStack(Items.DYE, 8, 15), "dsd", "   ", "   ", 'd', ModCrops.DyeEssence, 's', ModCrops.SkeletonEssence);
+			}
 		}
 
 		// Ore Essence
@@ -411,19 +427,20 @@ public class ModCrafting {
 		if (PrimordialConfig.enableNetherStarCrop) {
 			if (PrimordialConfig.specialCropsAreTooHard) {
 				if (PrimordialConfig.enableNetherCrop) {
-					LogHelper.info("Registering Easy Recipe for NetherStar");
+					LogHelper.info("Registering Easy Recipe for NetherStar Seed");
 					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.NetherStarSeeds), "aga", "n1n", "aga", 'a', ModItems.CrucioEssence, 'g', Items.NETHER_STAR, 'n', ModCrops.NetherEssence, '1', "InfusionStoneT3Plus"));
-					GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), "sss", "s s", "sss", 's', ModCrops.NetherStarEssence);
+					//GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), "sss", "s s", "sss", 's', ModCrops.NetherStarEssence);
 				} else {
-					LogHelper.info("Registering Alternate Easy Recipe for NetherStar");
+					LogHelper.info("Registering Alternate Easy Recipe for NetherStar Seed");
 					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.NetherStarSeeds), "aga", "n1n", "aga", 'a', ModItems.CrucioEssence, 'g', Items.NETHER_STAR, 'n', Items.MAGMA_CREAM, '1', "InfusionStoneT3Plus"));
-					GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), "sss", "s s", "sss", 's', ModCrops.NetherStarEssence);
+					//GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), "sss", "s s", "sss", 's', ModCrops.NetherStarEssence);
 				}
 			} else {
-				LogHelper.info("Registering Hard Recipes for NetherStar");
+				LogHelper.info("Registering Hard Recipes for NetherStar Seed");
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.NetherStarSeeds), "aga", "g1g", "aga", 'a', ModItems.ZivicioEssence, 'g', Items.NETHER_STAR, '1', "InfusionStoneT5Plus"));
-				GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), "sss", "szs", "sss", 's', ModCrops.NetherStarEssence, 'z', ModItems.ZivicioEssence);
+				//GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), "sss", "szs", "sss", 's', ModCrops.NetherStarEssence, 'z', ModItems.ZivicioEssence);
 			}
+			GameRegistry.addRecipe(new ItemStack(Items.NETHER_STAR, 1), "sss", "s s", "sss", 's', ModCrops.NetherStarEssence);
 		}
 
 		if (PrimordialConfig.enableDragonEggCrop) {

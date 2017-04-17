@@ -2,20 +2,35 @@ package killbait.PrimordialCrops.Items;
 
 import killbait.PrimordialCrops.Config.PrimordialConfig;
 import killbait.PrimordialCrops.PrimordialCrops;
+import killbait.PrimordialCrops.Utils.Colours;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Loader;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class PrimordialCropsItem extends Item {
 
-	protected String name;
+	private String name;
+	private boolean isEssence;
 
 	public PrimordialCropsItem(String name) {
+		this(name, false);
+
+	}
+
+	public PrimordialCropsItem(String name, @Nullable boolean isEssence) {
 		this.name = name;
+		this.isEssence = isEssence;
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		this.setCreativeTab(PrimordialCrops.PrimordialCrops);
+
 	}
+
 
 	public PrimordialCropsItem(String name, boolean hasDamage, int maxDamage, int stackNum) {
 		this.name = name;
@@ -44,5 +59,14 @@ public class PrimordialCropsItem extends Item {
 		}
 		copiedStack.stackSize = 1;
 		return copiedStack;
+	}
+
+	@Override
+	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
+		if (this.isEssence) {
+			if (Loader.isModLoaded("forestry")) {
+				list.add(Colours.YELLOW + "Solder onto forestry circuit boards to set farm type");
+			}
+		}
 	}
 }

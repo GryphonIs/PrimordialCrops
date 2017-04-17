@@ -1,5 +1,6 @@
 package killbait.PrimordialCrops.proxy;
 
+import killbait.PrimordialCrops.Compat.CompatHandler;
 import killbait.PrimordialCrops.PrimordialCrops;
 import killbait.PrimordialCrops.Registry.*;
 import killbait.PrimordialCrops.Utils.EventHandler;
@@ -19,6 +20,10 @@ public class CommonProxy {
 		ModItems.init();
 		ModCrops.init();
 		OreDictonaryRegistry.regOreDic();
+
+		CompatHandler.registerTOP();
+		CompatHandler.registerWaila();
+
 		MinecraftForge.EVENT_BUS.register(new EventHandler());
 	}
 

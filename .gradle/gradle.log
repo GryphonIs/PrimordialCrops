@@ -1,5 +1,14 @@
-Version string 'v1.7d_mc1.9.4' does not match SemVer specification 
+Version string 'v1.7e_mc1.9.4' does not match SemVer specification 
 You should try SemVer : http://semver.org/
+:extractMcpMappings SKIPPED
+:deobfCompileDeobfDepTask0 SKIPPED
+:deobfCompileDeobfDepTask1 SKIPPED
+:deobfCompileDeobfDepTask2 SKIPPED
+:deobfCompileDeobfDepTask3 SKIPPED
+:deobfCompileRemapDepSourcesTask4 SKIPPED
+:deobfCompileRemapDepSourcesTask5 SKIPPED
+:deobfCompileRemapDepSourcesTask6 SKIPPED
+:deobfCompileRemapDepSourcesTask7 SKIPPED
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
 :sourceApiJava
@@ -21,7 +30,6 @@ Note: Recompile with -Xlint:unchecked for details.
 :testClasses UP-TO-DATE
 :test UP-TO-DATE
 :extractMcpData SKIPPED
-:extractMcpMappings SKIPPED
 :getVersionJson
 :extractUserdev UP-TO-DATE
 :genSrgs SKIPPED
@@ -37,4 +45,4 @@ remapping source...
 
 BUILD SUCCESSFUL
 
-Total time: 11.891 secs
+Total time: 14.167 secs

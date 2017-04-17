@@ -54,7 +54,8 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 		return state.getValue(getAge()) >= getHarvestReadyAge();
 	}
 
-	protected Item getSeeds() {
+	@Override
+	protected Item getSeed() {
 		final Item seeds = ModCrops.seedsMapSpecial.get(this);
 
 		if (seeds == null) {
@@ -71,7 +72,7 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 
 	@Override
 	public ItemStack getItem(World world, BlockPos pos, IBlockState state) {
-		return new ItemStack(getSeeds());
+		return new ItemStack(getSeed());
 	}
 
 	@Override
@@ -113,7 +114,7 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 	@Override
 	public Item getItemDropped(IBlockState state, Random rnd, int fortune) {
 		if (!isHarvestReady(state)) {
-			return getSeeds();
+			return getSeed();
 		} else {
 			return getHarvestedItem();
 		}
@@ -211,7 +212,7 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 			} else {
 				extraseed = 0;
 			}
-			ret.add(new ItemStack(this.getSeeds(), 1 + extraseed, 0));
+			ret.add(new ItemStack(this.getSeed(), 1 + extraseed, 0));
 		}
 
 		return ret;
