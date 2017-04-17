@@ -779,13 +779,13 @@ public class ModCrops {
 	//
 
 	public static Item regSpecialHarvestItem(String regName, Block crop) {
-		Item item = register(new PrimordialCropsItem(regName));
+		Item item = register(new PrimordialCropsItem(regName, true));
 		harvestedItemMapSpecial.put((CropBlocksSpecial) crop, item);
 		return item;
 	}
 
 	public static Item regHarvestItem(String regName, Block crop) {
-		Item item = register(new PrimordialCropsItem(regName));
+		Item item = register(new PrimordialCropsItem(regName, true));
 		harvestedItemMap.put((CropBlocks) crop, item);
 		return item;
 	}

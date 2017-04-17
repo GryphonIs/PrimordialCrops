@@ -1,7 +1,37 @@
 /* v1.0 - v1.6 by abused_master (see Curse Page)
  *
  * v1.6a and beyond now maintained by KillBait
-*
+ *
+ *
+ * V1.7e Changelog
+ * ---------------
+ *
+ * Updated forge on 1.11 version - now requires minimum Forge 13.19.1.2189
+ * Fixed bug in crop code, rare chance you got wheat seeds instead of crop seeds.
+ * Changed dye recipes for Grey/Light Grey/Lime to avoid minecraft recipe mirroring.
+ * Removed Zivico Essence from Hard NetherStar recipe, seeds recipe's unchanged.
+ * Fixed Special Crops not showing any Waila info
+ * By request - Added reverse crafting recipe's for Accio/Crucio/Imperio/Zivicio essence
+ *
+ * Forestry MultiBlock Farm support. All seeds can now be used
+ *  Basic Usage Instructions
+ *    (1) if you are unfamiliar with the forestry multifarm i strongly recommend you
+ *        look at the forestry wiki at https://forestryforminecraft.info/
+ *    (2) Each essence is registered as it's own farm type and will only harvest/plant that
+ *        type, if you change the circuit board layout to a different crop, you will manually
+ *        have to remove the old crop type.
+ *    (2) Use the soldering iron as usual, instead of placing electron tubes in the
+ *        North/South/East/West slots, place the essence of the crop you want in the slots.
+ *    (3) Maunal and Managed (Automatic in 1.11.2) farms are supported.
+ *    (4) All other mechanics for the farm remain the same.
+ *
+ *    Tested on:
+ *       Minecraft 1.9.4/1.10 - Forestry 5.0.9.145 (Dev Env)
+ *       Minecraft 1.11/1.11.2 - Forestry 5.3.1.34 (Dev Env)/ 5.3.3.91 (regular play instance)
+ *
+ *  The forestry farm code is still Work-In-Progress, bugs may still be present.
+ *
+ *
  *
  * V1.7d Changelog
  * ---------------
@@ -9,13 +39,13 @@
  * Fixed not being able to enchant zicicio tools/swords/armour (changed how infinite durability is applied)
  * Re-balanced armour damage resistance.
  * Enabled zivicio armor flight code, hopefully it will play nice with other mods now.
- * Added (Configurable) right click growth speedup to Zivicio hoe.
+ * Added (configuable) right click growth speedup to Zivicio hoe.
  * Added missing dye's to dye essence recipes, also, you now get 8 dye's per craft.
  * Added indicators to zivicio armor and hoe tooltip if their abilities are disabled from the config file.
  *
  *
  * V1.7c ChangeLog
-  -----------------
+ * -----------------
  *
  * Tested mod with 1.11.2, everthing seems to work, let me know if things don't behave as intended.
  * Fixed all crops showing as wheat in Hwyla
@@ -25,9 +55,10 @@
  * Removed fire essence recipe that gave minicio essence (forgot to remove after worldgen testing)
  *
  * Added recipes for the following items/quantities.
-     - Glass(32), Clay Ball(32), Milk Bucket, Flint(32)
+    - Glass(32), Clay Ball(32), Milk Bucket, Flint(32)
  *
  * Added Configurable WorldGen (DO NOT change these unless you know what they do!!)
+  (will not retro-gen, setting changes will only effect new generated chunks)
    - Enable/Disable Minicio ore generation completely
    - Chance to spawn per chunk (5 min, 40 max) ( default 20)
    - Min Z to spawn ore from (0 min, 64 max) ( default 5)

@@ -25,7 +25,7 @@ public class GuiBook extends GuiScreen {
 		super.drawScreen(mouseX, mouseY, partialTicks);
 
 		String betaTest = I18n.format("Primordial Crops"); // replaced depreciated I18n.translateToLocal
-		mc.fontRendererObj.drawStringWithShadow(betaTest, left + xSize / 2 - mc.fontRendererObj.getStringWidth(betaTest) / 2, top - 12, 0xFFFFFF);
+		mc.fontRenderer.drawStringWithShadow(betaTest, left + xSize / 2 - mc.fontRenderer.getStringWidth(betaTest) / 2, top - 12, 0xFFFFFF);
 	}
 
 	@Override

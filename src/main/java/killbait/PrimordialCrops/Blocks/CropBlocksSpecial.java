@@ -1,7 +1,10 @@
 package killbait.PrimordialCrops.Blocks;
 
+import killbait.PrimordialCrops.Compat.WAILA.WailaInfoProvider;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
 import killbait.PrimordialCrops.Registry.ModCrops;
+import mcp.mobius.waila.api.IWailaConfigHandler;
+import mcp.mobius.waila.api.IWailaDataAccessor;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.IGrowable;
@@ -26,7 +29,7 @@ import net.minecraftforge.fml.common.FMLLog;
 import java.util.List;
 import java.util.Random;
 
-public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantable {
+public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantable, WailaInfoProvider {
 
 	public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 7);
 
@@ -54,7 +57,8 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 		return state.getValue(getAge()) >= getHarvestReadyAge();
 	}
 
-	protected Item getSeeds() {
+	@Override
+	protected Item getSeed() {
 		final Item seeds = ModCrops.seedsMapSpecial.get(this);
 
 		if (seeds == null) {
@@ -66,12 +70,12 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 
 	@Override
 	protected Item getCrop() {
-		return ModCrops.harvestedItemMap.get(this);
+		return ModCrops.harvestedItemMapSpecial.get(this);
 	}
 
 	@Override
 	public ItemStack getItem(World world, BlockPos pos, IBlockState state) {
-		return new ItemStack(getSeeds());
+		return new ItemStack(getSeed());
 	}
 
 	@Override
@@ -113,7 +117,7 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 	@Override
 	public Item getItemDropped(IBlockState state, Random rnd, int fortune) {
 		if (!isHarvestReady(state)) {
-			return getSeeds();
+			return getSeed();
 		} else {
 			return getHarvestedItem();
 		}
@@ -211,9 +215,14 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 			} else {
 				extraseed = 0;
 			}
-			ret.add(new ItemStack(this.getSeeds(), 1 + extraseed, 0));
+			ret.add(new ItemStack(this.getSeed(), 1 + extraseed, 0));
 		}
 
 		return ret;
+	}
+
+	@Override
+	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
+		return currenttip;
 	}
 }
