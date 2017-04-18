@@ -371,9 +371,9 @@ public class PluginPrimordialCrops extends BlankForestryPlugin {
 		ICircuit circuit = new CircuitFarmLogic(uid, new PrimordialFarmLogicCrop(uid, iconItem, seedItem, seedBlock));
 		if (ForestryAPI.enabledPlugins.contains(ForestryPluginUids.FARMING) && circuit != null) {
 			ICircuitLayout layoutManaged = ChipsetManager.circuitRegistry.getLayout("forestry.farms.managed");
-			ICircuitLayout layoutManual = ChipsetManager.circuitRegistry.getLayout("forestry.farms.manual");
+			//ICircuitLayout layoutManual = ChipsetManager.circuitRegistry.getLayout("forestry.farms.manual");
 			ChipsetManager.solderManager.addRecipe(layoutManaged, new ItemStack(iconItem), circuit);
-			ChipsetManager.solderManager.addRecipe(layoutManual, new ItemStack(iconItem), circuit);
+			//ChipsetManager.solderManager.addRecipe(layoutManual, new ItemStack(iconItem), circuit);
 		}
 	}
 

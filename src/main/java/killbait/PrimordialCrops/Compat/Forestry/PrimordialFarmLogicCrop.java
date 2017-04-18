@@ -22,6 +22,9 @@ import java.util.Stack;
 /**
  * Created by Jon on 15/04/2017.
  */
+
+// TODO track down how isManual is set, is it even worth the hassle for manual farm support, will anybody use it?
+
 public class PrimordialFarmLogicCrop extends FarmLogicWatered {
 
 	private final Item logicIconItem;
