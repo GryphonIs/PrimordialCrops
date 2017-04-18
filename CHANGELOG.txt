@@ -18,11 +18,11 @@
  *    (1) if you are unfamiliar with the forestry multifarm i strongly recommend you
  *        look at the forestry wiki at https://forestryforminecraft.info/
  *    (2) Each essence is registered as it's own farm type and will only harvest/plant that
- *        type, if you change the circuit board layout to a different crop, you will manually
+ *        crop, if you change the circuit board layout to a different crop, you will manually
  *        have to remove the old crop type.
  *    (2) Use the soldering iron as usual, instead of placing electron tubes in the
  *        North/South/East/West slots, place the essence of the crop you want in the slots.
- *    (3) Maunal and Managed (Automatic in 1.11.2) farms are supported.
+ *    (3) Only Managed (Automatic in 1.11.2) farms are supported currently.
  *    (4) All other mechanics for the farm remain the same.
  *
  *    Tested on:
