@@ -10,24 +10,27 @@
  * Fixed bug in crop code, rare chance you got wheat seeds instead of crop seeds.
  * Changed dye recipes for Grey/Light Grey/Lime to avoid minecraft recipe mirroring.
  * Removed Zivico Essence from Hard NetherStar recipe, seeds recipe's unchanged.
- * Fixed Special Crops not showing any Waila info
+ * Added Support for Waila/Hwyla and The One Probe - Displays basic crop info.
+ * Fixed Special Crops not showing any Waila info.
  * By request - Added reverse crafting recipe's for Accio/Crucio/Imperio/Zivicio essence
  *
  * Forestry MultiBlock Farm support. All seeds can now be used
  *  Basic Usage Instructions
- *    (1) if you are unfamiliar with the forestry multifarm i strongly recommend you
+ *    (1) Forestry is NOT required to run the mod, support will be added if it detected.
+ *    (2) If you are unfamiliar with the forestry multifarm i strongly recommend you
  *        look at the forestry wiki at https://forestryforminecraft.info/
- *    (2) Each essence is registered as it's own farm type and will only harvest/plant that
+ *    (3) Each essence is registered as it's own farm type and will only harvest/plant that
  *        crop, if you change the circuit board layout to a different crop, you will manually
  *        have to remove the old crop type.
- *    (2) Use the soldering iron as usual, instead of placing electron tubes in the
+ *    (4) Use the soldering iron as usual, instead of placing electron tubes in the
  *        North/South/East/West slots, place the essence of the crop you want in the slots.
- *    (3) Only Managed (Automatic in 1.11.2) farms are supported currently.
- *    (4) All other mechanics for the farm remain the same.
+ *    (5) Only Managed (Automatic in 1.11.2) farms are supported currently.
+ *    (6) All other mechanics for the farm remain the same.
  *
  *    Tested on:
- *       Minecraft 1.9.4/1.10 - Forestry 5.0.9.145 (Dev Env)
- *       Minecraft 1.11/1.11.2 - Forestry 5.3.1.34 (Dev Env)/ 5.3.3.91 (regular play instance)
+ *       Minecraft 1.9.4/1.10 - (Minimum) Forestry 5.0.9.145 (Dev Env)
+ *       Minecraft 1.11/1.11.2 - (Minimum) Forestry 5.3.1.34 (Dev Env) and 5.3.3.91
+ *       Use of versions below the minimum tested may not work, crash or do other bad things.
  *
  *  The forestry farm code is still Work-In-Progress, bugs may still be present.
  *

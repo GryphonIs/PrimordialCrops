@@ -1,7 +1,15 @@
 package killbait.PrimordialCrops.Blocks;
 
+import killbait.PrimordialCrops.Compat.TheOneProbe.TOPInfoProvider;
+import killbait.PrimordialCrops.Compat.WAILA.WailaInfoProvider;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
 import killbait.PrimordialCrops.Registry.ModCrops;
+import killbait.PrimordialCrops.Utils.Colours;
+import mcjty.theoneprobe.api.IProbeHitData;
+import mcjty.theoneprobe.api.IProbeInfo;
+import mcjty.theoneprobe.api.ProbeMode;
+import mcp.mobius.waila.api.IWailaConfigHandler;
+import mcp.mobius.waila.api.IWailaDataAccessor;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.IGrowable;
@@ -26,7 +34,7 @@ import net.minecraftforge.fml.common.FMLLog;
 import java.util.List;
 import java.util.Random;
 
-public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantable {
+public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantable, TOPInfoProvider, WailaInfoProvider {
 
 	public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 7);
 
@@ -216,5 +224,29 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 		}
 
 		return ret;
+	}
+
+	@Override
+	public void addProbeInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world, IBlockState blockState, IProbeHitData data) {
+		probeInfo.horizontal().text(Colours.YELLOW + PrimordialConfig.specialSeedExtraChance + "% Chance of Extra Seed");
+		if (PrimordialConfig.enableBonemealUse) {
+			probeInfo.horizontal().text(Colours.LIGHTGREEN + "Bonemeal use Enabled");
+		} else {
+			probeInfo.horizontal().text(Colours.LIGHTRED + "Bonemeal use Disabled");
+		}
+	}
+
+	@Override
+	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
+		if (accessor.getBlock() instanceof CropBlocksSpecial) {
+			float chance = PrimordialConfig.specialSeedExtraChance;
+			currenttip.add(String.format("%s%.0f%% %s", Colours.YELLOW, chance, "Change of extra seed"));
+			if (PrimordialConfig.enableBonemealUse) {
+				currenttip.add(String.format("%s%s", Colours.LIGHTGREEN, "Bonemeal use Enabled"));
+			} else {
+				currenttip.add(String.format("%s%s", Colours.LIGHTRED + "Bonemeal use Disabled"));
+			}
+		}
+		return currenttip;
 	}
 }

@@ -1,6 +1,7 @@
 package killbait.PrimordialCrops.Compat.WAILA;
 
 import killbait.PrimordialCrops.Blocks.CropBlocks;
+import killbait.PrimordialCrops.Blocks.CropBlocksSpecial;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import mcp.mobius.waila.api.IWailaDataProvider;
@@ -37,6 +38,9 @@ public class WailaCompatibility implements IWailaDataProvider {
 			registrar.registerHeadProvider(INSTANCE, CropBlocks.class);
 			registrar.registerBodyProvider(INSTANCE, CropBlocks.class);
 			registrar.registerTailProvider(INSTANCE, CropBlocks.class);
+			registrar.registerHeadProvider(INSTANCE, CropBlocksSpecial.class);
+			registrar.registerBodyProvider(INSTANCE, CropBlocksSpecial.class);
+			registrar.registerTailProvider(INSTANCE, CropBlocksSpecial.class);
 			loaded = true;
 		}
 	}
@@ -60,24 +64,15 @@ public class WailaCompatibility implements IWailaDataProvider {
 
 	@Override
 	public List<String> getWailaHead(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
-		Block block = accessor.getBlock();
-		if (block instanceof WailaInfoProvider) {
-			// Testing Only
-			/*if (accessor.getBlock() instanceof CropBlocks || accessor.getBlock() instanceof CropBlocksSpecial) {
-				IBlockState state = accessor.getBlockState();
-				float age = ((Integer) state.getValue(AGE));
-				if (age < 3)
-					currenttip.add(String.format("%s : %.0f %%", "Growth", (age * 33)));
-				else
-					currenttip.add(String.format("%s : %s", "Growth", "Mature"));
-			}*/
-			return ((WailaInfoProvider) block).getWailaBody(itemStack, currenttip, accessor, config);
-		}
 		return currenttip;
 	}
 
 	@Override
 	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
+		Block block = accessor.getBlock();
+		if (block instanceof WailaInfoProvider) {
+			return ((WailaInfoProvider) block).getWailaBody(itemStack, currenttip, accessor, config);
+		}
 		return currenttip;
 	}
 

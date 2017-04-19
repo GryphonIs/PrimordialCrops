@@ -9,7 +9,7 @@ public class PrimordialCircuitSocketType implements ICircuitSocketType {
 
 	private String uid;
 
-	PrimordialCircuitSocketType(String uid) {
+	public PrimordialCircuitSocketType(String uid) {
 		this.uid = uid;
 	}
 

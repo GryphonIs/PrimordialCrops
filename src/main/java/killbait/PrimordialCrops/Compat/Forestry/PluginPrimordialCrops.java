@@ -4,27 +4,17 @@ import forestry.api.circuits.ChipsetManager;
 import forestry.api.circuits.ICircuit;
 import forestry.api.circuits.ICircuitLayout;
 import forestry.api.core.ForestryAPI;
-import forestry.api.farming.Farmables;
-import forestry.core.utils.Log;
 import forestry.core.utils.ModUtil;
 import forestry.farming.circuits.CircuitFarmLogic;
-import forestry.farming.logic.FarmableAgingCrop;
 import forestry.plugins.BlankForestryPlugin;
 import forestry.plugins.ForestryPlugin;
 import forestry.plugins.ForestryPluginUids;
-import killbait.PrimordialCrops.Blocks.CropBlocks;
-import killbait.PrimordialCrops.Blocks.CropBlocksSpecial;
 import killbait.PrimordialCrops.Config.PrimordialConfig;
 import killbait.PrimordialCrops.Registry.ModCrops;
-import killbait.PrimordialCrops.Utils.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
-
-import javax.annotation.Nullable;
 
 /**
  * Created by Jon on 13/04/2017.
@@ -34,27 +24,27 @@ public class PluginPrimordialCrops extends BlankForestryPlugin {
 
 	private static final String PRI_CROP = "mc";
 
-	private static void registerSeedPlant(@Nullable Item seedItem, String blockName) {
+	/*private static void registerSeedPlant(@Nullable Item seedItem, String blockName) {
 		if (seedItem != null) {
 			Block plantBlock = getBlock(blockName);
 			if (plantBlock != null) {
 				Farmables.farmables.put("farmWheat", new FarmableAgingCrop(new ItemStack(seedItem), plantBlock, CropBlocks.AGE, 7));
 			}
 		}
-	}
+	}*/
 
 	//
 
-	private static void registerSpecialSeedPlant(@Nullable Item seedItem, String blockName) {
+	/*private static void registerSpecialSeedPlant(@Nullable Item seedItem, String blockName) {
 		if (seedItem != null) {
 			Block plantBlock = getBlock(blockName);
 			if (plantBlock != null) {
 				Farmables.farmables.put("farmWheat", new FarmableAgingCrop(new ItemStack(seedItem), plantBlock, CropBlocksSpecial.AGE, 7));
 			}
 		}
-	}
+	}*/
 
-	@Nullable
+	/*@Nullable
 	private static Block getBlock(String blockName) {
 		ResourceLocation key = new ResourceLocation(PRI_CROP, blockName);
 		if (ForgeRegistries.BLOCKS.containsKey(key)) {
@@ -64,9 +54,9 @@ public class PluginPrimordialCrops extends BlankForestryPlugin {
 			LogHelper.error("Could not find {}" + key);
 			return null;
 		}
-	}
+	}*/
 
-	@Nullable
+	/*@Nullable
 	private static Item getItem(String itemName) {
 		ResourceLocation key = new ResourceLocation(PRI_CROP, itemName);
 		if (ForgeRegistries.ITEMS.containsKey(key)) {
@@ -75,7 +65,7 @@ public class PluginPrimordialCrops extends BlankForestryPlugin {
 			Log.error("Could not find {}", key);
 			return null;
 		}
-	}
+	}*/
 
 	/*@Override
 	public void registerRecipes() {
@@ -363,7 +353,8 @@ public class PluginPrimordialCrops extends BlankForestryPlugin {
 
 		/*ICircuitSocketType type = new PrimordialCircuitSocketType("primordialsockettype");
 		ICircuitLayout layout = new PrimordialCircuitLayout("primordialcircuit", type);
-		ICircuit circiut = new PrimordialCircuit(Info.MODID, layout, new ItemStack(ModItems.AccioAxe));*/
+		ICircuit circuit = new PrimordialCircuit(Info.MODID, layout, new ItemStack(ModItems.AccioAxe));
+		ChipsetManager.circuitRegistry.registerCircuit(circuit);*/
 	}
 
 	private void registerFarmLogic(String uid, Item iconItem, Item seedItem, Block seedBlock) {
