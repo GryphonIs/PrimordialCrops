@@ -11,6 +11,7 @@
   "credits": "Mod idea from Magical Crops",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["forestry"],
+  "useDependencyInformation": "true"
 }
 ]
