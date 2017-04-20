@@ -446,21 +446,21 @@ public class ModCrafting {
 		if (PrimordialConfig.enableDragonEggCrop) {
 			if (PrimordialConfig.specialCropsAreTooHard) {
 				if (PrimordialConfig.enableEnderCrop) {
-					LogHelper.info("Registering Easy Recipe for DragonEgg");
+					LogHelper.info("Registering Easy Recipe for DragonEgg Seed");
 					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.DragonEggSeeds), "zdz", "e5e", "zez", 'z', ModItems.CrucioEssence, 'd', Blocks.DRAGON_EGG, '5', "InfusionStoneT3Plus", 'e', ModCrops.EnderEssence));
 					GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG, 1), "ddd", "d d", "ddd", 'd', ModCrops.DragonEggEssence);
 				} else {
-					LogHelper.info("Registering Alternate Easy Recipe for DragonEgg");
+					LogHelper.info("Registering Alternate Easy Recipe for DragonEgg Seed");
 					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.DragonEggSeeds), "zdz", "e5e", "zez", 'z', ModItems.CrucioEssence, 'd', Blocks.DRAGON_EGG, '5', "InfusionStoneT3Plus", 'e', Items.ENDER_PEARL));
 					GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG, 1), "ddd", "d d", "ddd", 'd', ModCrops.DragonEggEssence);
 				}
 			} else {
 				if (PrimordialConfig.enableEnderCrop) {
-					LogHelper.info("Registering Hard Recipes for DragonEgg");
+					LogHelper.info("Registering Hard Recipes for DragonEgg Seed");
 					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.DragonEggSeeds), "zdz", "e5e", "zez", 'z', ModItems.ZivicioEssence, 'd', Blocks.DRAGON_EGG, '5', "InfusionStoneT5Plus", 'e', ModCrops.EnderEssence));
 					GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG, 1), "ddd", "dzd", "ddd", 'd', ModCrops.DragonEggEssence, 'z', ModItems.ZivicioEssence);
 				} else {
-					LogHelper.info("Registering Alternate Hard Recipes for DragonEgg");
+					LogHelper.info("Registering Alternate Hard Recipes for DragonEgg Seed");
 					GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModCrops.DragonEggSeeds), "zdz", "e5e", "zez", 'z', ModItems.ZivicioEssence, 'd', Blocks.DRAGON_EGG, '5', "InfusionStoneT5Plus", 'e', Items.ENDER_PEARL));
 					GameRegistry.addRecipe(new ItemStack(Blocks.DRAGON_EGG, 1), "ddd", "dzd", "ddd", 'd', ModCrops.DragonEggEssence, 'z', ModItems.ZivicioEssence);
 
