@@ -228,23 +228,27 @@ public class CropBlocksSpecial extends BlockCrops implements IGrowable, IPlantab
 
 	@Override
 	public void addProbeInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world, IBlockState blockState, IProbeHitData data) {
-		probeInfo.horizontal().text(Colours.YELLOW + PrimordialConfig.specialSeedExtraChance + "% Chance of Extra Seed");
-		if (PrimordialConfig.enableBonemealUse) {
-			probeInfo.horizontal().text(Colours.LIGHTGREEN + "Bonemeal use Enabled");
-		} else {
-			probeInfo.horizontal().text(Colours.LIGHTRED + "Bonemeal use Disabled");
+		if (PrimordialConfig.enableExtraTOPInfo) {
+			probeInfo.horizontal().text(Colours.YELLOW + PrimordialConfig.specialSeedExtraChance + "% Chance of Extra Seed");
+			if (PrimordialConfig.enableBonemealUse) {
+				probeInfo.horizontal().text(Colours.LIGHTGREEN + "Bonemeal use Enabled");
+			} else {
+				probeInfo.horizontal().text(Colours.LIGHTRED + "Bonemeal use Disabled");
+			}
 		}
 	}
 
 	@Override
 	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
-		if (accessor.getBlock() instanceof CropBlocksSpecial) {
-			float chance = PrimordialConfig.specialSeedExtraChance;
-			currenttip.add(String.format("%s%.0f%% %s", Colours.YELLOW, chance, "Change of extra seed"));
-			if (PrimordialConfig.enableBonemealUse) {
-				currenttip.add(String.format("%s%s", Colours.LIGHTGREEN, "Bonemeal use Enabled"));
-			} else {
-				currenttip.add(String.format("%s%s", Colours.LIGHTRED + "Bonemeal use Disabled"));
+		if (PrimordialConfig.enableExtraWAILAInfo) {
+			if (accessor.getBlock() instanceof CropBlocksSpecial) {
+				float chance = PrimordialConfig.specialSeedExtraChance;
+				currenttip.add(String.format("%s%.0f%% %s", Colours.YELLOW, chance, "Change of extra seed"));
+				if (PrimordialConfig.enableBonemealUse) {
+					currenttip.add(String.format("%s%s", Colours.LIGHTGREEN, "Bonemeal use Enabled"));
+				} else {
+					currenttip.add(String.format("%s%s", Colours.LIGHTRED, "Bonemeal use Disabled"));
+				}
 			}
 		}
 		return currenttip;
