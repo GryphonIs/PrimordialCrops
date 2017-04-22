@@ -2,7 +2,7 @@
  *
  * v1.6a and beyond now maintained by KillBait
  *
- * V1.7e Changelog
+ * V1.7f Changelog
  * ---------------
  *
  * Fixed <ERROR> in WAILA crop info.
