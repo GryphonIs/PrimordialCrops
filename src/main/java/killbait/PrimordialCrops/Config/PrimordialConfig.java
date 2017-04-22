@@ -117,6 +117,11 @@ public class PrimordialConfig {
 	//1.7d new stuff
 	public static boolean enableZivicioHoeSpeedup;
 
+	// 1.7e new stuff
+	public static boolean enableExtraWAILAInfo;
+	public static boolean enableExtraTOPInfo;
+	public static boolean enableForestryFarmSupport;
+
 
 	public static boolean useAlternateIfDisabled;
 
@@ -154,6 +159,9 @@ public class PrimordialConfig {
 		enableIngameBook = config.getBoolean("enableInGameBook", CATEGORY_MOD, true, "Set to false if you don't want to use the Ingame Manual");
 		enableZivicioArmorFlight = config.getBoolean("enableZivicioArmourFlight", CATEGORY_MOD, true, "Set to false if you don't want wearing a full set of Zivicio Armour to grant flight");
 		enableZivicioHoeSpeedup = config.getBoolean("enableZivicioHoeRightClick", CATEGORY_MOD, true, "Set to false if you don't want the Zivicio Hoe's crop speedup on right click");
+		enableExtraWAILAInfo = config.getBoolean("enableExtraWailaInfo", CATEGORY_MOD, true, "Set to false if you don't want to see extra crop info in WAILA");
+		enableExtraTOPInfo = config.getBoolean("enableExtraProbeInfo", CATEGORY_MOD, true, "Set to false if you don't want to see extra crop info in The One Probe");
+		enableForestryFarmSupport = config.getBoolean("enableForestryFarmSupport", CATEGORY_MOD, true, "Set to false if you don't want forestry farm support");
 
 
 		config.addCustomCategoryComment(CATEGORY_CROPS, "Enable/Disable individual crops (also disables/Enables the seeds)");

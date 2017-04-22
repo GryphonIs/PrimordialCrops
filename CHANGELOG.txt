@@ -2,6 +2,13 @@
  *
  * v1.6a and beyond now maintained by KillBait
  *
+ * V1.7e Changelog
+ * ---------------
+ *
+ * Fixed <ERROR> in WAILA crop info.
+ * Added missing config options to disable extra crop info in WAILA/The One Probe.
+ * Added missing config option to disable forestry farm support.
+ * Removed Debug output for TOP registration.
  *
  *
  * V1.7e Changelog
