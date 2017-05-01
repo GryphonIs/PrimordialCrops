@@ -35,7 +35,7 @@ public class GuiBook extends GuiScreen {
 		GlStateManager.pushMatrix();
 
 		drawBackground(scalewidth, scaleheight, scalefactor);
-		drawPage(scalewidth, scaleheight, scalefactor);
+		//drawPage(scalewidth, scaleheight, scalefactor);
 		//mc.gameSettings.guiScale = guiScale;
 
 		GlStateManager.popMatrix();
