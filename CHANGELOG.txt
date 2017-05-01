@@ -2,6 +2,34 @@
  *
  * v1.6a and beyond now maintained by KillBait
  *
+ * V1.7g Changelog
+ * ---------------
+ *
+ * Added uses remaining tooltip to infusion stones (if durability enabled)
+ * Increased Infusion stones default uses to 256 (if durability enabled)
+ * Fixed higher tier infusion stones not being able to craft lower tier essence.
+ * Fixed Dragon Egg recipe again!!
+ * Fixed Emerald recipe
+ * Changed Glowstone recipe to match high amount given.
+ * Added config option to give ingots instead of Ore ( only Gold/Iron currently )
+ * Added config option to increase the amount of essence given on harvest
+   ** WARNING - Mods that multiply harvest output may result in INSANE amounts **
+   ** Default is 1 essence per harvest, minimum 1, maximum 8 **
+ *
+ * Recipe changes
+   - Diamond essence recipe now gives 4 Diamonds
+   - Emerald essence recipe now gives 4 Emerald
+   - Coal essences recipe now gives 16 Coal
+   - Redstone essence now gives 16 Redstone
+   - Experience essence now gives 8 Experience Bottles
+   - Nether Quartz essence now gives 16 Quartz
+   - Glowstone essence now gives 16 Glowstone
+   - Obsidian essence now gives 16 Obsidian.
+ *
+ * Added recipes for the following items/quantities.
+     - Dragons Breath(4), Sponge(16), 1.11 only - Shulker Shell(4)
+ *
+ *
  * V1.7f Changelog
  * ---------------
  *

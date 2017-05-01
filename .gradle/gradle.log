@@ -7,51 +7,9 @@
          by: Searge, ProfMobius, Fesh0r,         
          R4wk, ZeuX, IngisKahn, bspkrs           
 #################################################
-Version string 'v1.7f_mc1.9.4' does not match SemVer specification 
+Version string 'v1.7g_mc1.9.4' does not match SemVer specification 
 You should try SemVer : http://semver.org/
-:extractMcpMappings SKIPPED
-:deobfCompileDeobfDepTask0 SKIPPED
-:deobfCompileDeobfDepTask1 SKIPPED
-:deobfCompileDeobfDepTask2 SKIPPED
-:deobfCompileDeobfDepTask3 SKIPPED
-:deobfCompileRemapDepSourcesTask4 SKIPPED
-:deobfCompileRemapDepSourcesTask5 SKIPPED
-:deobfCompileRemapDepSourcesTask6 SKIPPED
-:deobfCompileRemapDepSourcesTask7 SKIPPED
-:deobfCompileDummyTask
-:deobfProvidedDummyTask
-:sourceApiJava UP-TO-DATE
-:compileApiJava UP-TO-DATE
-:processApiResources UP-TO-DATE
-:apiClasses UP-TO-DATE
-:sourceMainJava UP-TO-DATE
-:compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-1 warning
-
-:processResources UP-TO-DATE
-:classes
-:jar
-:sourceTestJava UP-TO-DATE
-:compileTestJava UP-TO-DATE
-:processTestResources UP-TO-DATE
-:testClasses UP-TO-DATE
-:test UP-TO-DATE
-:extractMcpData SKIPPED
-:getVersionJson
-:extractUserdev UP-TO-DATE
-:genSrgs SKIPPED
-:reobfJar
-:extractRangemapReplacedMain
-F:\Projects\Minecraft\1.10.2\PrimordialCrops\build\sources\main\java
-:retromapReplacedMain
-remapping source...
-:sourceJar UP-TO-DATE
-:assemble
-:check UP-TO-DATE
-:build
 
 BUILD SUCCESSFUL
 
-Total time: 12.981 secs
+Total time: 10.342 secs

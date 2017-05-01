@@ -35,7 +35,7 @@ public class GuiBook extends GuiScreen {
 		GlStateManager.pushMatrix();
 
 		drawBackground(scalewidth, scaleheight, scalefactor);
-		//drawPage(scalewidth, scaleheight, scalefactor);
+		drawPage(scalewidth, scaleheight, scalefactor);
 		//mc.gameSettings.guiScale = guiScale;
 
 		GlStateManager.popMatrix();
@@ -73,6 +73,9 @@ public class GuiBook extends GuiScreen {
 
 		// DEBUG Stuff
 
+		// Left Justify Only = (int)((scalew / 2) / scaleheight)
+		// Centered = scalew / 2
+
 		Object obj = "gameSettings.giuScale " + mc.gameSettings.guiScale + " , this.width= " + this.width + " , this.height = " + this.height;
 		drawCenteredString(mc.fontRendererObj, obj.toString(), scalew/2, scaleh/2, Integer.parseInt("FFAA00", 16));
 
@@ -88,7 +91,7 @@ public class GuiBook extends GuiScreen {
 		GlStateManager.pushMatrix();
 		GlStateManager.scale(scaleheight / 2, scaleheight / 2, scaleheight / 2);
 
-		drawString(mc.fontRendererObj, "Test Text is half the length we want to be", (int) (scalew / 4), top + (int) ((scaleh - (ySize * scaleheight)) / (2 * scaleheight)) + 8, Integer.parseInt("FFAA00", 16));
+		drawString(mc.fontRendererObj, "Test Text is half the length we want to be", (int) ((scalew / 2) / scaleheight), top + (int) ((scaleh - (ySize * scaleheight)) / scaleheight) + 16, Integer.parseInt("FFAA00", 16));
 
 		GlStateManager.popMatrix();
 	}

@@ -122,6 +122,11 @@ public class PrimordialConfig {
 	public static boolean enableExtraTOPInfo;
 	public static boolean enableForestryFarmSupport;
 
+	//1.7g new stuff
+
+	public static int essenceMultiplier;
+	public static boolean enableNoOre;
+
 
 	public static boolean useAlternateIfDisabled;
 
@@ -145,14 +150,14 @@ public class PrimordialConfig {
 
 		config.addCustomCategoryComment(CATEGORY_MOD, "Mod Settings");
 		infusionStoneDurability = config.getBoolean("infusionStonesHaveDurability", CATEGORY_MOD, false, "Set to true if you want Infusions stones to have durability");
-		infusionStoneMaxUses = config.getInt("infusionStoneMaxUses", CATEGORY_MOD, 100, 0, 1000, "How many uses an infusions stone has before it breaks (if infusionStoneDurability is true)");
+		infusionStoneMaxUses = config.getInt("infusionStoneMaxUses", CATEGORY_MOD, 256, 0, 1000, "How many uses an infusions stone has before it breaks (if infusionStoneDurability is true)");
 		enableWeapons = config.getBoolean("enableWeapons", CATEGORY_MOD, true, "Set to false if you dont want the mods Weapons");
 		enableTools = config.getBoolean("enableTools", CATEGORY_MOD, true, "Set to false if you dont want the mods Tools");
-		enableArmour = config.getBoolean("enableArmour", CATEGORY_MOD, true, "Set to false if you dont want the mods Armour (not yet implimented)");
+		enableArmour = config.getBoolean("enableArmour", CATEGORY_MOD, true, "Set to false if you dont want the mods Armour");
 		regularSeedExtraChance = config.getInt("extraSeedChanceRegular", CATEGORY_MOD, 20, 0, 100, "Percentage chance you get an extra seed from regular crops");
 		specialCropsAreTooHard = config.getBoolean("easySpecials", CATEGORY_MOD, false, "Set to true if you want easy crafting recipes for special crops");
 		specialSeedExtraChance = config.getInt("extraSeedChanceSpecial", CATEGORY_MOD, 3, 0, 100, "Percentage chance you get an extra seed from special crops");
-		rightClickHarvest = config.getBoolean("harvestOnRightClick", CATEGORY_MOD, false, "Set to true if you want right click harvesting of crops (this option is ignored if Pam's Harvestcraft installed)");
+		rightClickHarvest = config.getBoolean("harvestOnRightClick", CATEGORY_MOD, false, "Set to true if you want right click harvesting of crops (if false and still occurs another mod is responsible)");
 		addMinicioSeedToGrassDrop = config.getBoolean("grassDropsMinicioSeed", CATEGORY_MOD, true, "Set to false if you don't want minicio seeds as a chance drop from breaking grass");
 		enableBonemealUse = config.getBoolean("allowBonemealCrops", CATEGORY_MOD, true, "Set to false if you don't want bonemeal to speed up crop growth");
 		// Work In Progress (Not Yet Craftable)
@@ -162,6 +167,7 @@ public class PrimordialConfig {
 		enableExtraWAILAInfo = config.getBoolean("enableExtraWailaInfo", CATEGORY_MOD, true, "Set to false if you don't want to see extra crop info in WAILA");
 		enableExtraTOPInfo = config.getBoolean("enableExtraProbeInfo", CATEGORY_MOD, true, "Set to false if you don't want to see extra crop info in The One Probe");
 		enableForestryFarmSupport = config.getBoolean("enableForestryFarmSupport", CATEGORY_MOD, true, "Set to false if you don't want forestry farm support");
+		enableNoOre = config.getBoolean("essenceGivesIngots", CATEGORY_MOD, false, "Set to true if you want essence recipes to give ingots instead of ore");
 
 
 		config.addCustomCategoryComment(CATEGORY_CROPS, "Enable/Disable individual crops (also disables/Enables the seeds)");
@@ -235,11 +241,12 @@ public class PrimordialConfig {
 		enableFluixCrop = config.getBoolean("enableFluixCrystalCrop", CATEGORY_CROPS, true, "Set to false to disable AE2 Fluix Crystal Crops/Seeds/Essence");
 		enablePrismarineShardCrop = config.getBoolean("enablePrismarineShardCrop", CATEGORY_CROPS, true, "Set to false to disable Prismarine Shard Crops/Seeds/Essence");
 
-		config.addCustomCategoryComment(CATEGORY_DANGER, "DANGER AREA!!! - useAlternateRecipeIfCropDisabled Can unbalanace mod if true, Use at your own risk!!!");
+		config.addCustomCategoryComment(CATEGORY_DANGER, "DANGER AREA!!! - All these options can unbalance the mod if true, Use at your own risk!!!");
 		useAlternateIfDisabled = config.getBoolean("useAlternateRecipeIfCropDisabled", CATEGORY_DANGER, false, "If true, certain recipes that use disabled crop essence will use vanilla items instead, can make items too easy to make");
 		enableOreSpawn = config.getBoolean("enableOreSpawn", CATEGORY_DANGER, true, "Set to false to disable minicio ore spawning (WARNING - Use at own Risk!!!)");
-		oreSpawnChance = config.getInt("oreSpawnChance", CATEGORY_DANGER, 20, 5, 40, "How many chances of Ore to Spawn per chunk(lower numbers = less to spawn)");
+		oreSpawnChance = config.getInt("oreSpawnChance", CATEGORY_DANGER, 20, 5, 40, "How many chances of Ore to Spawn per chunk (BEWARE - numbers below 7 may result in no ore spawning at all)");
 		oreSpawnMinZ = config.getInt("oreSpawnMinZ", CATEGORY_DANGER, 5, 0, 64, "Minimum Z height for ore to start spawning (WARNING - If your not sure what this does, do not adjust it!!!)");
 		oreSpawnMaxZ = config.getInt("oreSpawnMaxZ", CATEGORY_DANGER, 64, 0, 64, "Maximum Z height for ore to stop spawning (WARNING - If your not sure what this does, do not adjust it!!!)");
+		essenceMultiplier = config.getInt("harvestEssenceAmount", CATEGORY_DANGER, 1, 1, 8, "How many essence you get on a crop harvest (WARNING - Mods that increase harvest output may result in an Insane amount per plant)");
 	}
 }
