@@ -106,8 +106,6 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable, TOP
 		}
 	}
 
-
-
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return getDefaultState().withProperty(getAge(), meta);
@@ -218,7 +216,7 @@ public class CropBlocks extends BlockCrops implements IGrowable, IPlantable, TOP
 		for (int i = 0; i < count; i++) {
 			Item item = this.getItemDropped(state, rnd, fortune);
 			if (item != null) {
-				ret.add(new ItemStack(item, 1, this.damageDropped(state)));
+				ret.add(new ItemStack(item, 1 * PrimordialConfig.essenceMultiplier, this.damageDropped(state)));
 			}
 		}
 

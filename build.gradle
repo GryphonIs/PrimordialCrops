@@ -20,7 +20,7 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "v1.7f_mc1.11"
+version = "v1.7g_mc1.11"
 group= "killbait.primordialcrops" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "PrimordialCrops"
 

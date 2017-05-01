@@ -67,5 +67,13 @@ public class PrimordialCropsItem extends Item {
 				list.add(Colours.YELLOW + "Solder onto forestry circuit boards to set farm type");
 			}
 		}
+
+		// A very generic check, but no items in the mod use Subtypes except for durability infusion stones
+		// so its safe to just do this check
+
+		if (this.getHasSubtypes()) {
+			list.add("Uses Remaining " + (PrimordialConfig.infusionStoneMaxUses - stack.getMetadata()));
+
+		}
 	}
 }
